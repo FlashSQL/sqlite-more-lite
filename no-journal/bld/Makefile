@@ -185,7 +185,7 @@ LIBOBJS0 = alter.lo analyze.lo attach.lo auth.lo \
          table.lo threads.lo tokenize.lo treeview.lo trigger.lo \
          update.lo util.lo vacuum.lo \
          vdbe.lo vdbeapi.lo vdbeaux.lo vdbeblob.lo vdbemem.lo vdbesort.lo \
-         vdbetrace.lo wal.lo walker.lo where.lo wherecode.lo whereexpr.lo \
+         vdbetrace.lo  walker.lo where.lo wherecode.lo whereexpr.lo \
          utf.lo vtab.lo
 
 # Object files for the amalgamation.
@@ -291,8 +291,6 @@ SRC = \
   $(TOP)/src/vdbeInt.h \
   $(TOP)/src/vtab.c \
   $(TOP)/src/vxworks.h \
-  $(TOP)/src/wal.c \
-  $(TOP)/src/wal.h \
   $(TOP)/src/walker.c \
   $(TOP)/src/where.c \
   $(TOP)/src/wherecode.c \
@@ -446,7 +444,6 @@ TESTSRC2 = \
   $(TOP)/src/expr.c \
   $(TOP)/src/func.c \
   $(TOP)/src/insert.c \
-  $(TOP)/src/wal.c \
   $(TOP)/src/main.c \
   $(TOP)/src/mem5.c \
   $(TOP)/src/os.c \
@@ -882,9 +879,6 @@ vdbetrace.lo:	$(TOP)/src/vdbetrace.c $(HDR)
 vtab.lo:	$(TOP)/src/vtab.c $(HDR)
 	$(LTCOMPILE) $(TEMP_STORE) -c $(TOP)/src/vtab.c
 
-wal.lo:	$(TOP)/src/wal.c $(HDR)
-	$(LTCOMPILE) $(TEMP_STORE) -c $(TOP)/src/wal.c
-
 walker.lo:	$(TOP)/src/walker.c $(HDR)
 	$(LTCOMPILE) $(TEMP_STORE) -c $(TOP)/src/walker.c
 
@@ -1135,9 +1129,6 @@ showstat4$(TEXE):	$(TOP)/tool/showstat4.c sqlite3.lo
 showjournal$(TEXE):	$(TOP)/tool/showjournal.c sqlite3.lo
 	$(LTLINK) -o $@ $(TOP)/tool/showjournal.c sqlite3.lo $(TLIBS)
 
-showwal$(TEXE):	$(TOP)/tool/showwal.c sqlite3.lo
-	$(LTLINK) -o $@ $(TOP)/tool/showwal.c sqlite3.lo $(TLIBS)
-
 changeset$(TEXE):	$(TOP)/ext/session/changeset.c sqlite3.lo
 	$(LTLINK) -o $@ $(TOP)/ext/session/changeset.c sqlite3.lo $(TLIBS)
 
@@ -1232,7 +1223,7 @@ clean:
 	rm -f tclsqlite3$(TEXE)
 	rm -f testfixture$(TEXE) test.db
 	rm -f LogEst$(TEXE) fts3view$(TEXE) rollback-test$(TEXE) showdb$(TEXE)
-	rm -f showjournal$(TEXE) showstat4$(TEXE) showwal$(TEXE) speedtest1$(TEXE)
+	rm -f showjournal$(TEXE) showstat4$(TEXE) speedtest1$(TEXE)
 	rm -f wordcount$(TEXE) changeset$(TEXE)
 	rm -f sqlite3.dll sqlite3.lib sqlite3.exp sqlite3.def
 	rm -f sqlite3.c

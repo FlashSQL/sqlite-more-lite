@@ -122,7 +122,6 @@ foreach hdr {
    vdbe.h
    vdbeInt.h
    vxworks.h
-   wal.h
    whereInt.h
 } {
   set available_hdr($hdr) 1
@@ -313,7 +312,6 @@ foreach file {
    pcache1.c
    rowset.c
    pager.c
-   wal.c
 
    btmutex.c
    btree.c
