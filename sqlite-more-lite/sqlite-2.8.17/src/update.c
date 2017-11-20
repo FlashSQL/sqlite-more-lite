@@ -142,8 +142,9 @@ void sqliteUpdate(
 #ifndef SQLITE_OMIT_AUTHORIZATION
     {
       int rc;
-      rc = sqliteAuthCheck(pParse, SQLITE_UPDATE, pTab->zName,
-                           pTab->aCol[j].zName, db->aDb[pTab->iDb].zName);
+      
+	  //rc = sqliteAuthCheck(pParse, SQLITE_UPDATE, pTab->zName,
+      //                     pTab->aCol[j].zName, db->aDb[pTab->iDb].zName);
       if( rc==SQLITE_DENY ){
         goto update_cleanup;
       }else if( rc==SQLITE_IGNORE ){
@@ -204,7 +205,7 @@ void sqliteUpdate(
   /* Start the view context
   */
   if( isView ){
-    sqliteAuthContextPush(pParse, &sContext, pTab->zName);
+    //sqliteAuthContextPush(pParse, &sContext, pTab->zName);
   }
 
   /* Begin generating code.
@@ -449,7 +450,7 @@ void sqliteUpdate(
   }
 
 update_cleanup:
-  sqliteAuthContextPop(&sContext);
+  //sqliteAuthContextPop(&sContext);
   sqliteFree(apIdx);
   sqliteFree(aXRef);
   sqliteSrcListDelete(pTabList);

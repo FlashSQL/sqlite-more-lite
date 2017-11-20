@@ -109,12 +109,14 @@ void sqliteBeginTrigger(
     const char *zDb = db->aDb[tab->iDb].zName;
     const char *zDbTrig = isTemp ? db->aDb[1].zName : zDb;
     if( tab->iDb==1 || isTemp ) code = SQLITE_CREATE_TEMP_TRIGGER;
-    if( sqliteAuthCheck(pParse, code, zName, tab->zName, zDbTrig) ){
+    /*
+	if( sqliteAuthCheck(pParse, code, zName, tab->zName, zDbTrig) ){
       goto trigger_cleanup;
     }
     if( sqliteAuthCheck(pParse, SQLITE_INSERT, SCHEMA_TABLE(tab->iDb), 0, zDb)){
       goto trigger_cleanup;
     }
+	*/
   }
 #endif
 
@@ -439,10 +441,12 @@ void sqliteDropTriggerPtr(Parse *pParse, Trigger *pTrigger, int nested){
     const char *zDb = db->aDb[pTrigger->iDb].zName;
     const char *zTab = SCHEMA_TABLE(pTrigger->iDb);
     if( pTrigger->iDb ) code = SQLITE_DROP_TEMP_TRIGGER;
-    if( sqliteAuthCheck(pParse, code, pTrigger->name, pTable->zName, zDb) ||
+    /*
+	if( sqliteAuthCheck(pParse, code, pTrigger->name, pTable->zName, zDb) ||
       sqliteAuthCheck(pParse, SQLITE_DELETE, zTab, 0, zDb) ){
       return;
     }
+	*/
   }
 #endif
 
@@ -732,7 +736,7 @@ int sqliteCodeRowTrigger(
       pTriggerStack->pNext = pParse->trigStack;
       pTriggerStack->ignoreJump = ignoreJump;
       pParse->trigStack = pTriggerStack;
-      sqliteAuthContextPush(pParse, &sContext, pTrigger->name);
+      //sqliteAuthContextPush(pParse, &sContext, pTrigger->name);
 
       /* code the WHEN clause */
       endTrigger = sqliteVdbeMakeLabel(pParse->pVdbe);
@@ -752,7 +756,7 @@ int sqliteCodeRowTrigger(
 
       /* Pop the entry off the trigger stack */
       pParse->trigStack = pParse->trigStack->pNext;
-      sqliteAuthContextPop(&sContext);
+      //sqliteAuthContextPop(&sContext);
       sqliteFree(pTriggerStack);
 
       sqliteVdbeResolveLabel(pParse->pVdbe, endTrigger);

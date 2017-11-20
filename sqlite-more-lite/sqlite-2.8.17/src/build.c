@@ -443,10 +443,11 @@ void sqliteStartTable(
   {
     int code;
     char *zDb = isTemp ? "temp" : "main";
-    if( sqliteAuthCheck(pParse, SQLITE_INSERT, SCHEMA_TABLE(isTemp), 0, zDb) ){
-      sqliteFree(zName);
-      return;
-    }
+// JOGNQ    
+//	if( sqliteAuthCheck(pParse, SQLITE_INSERT, SCHEMA_TABLE(isTemp), 0, zDb) ){
+//      sqliteFree(zName);
+//      return;
+//    }
     if( isView ){
       if( isTemp ){
         code = SQLITE_CREATE_TEMP_VIEW;
@@ -460,10 +461,11 @@ void sqliteStartTable(
         code = SQLITE_CREATE_TABLE;
       }
     }
-    if( sqliteAuthCheck(pParse, code, zName, 0, zDb) ){
-      sqliteFree(zName);
-      return;
-    }
+// JOGNQ	
+//    if( sqliteAuthCheck(pParse, code, zName, 0, zDb) ){
+//      sqliteFree(zName);
+//      return;
+//    }
   }
 #endif
  
@@ -1189,9 +1191,10 @@ void sqliteDropTable(Parse *pParse, Token *pName, int isView){
     int code;
     const char *zTab = SCHEMA_TABLE(pTable->iDb);
     const char *zDb = db->aDb[pTable->iDb].zName;
-    if( sqliteAuthCheck(pParse, SQLITE_DELETE, zTab, 0, zDb)){
-      return;
-    }
+// JONGQ
+//    if( sqliteAuthCheck(pParse, SQLITE_DELETE, zTab, 0, zDb)){
+//      return;
+//    }
     if( isView ){
       if( iDb==1 ){
         code = SQLITE_DROP_TEMP_VIEW;
@@ -1205,12 +1208,15 @@ void sqliteDropTable(Parse *pParse, Token *pName, int isView){
         code = SQLITE_DROP_TABLE;
       }
     }
+// JONGQ
+/*	
     if( sqliteAuthCheck(pParse, code, pTable->zName, 0, zDb) ){
       return;
     }
     if( sqliteAuthCheck(pParse, SQLITE_DELETE, pTable->zName, 0, zDb) ){
       return;
     }
+*/
   }
 #endif
   if( pTable->readOnly ){
@@ -1567,14 +1573,19 @@ void sqliteCreateIndex(
     const char *zDb = db->aDb[pTab->iDb].zName;
 
     assert( pTab->iDb==db->init.iDb || isTemp );
-    if( sqliteAuthCheck(pParse, SQLITE_INSERT, SCHEMA_TABLE(isTemp), 0, zDb) ){
+/*    
+	if( sqliteAuthCheck(pParse, SQLITE_INSERT, SCHEMA_TABLE(isTemp), 0, zDb) ){
       goto exit_create_index;
     }
+*/
     i = SQLITE_CREATE_INDEX;
     if( isTemp ) i = SQLITE_CREATE_TEMP_INDEX;
-    if( sqliteAuthCheck(pParse, i, zName, pTab->zName, zDb) ){
+/*    
+	if( sqliteAuthCheck(pParse, i, zName, pTab->zName, zDb) ){
       goto exit_create_index;
     }
+*/
+
   }
 #endif
 
@@ -1782,13 +1793,17 @@ void sqliteDropIndex(Parse *pParse, SrcList *pName){
     Table *pTab = pIndex->pTable;
     const char *zDb = db->aDb[pIndex->iDb].zName;
     const char *zTab = SCHEMA_TABLE(pIndex->iDb);
-    if( sqliteAuthCheck(pParse, SQLITE_DELETE, zTab, 0, zDb) ){
+/*
+	if( sqliteAuthCheck(pParse, SQLITE_DELETE, zTab, 0, zDb) ){
       goto exit_drop_index;
     }
+*/
     if( pIndex->iDb ) code = SQLITE_DROP_TEMP_INDEX;
-    if( sqliteAuthCheck(pParse, code, pIndex->zName, pTab->zName, zDb) ){
+/*
+	if( sqliteAuthCheck(pParse, code, pIndex->zName, pTab->zName, zDb) ){
       goto exit_drop_index;
     }
+*/
   }
 #endif
 
@@ -2021,7 +2036,7 @@ void sqliteBeginTransaction(Parse *pParse, int onError){
 
   if( pParse==0 || (db=pParse->db)==0 || db->aDb[0].pBt==0 ) return;
   if( pParse->nErr || sqlite_malloc_failed ) return;
-  if( sqliteAuthCheck(pParse, SQLITE_TRANSACTION, "BEGIN", 0, 0) ) return;
+//  if( sqliteAuthCheck(pParse, SQLITE_TRANSACTION, "BEGIN", 0, 0) ) return;
   if( db->flags & SQLITE_InTrans ){
     sqliteErrorMsg(pParse, "cannot start a transaction within a transaction");
     return;
@@ -2041,7 +2056,7 @@ void sqliteCommitTransaction(Parse *pParse){
 
   if( pParse==0 || (db=pParse->db)==0 || db->aDb[0].pBt==0 ) return;
   if( pParse->nErr || sqlite_malloc_failed ) return;
-  if( sqliteAuthCheck(pParse, SQLITE_TRANSACTION, "COMMIT", 0, 0) ) return;
+//  if( sqliteAuthCheck(pParse, SQLITE_TRANSACTION, "COMMIT", 0, 0) ) return;
   if( (db->flags & SQLITE_InTrans)==0 ){
     sqliteErrorMsg(pParse, "cannot commit - no transaction is active");
     return;
@@ -2064,7 +2079,7 @@ void sqliteRollbackTransaction(Parse *pParse){
 
   if( pParse==0 || (db=pParse->db)==0 || db->aDb[0].pBt==0 ) return;
   if( pParse->nErr || sqlite_malloc_failed ) return;
-  if( sqliteAuthCheck(pParse, SQLITE_TRANSACTION, "ROLLBACK", 0, 0) ) return;
+//  if( sqliteAuthCheck(pParse, SQLITE_TRANSACTION, "ROLLBACK", 0, 0) ) return;
   if( (db->flags & SQLITE_InTrans)==0 ){
     sqliteErrorMsg(pParse, "cannot rollback - no transaction is active");
     return; 

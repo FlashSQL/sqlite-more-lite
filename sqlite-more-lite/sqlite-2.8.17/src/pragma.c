@@ -172,11 +172,13 @@ void sqlitePragma(Parse *pParse, Token *pLeft, Token *pRight, int minusFlag){
     zRight = sqliteStrNDup(pRight->z, pRight->n);
     sqliteDequote(zRight);
   }
-  if( sqliteAuthCheck(pParse, SQLITE_PRAGMA, zLeft, zRight, 0) ){
-    sqliteFree(zLeft);
-    sqliteFree(zRight);
-    return;
-  }
+  
+  // JONGQ
+  //if( sqliteAuthCheck(pParse, SQLITE_PRAGMA, zLeft, zRight, 0) ){
+  //  sqliteFree(zLeft);
+  //  sqliteFree(zRight);
+  //  return;
+  //}
  
   /*
   **  PRAGMA default_cache_size

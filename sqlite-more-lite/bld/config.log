@@ -745,8 +745,8 @@ configure:19573: gcc -o conftest -g -O2   conftest.c  >&5
 conftest.c:47:6: warning: conflicting types for built-in function 'sin' [enabled by default]
  char sin ();
       ^
-/tmp/ccw0IXsz.o:(.data+0x0): undefined reference to `sin'
-/tmp/ccw0IXsz.o: In function `main':
+/tmp/ccjVrkUU.o:(.data+0x0): undefined reference to `sin'
+/tmp/ccjVrkUU.o: In function `main':
 /home/jonghyeok/SaS/sqlite-more-lite/bld/conftest.c:63: undefined reference to `sin'
 collect2: error: ld returned 1 exit status
 configure:19579: $? = 1
@@ -828,7 +828,7 @@ configure:19660: $? = 0
 configure:19673: result: yes
 configure:19689: checking for library containing Tcl_Init
 configure:19719: gcc -o conftest -g -O2   conftest.c  >&5
-/tmp/ccDxHyUB.o: In function `main':
+/tmp/ccPtYBGZ.o: In function `main':
 /home/jonghyeok/SaS/sqlite-more-lite/bld/conftest.c:35: undefined reference to `Tcl_Init'
 collect2: error: ld returned 1 exit status
 configure:19725: $? = 1
@@ -1205,7 +1205,7 @@ configure:19987: checking for /usr/include/tcl.h
 configure:20002: result: no
 configure:20028: checking for library containing tgetent
 configure:20058: gcc -o conftest -g -O2   conftest.c  >&5
-/tmp/ccuQnP4W.o: In function `main':
+/tmp/ccytFg6a.o: In function `main':
 /home/jonghyeok/SaS/sqlite-more-lite/bld/conftest.c:35: undefined reference to `tgetent'
 collect2: error: ld returned 1 exit status
 configure:20064: $? = 1
@@ -1249,7 +1249,7 @@ configure: failed program was:
 |   return 0;
 | }
 configure:20112: gcc -o conftest -g -O2   conftest.c -lreadline   >&5
-/tmp/cc8jgHFW.o: In function `main':
+/tmp/cccoWC2c.o: In function `main':
 /home/jonghyeok/SaS/sqlite-more-lite/bld/conftest.c:35: undefined reference to `tgetent'
 collect2: error: ld returned 1 exit status
 configure:20118: $? = 1

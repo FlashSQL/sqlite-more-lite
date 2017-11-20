@@ -50,10 +50,12 @@ void sqliteCopy(
   sqliteDequote(zFile);
   assert( pTab->iDb<db->nDb );
   zDb = db->aDb[pTab->iDb].zName;
+/*
   if( sqliteAuthCheck(pParse, SQLITE_INSERT, pTab->zName, 0, zDb)
       || sqliteAuthCheck(pParse, SQLITE_COPY, pTab->zName, zFile, zDb) ){
     goto copy_cleanup;
   }
+*/
   v = sqliteGetVdbe(pParse);
   if( v ){
     sqliteBeginWriteOperation(pParse, 1, pTab->iDb);

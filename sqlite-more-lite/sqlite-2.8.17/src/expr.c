@@ -591,7 +591,7 @@ static int lookupName(
   sqliteExprDelete(pExpr->pRight);
   pExpr->pRight = 0;
   pExpr->op = TK_COLUMN;
-  sqliteAuthRead(pParse, pExpr, pSrcList);
+  //sqliteAuthRead(pParse, pExpr, pSrcList);
   return cnt!=1;
 }
 

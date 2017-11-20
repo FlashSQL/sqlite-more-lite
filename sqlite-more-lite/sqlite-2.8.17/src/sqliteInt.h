@@ -1245,15 +1245,15 @@ int sqliteJoinType(Parse*, Token*, Token*, Token*);
 void sqliteCreateForeignKey(Parse*, IdList*, Token*, IdList*, int);
 void sqliteDeferForeignKey(Parse*, int);
 #ifndef SQLITE_OMIT_AUTHORIZATION
-  void sqliteAuthRead(Parse*,Expr*,SrcList*);
-  int sqliteAuthCheck(Parse*,int, const char*, const char*, const char*);
-  void sqliteAuthContextPush(Parse*, AuthContext*, const char*);
-  void sqliteAuthContextPop(AuthContext*);
+//  void sqliteAuthRead(Parse*,Expr*,SrcList*);
+//  int sqliteAuthCheck(Parse*,int, const char*, const char*, const char*);
+//  void sqliteAuthContextPush(Parse*, AuthContext*, const char*);
+//  void sqliteAuthContextPop(AuthContext*);
 #else
-# define sqliteAuthRead(a,b,c)
-# define sqliteAuthCheck(a,b,c,d,e)    SQLITE_OK
-# define sqliteAuthContextPush(a,b,c)
-# define sqliteAuthContextPop(a)  ((void)(a))
+//# define sqliteAuthRead(a,b,c)
+//# define sqliteAuthCheck(a,b,c,d,e)    SQLITE_OK
+//# define sqliteAuthContextPush(a,b,c)
+//# define sqliteAuthContextPop(a)  ((void)(a))
 #endif
 void sqliteAttach(Parse*, Token*, Token*, Token*);
 void sqliteDetach(Parse*, Token*);

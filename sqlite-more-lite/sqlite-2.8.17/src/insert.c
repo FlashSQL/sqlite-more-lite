@@ -130,9 +130,11 @@ void sqliteInsert(
   }
   assert( pTab->iDb<db->nDb );
   zDb = db->aDb[pTab->iDb].zName;
+  /*
   if( sqliteAuthCheck(pParse, SQLITE_INSERT, pTab->zName, 0, zDb) ){
     goto insert_cleanup;
   }
+  */
 
   /* Ensure that:
   *  (a) the table is not read-only, 

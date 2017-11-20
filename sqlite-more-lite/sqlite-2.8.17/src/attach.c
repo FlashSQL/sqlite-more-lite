@@ -52,10 +52,12 @@ void sqliteAttach(Parse *pParse, Token *pFilename, Token *pDbname, Token *pKey){
   if( zFile==0 ) return;
   sqliteDequote(zFile);
 #ifndef SQLITE_OMIT_AUTHORIZATION
+/*
   if( sqliteAuthCheck(pParse, SQLITE_ATTACH, zFile, 0, 0)!=SQLITE_OK ){
     sqliteFree(zFile);
     return;
   }
+*/
 #endif /* SQLITE_OMIT_AUTHORIZATION */
 
   zName = 0;
@@ -158,9 +160,10 @@ void sqliteDetach(Parse *pParse, Token *pDbname){
     return;
   }
 #ifndef SQLITE_OMIT_AUTHORIZATION
-  if( sqliteAuthCheck(pParse,SQLITE_DETACH,db->aDb[i].zName,0,0)!=SQLITE_OK ){
-    return;
-  }
+// JONGQ
+//  if( sqliteAuthCheck(pParse,SQLITE_DETACH,db->aDb[i].zName,0,0)!=SQLITE_OK ){
+//    return;
+//  }
 #endif /* SQLITE_OMIT_AUTHORIZATION */
   sqliteBtreeClose(pDb->pBt);
   pDb->pBt = 0;

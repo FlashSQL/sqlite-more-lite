@@ -2030,7 +2030,7 @@ int sqliteSelect(
   int rc = 1;            /* Value to return from this function */
 
   if( sqlite_malloc_failed || pParse->nErr || p==0 ) return 1;
-  if( sqliteAuthCheck(pParse, SQLITE_SELECT, 0, 0, 0) ) return 1;
+  //if( sqliteAuthCheck(pParse, SQLITE_SELECT, 0, 0, 0) ) return 1;
 
   /* If there is are a sequence of queries, do the earlier ones first.
   */

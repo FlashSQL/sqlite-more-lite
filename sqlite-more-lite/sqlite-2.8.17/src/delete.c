@@ -101,9 +101,11 @@ void sqliteDeleteFrom(
   }
   assert( pTab->iDb<db->nDb );
   zDb = db->aDb[pTab->iDb].zName;
+  /*
   if( sqliteAuthCheck(pParse, SQLITE_DELETE, pTab->zName, 0, zDb) ){
     goto delete_from_cleanup;
   }
+  */
 
   /* If pTab is really a view, make sure it has been initialized.
   */
@@ -133,7 +135,7 @@ void sqliteDeleteFrom(
   /* Start the view context
   */
   if( isView ){
-    sqliteAuthContextPush(pParse, &sContext, pTab->zName);
+    //sqliteAuthContextPush(pParse, &sContext, pTab->zName);
   }
 
   /* Begin generating code.
@@ -307,7 +309,7 @@ void sqliteDeleteFrom(
   }
 
 delete_from_cleanup:
-  sqliteAuthContextPop(&sContext);
+  //sqliteAuthContextPop(&sContext);
   sqliteSrcListDelete(pTabList);
   sqliteExprDelete(pWhere);
   return;
