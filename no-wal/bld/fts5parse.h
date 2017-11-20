@@ -1,0 +1,13 @@
+#define FTS5_OR                               1
+#define FTS5_AND                              2
+#define FTS5_NOT                              3
+#define FTS5_TERM                             4
+#define FTS5_COLON                            5
+#define FTS5_LP                               6
+#define FTS5_RP                               7
+#define FTS5_LCP                              8
+#define FTS5_RCP                              9
+#define FTS5_STRING                          10
+#define FTS5_COMMA                           11
+#define FTS5_PLUS                            12
+#define FTS5_STAR                            13

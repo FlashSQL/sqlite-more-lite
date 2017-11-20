@@ -1,6 +1,5 @@
-THIS PORJECT IS PORTING LIGHT SQLite on OPEN-SSD
+THIS PORJECT IS PORTING LIGHT SQLite More Lite 
 
-SaSE : Storage as Sql Engine
 
 Gihwan Oh
 Jonghyeok Park

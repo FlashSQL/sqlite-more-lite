@@ -20,7 +20,7 @@ TOP = /home/jonghyeok/SaS/no-wal/bld/../sqlite-src-3130000
 # C Compiler and options for use in building executables that
 # will run on the platform that is doing the build.
 #
-BCC = gcc  -g -O2
+BCC = gcc  -g -O0
 
 # TCC is the C Compile and options for use in building executables that 
 # will run on the target platform.  (BCC and TCC are usually the
@@ -28,8 +28,11 @@ BCC = gcc  -g -O2
 # are provide so that these aspects of the build process can be changed
 # on the "make" command-line.  Ex:  "make CC=clang CFLAGS=-fsanitize=undefined"
 #
-CC = gcc
-CFLAGS =   -g -O2 -DSQLITE_OS_UNIX=1
+CC = gcc -w
+# SQLITE_OMIT_SHARED_CACHE 삭제함
+
+CFLAGS =   -g -O0 -mcmodel=large  -DSQLITE_OS_UNIX=1 -DSQLITE_OMIT_TRIGGER -DSQLITE_OMIT_WAL -DSQLITE_OMIT_FLOATING_POINT -DSQLITE_OMIT_VIRTUALTABLE -DSQLITE_OMIT_PRAGMA -DSQLITE_OMIT_FOREIGN_KEY -DSQLITE_OMIT_AUTOVACUUM -DSQLITE_OMIT_SUBQUERY -DSQLITE_OMIT_COMPOUND_SELECT -DSQLITE_OMIT_EXPLAIN -DSQLITE_OMIT_DATETIME_FUNCS -DSQLITE_OMIT_INTEGRITY_CHECK -DSQLITE_OMIT_ATTACH -DSQLITE_OMIT_ALTERTABLE -DSQLITE_OMIT_UTF16 -DSQLITE_OMIT_INCRBLOB -DSQLITE_OMIT_ANALYZE -DSQLITE_OMIT_AUTHORIZATION -DSQLITE_OMIT_VACUUM -DSQLITE_OMIT_PAGER_PRAGMAS -DSQLITE_OMIT_OR_OPTIMIZATION -DSQLITE_OMIT_VIEW-DSQLITE_OMIT_BUILTIN_TEST -DSQLITE_OMIT_XFER_OPT -DSQLITE_OMIT_AUTOINCREMENT -DSQLITE_OMIT_SCHEMA_PRAGMAS -DSQLITE_OMIT_TRACE -DSQLITE_OMIT_LOAD_EXTENSION -DSQLITE_OMIT_AUTOMATIC_INDEX -DSQLITE_OMIT_LIKE_OPTIMIZATION -DSQLITE_OMIT_REINDEX -DSQLITE_OMIT_GET_TABLE -DSQLITE_OMIT_COMPLETE -DSQLITE_OMIT_TEMPDB -DSQLITE_OMIT_BTREECOUNT -DSQLITE_OMIT_LOCALTIME -DSQLITE_OMIT_COMPILEOPTION_DIAGS -DSQLITE_OMIT_FLAG_PRAGMAS -DSQLITE_OMIT_QUICKBALANCE -DSQLITE_OMIT_CAST -DSQLITE_OMIT_CHECK -DSQLITE_OMIT_MEMORYDB -DSQLITE_OMIT_BLOB_LITERAL -DSQLITE_OMIT_SCHEMA_VERSION_PRAGMAS -DSQLITE_OMIT_LOOKASIDE -DSQLITE_OMIT_AUTOINIT -DSQLITE_DISABLE_DIRSYNC -DSQLITE_OMIT_DECLTYPE -DSQLITE_OMIT_DEPRECATED -DSQLITE_OMIT_BETWEEN_OPTIMIZATION -DSQLITE_OMIT_PROGRESS_CALLBACK -DSQLITE_OMIT_TRUNCATE_OPTIMIZATION -DSQLITE_OMIT_TCL_VARIABLE
+
 TCC = ${CC} ${CFLAGS} -I. -I${TOP}/src -I${TOP}/ext/rtree -I${TOP}/ext/icu
 TCC += -I${TOP}/ext/fts3 -I${TOP}/ext/async -I${TOP}/ext/session
 
@@ -66,7 +69,7 @@ LIBREADLINE = -lreadline -lncurses
 TCC += -DSQLITE_THREADSAFE=1
 
 # Any target libraries which libsqlite must be linked against
-# 
+#
 TLIBS = -ldl -lpthread  $(LIBS)
 
 # Flags controlling use of the in memory btree implementation
@@ -75,7 +78,7 @@ TLIBS = -ldl -lpthread  $(LIBS)
 # default to file, 2 to default to memory, and 3 to force temporary
 # tables to always be in memory.
 #
-TEMP_STORE = -DSQLITE_TEMP_STORE=1
+#TEMP_STORE = -DSQLITE_TEMP_STORE=1
 
 # Enable/disable loadable extensions, and other optional features
 # based on configuration. (-DSQLITE_OMIT*, -DSQLITE_ENABLE*).  
@@ -1250,21 +1253,3 @@ clean:
 
 distclean:	clean
 	rm -f config.h config.log config.status libtool Makefile sqlite3.pc
-
-#
-# Windows section
-#
-dll: sqlite3.dll
-
-REAL_LIBOBJ = $(LIBOBJ:%.lo=.libs/%.o)
-
-$(REAL_LIBOBJ): $(LIBOBJ)
-
-sqlite3.def: $(REAL_LIBOBJ)
-	echo 'EXPORTS' >sqlite3.def
-	nm $(REAL_LIBOBJ) | grep ' T ' | grep ' _sqlite3_' \
-		| sed 's/^.* _//' >>sqlite3.def
-
-sqlite3.dll: $(REAL_LIBOBJ) sqlite3.def
-	$(TCC) -shared -o $@ sqlite3.def \
-		-Wl,"--strip-all" $(REAL_LIBOBJ)
