@@ -1,0 +1,6 @@
+*.zip
+*.swp
+./bld
+./sqlite-src-3130000
+./README.txt
+
