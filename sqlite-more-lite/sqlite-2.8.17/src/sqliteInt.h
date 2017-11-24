@@ -1185,7 +1185,7 @@ Table *sqliteFindTable(sqlite*,const char*, const char*);
 Table *sqliteLocateTable(Parse*,const char*, const char*);
 Index *sqliteFindIndex(sqlite*,const char*, const char*);
 void sqliteUnlinkAndDeleteIndex(sqlite*,Index*);
-void sqliteCopy(Parse*, SrcList*, Token*, Token*, int);
+//void sqliteCopy(Parse*, SrcList*, Token*, Token*, int);
 void sqliteVacuum(Parse*, Token*);
 int sqliteRunVacuum(char**, sqlite*);
 int sqliteGlobCompare(const unsigned char*,const unsigned char*);

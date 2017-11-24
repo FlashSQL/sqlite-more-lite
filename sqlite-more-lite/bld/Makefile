@@ -84,7 +84,7 @@ endif
 
 # Object files for the SQLite library.
 #
-LIBOBJ = attach.lo auth.lo btree.lo build.lo copy.lo date.lo \
+LIBOBJ = attach.lo btree.lo build.lo date.lo \
          delete.lo encode.lo expr.lo func.lo hash.lo insert.lo \
          main.lo opcodes.lo os.lo pager.lo parse.lo pragma.lo \
          printf.lo random.lo select.lo table.lo tokenize.lo \
@@ -100,12 +100,10 @@ endif
 #
 SRC = \
   $(TOP)/src/attach.c \
-  $(TOP)/src/auth.c \
   $(TOP)/src/btree.c \
   $(TOP)/src/btree.h \
   $(TOP)/src/btree_rb.c \
   $(TOP)/src/build.c \
-  $(TOP)/src/copy.c \
   $(TOP)/src/date.c \
   $(TOP)/src/delete.c \
   $(TOP)/src/encode.c \
@@ -297,9 +295,6 @@ vdbeaux.lo:	$(TOP)/src/vdbe.c $(VDBEHDR)
 where.lo:	$(TOP)/src/where.c $(HDR)
 	$(LTCOMPILE) -c $(TOP)/src/where.c
 
-copy.lo:	$(TOP)/src/copy.c $(HDR)
-	$(LTCOMPILE) -c $(TOP)/src/copy.c
-
 date.lo:	$(TOP)/src/date.c $(HDR)
 	$(LTCOMPILE) -c $(TOP)/src/date.c
 
@@ -350,9 +345,6 @@ printf.lo:	$(TOP)/src/printf.c $(HDR)
 
 attach.lo:	$(TOP)/src/attach.c $(HDR)
 	$(LTCOMPILE) $(TCL_FLAGS) -c $(TOP)/src/attach.c
-
-auth.lo:	$(TOP)/src/auth.c $(HDR)
-	$(LTCOMPILE) $(TCL_FLAGS) -c $(TOP)/src/auth.c
 
 tclsqlite-sh.lo:	$(TOP)/src/tclsqlite.c $(HDR)
 	$(LTCOMPILE) $(TCL_FLAGS) -DTCLSH=1 -o $@ -c $(TOP)/src/tclsqlite.c

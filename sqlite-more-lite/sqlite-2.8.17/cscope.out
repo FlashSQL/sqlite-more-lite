@@ -1,4 +1,4 @@
-cscope 15 $HOME/SaS/VERSTION2/sqlite-2.8.17               0001439987
+cscope 15 $HOME/SaS/sqlite-more-lite/sqlite-2.8.17               0001431292
 	@src/attach.c
 
 16 
@@ -155,29 +155,11 @@ zFûe
 SQLITE_OMIT_AUTHORIZATION
 
 
-55 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_ATTACH
-, 
-zFûe
-, 0, 0)!=
-SQLITE_OK
- ){
-
-56 
-	`sqlôeFªe
-(
-zFûe
-);
-
-61 
+63 
 zName
  = 0;
 
-62 
+64 
 	`sqlôeSëNSåög
 (&
 zName
@@ -189,17 +171,17 @@ z
 n
 , 0);
 
-63 if–
+65 if–
 zName
 ==0 ) ;
 
-64 
+66 
 	`sqlôeDequŸe
 (
 zName
 );
 
-65 
+67 
 i
 =0; i<
 db
@@ -207,7 +189,7 @@ db
 nDb
 ; i++){
 
-66 if–
+68 if–
 db
 ->
 aDb
@@ -219,7 +201,7 @@ zName
 	`sqlôeSåICmp
 (db->aDb[i].zName, zName)==0 ){
 
-67 
+69 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -227,7 +209,7 @@ pP¨£
 zName
 );
 
-68 
+70 
 pP¨£
 ->
 rc
@@ -235,13 +217,13 @@ rc
 SQLITE_ERROR
 ;
 
-69 
+71 
 	`sqlôeFªe
 (
 zFûe
 );
 
-74 if–
+76 if–
 db
 ->
 aDb
@@ -249,7 +231,7 @@ aDb
 aDbSètic
  ){
 
-75 
+77 
 aNew
  = 
 	`sqlôeMÆloc
@@ -259,11 +241,11 @@ db
 aDb
 [0])*3 );
 
-76 if–
+78 if–
 aNew
 ==0 ) ;
 
-77 
+79 
 	`mem˝y
 (
 aNew
@@ -273,7 +255,7 @@ db
 aDb
 , (db->aDb[0])*2);
 
-79 
+81 
 aNew
  = 
 	`sqlôeRóŒoc
@@ -285,11 +267,11 @@ aDb
 nDb
 +1) );
 
-80 if–
+82 if–
 aNew
 ==0 ) ;
 
-82 
+84 
 db
 ->
 aDb
@@ -297,7 +279,7 @@ aDb
 aNew
 ;
 
-83 
+85 
 aNew
  = &
 db
@@ -307,13 +289,13 @@ aDb
 nDb
 ++];
 
-84 
+86 
 	`mem£t
 (
 aNew
 , 0, (*aNew));
 
-85 
+87 
 	`sqlôeHashInô
 (&
 aNew
@@ -323,7 +305,7 @@ tblHash
 SQLITE_HASH_STRING
 , 0);
 
-86 
+88 
 	`sqlôeHashInô
 (&
 aNew
@@ -333,7 +315,7 @@ idxHash
 SQLITE_HASH_STRING
 , 0);
 
-87 
+89 
 	`sqlôeHashInô
 (&
 aNew
@@ -343,7 +325,7 @@ aNew
 SQLITE_HASH_STRING
 , 0);
 
-88 
+90 
 	`sqlôeHashInô
 (&
 aNew
@@ -353,13 +335,13 @@ aFKey
 SQLITE_HASH_STRING
 , 1);
 
-89 
+91 
 aNew
 ->
 zName
  = zName;
 
-90 
+92 
 rc
  = 
 	`sqlôeBåìFa˘‹y
@@ -375,11 +357,11 @@ aNew
 pBt
 );
 
-91 if–
+93 if–
 rc
  ){
 
-92 
+94 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -387,25 +369,25 @@ pP¨£
 zFûe
 );
 
-94 #i‡
+96 #i‡
 SQLITE_HAS_CODEC
 
 
-96 
+98 
 	`sqlôeCodecAâach
 (
 sqlôe
 *, , *, );
 
-97 *
+99 *
 zKey
  = 0;
 
-98 
+100 
 nKey
 ;
 
-99 if–
+101 if–
 pKey
  &&ÖKey->
 z
@@ -413,7 +395,7 @@ z
 n
  ){
 
-100 
+102 
 	`sqlôeSëNSåög
 (&
 zKey
@@ -425,13 +407,13 @@ z
 n
 , 0);
 
-101 
+103 
 	`sqlôeDequŸe
 (
 zKey
 );
 
-102 
+104 
 nKey
  = 
 	`°æí
@@ -439,15 +421,15 @@ nKey
 zKey
 );
 
-104 
+106 
 zKey
  = 0;
 
-105 
+107 
 nKey
  = 0;
 
-107 
+109 
 	`sqlôeCodecAâach
 (
 db
@@ -459,13 +441,13 @@ zKey
 nKey
 );
 
-110 
+112 
 	`sqlôeFªe
 (
 zFûe
 );
 
-111 
+113 
 db
 ->
 Êags
@@ -473,19 +455,19 @@ db
 SQLITE_Inôülized
 ;
 
-112 if–
+114 if–
 pP¨£
 ->
 nEº
  ) ;
 
-113 if–
+115 if–
 rc
 ==
 SQLITE_OK
  ){
 
-114 
+116 
 rc
  = 
 	`sqlôeInô
@@ -497,11 +479,11 @@ db
 zEºMsg
 );
 
-116 if–
+118 if–
 rc
  ){
 
-117 
+119 
 i
  = 
 db
@@ -509,13 +491,13 @@ db
 nDb
  - 1;
 
-118 
+120 
 	`as£π
 –
 i
 >=2 );
 
-119 if–
+121 if–
 db
 ->
 aDb
@@ -525,7 +507,7 @@ i
 pBt
  ){
 
-120 
+122 
 	`sqlôeBåìClo£
 (
 db
@@ -537,7 +519,7 @@ i
 pBt
 );
 
-121 
+123 
 db
 ->
 aDb
@@ -547,19 +529,19 @@ i
 pBt
  = 0;
 
-123 
+125 
 	`sqlôeRe£tI¡î«lSchema
 (
 db
 , 0);
 
-124 
+126 
 pP¨£
 ->
 nEº
 ++;
 
-125 
+127 
 pP¨£
 ->
 rc
@@ -567,11 +549,11 @@ rc
 SQLITE_ERROR
 ;
 
-127 
+129 
 	}
 }
 
-136 
+138 
 	$sqlôeDëach
 (
 P¨£
@@ -583,29 +565,29 @@ Tokí
 pDb«me
 ){
 
-137 
+139 
 i
 ;
 
-138 
+140 
 sqlôe
  *
 db
 ;
 
-139 
+141 
 Vdbe
  *
 v
 ;
 
-140 
+142 
 Db
  *
 pDb
 ;
 
-142 
+144 
 v
  = 
 	`sqlôeGëVdbe
@@ -613,7 +595,7 @@ v
 pP¨£
 );
 
-143 
+145 
 	`sqlôeVdbeAddOp
 (
 v
@@ -621,19 +603,19 @@ v
 OP_HÆt
 , 0, 0);
 
-144 if–
+146 if–
 pP¨£
 ->
 ex∂aö
  ) ;
 
-145 
+147 
 db
  = 
 pP¨£
 ->db;
 
-146 
+148 
 i
 =0; i<
 db
@@ -641,7 +623,7 @@ db
 nDb
 ; i++){
 
-147 
+149 
 pDb
  = &
 db
@@ -651,7 +633,7 @@ aDb
 i
 ];
 
-148 if–
+150 if–
 pDb
 ->
 pBt
@@ -659,7 +641,7 @@ pBt
 zName
 ==0 ) ;
 
-149 if–
+151 if–
 	`°æí
 (
 pDb
@@ -671,7 +653,7 @@ pDb«me
 n
  ) ;
 
-150 if–
+152 if–
 	`sqlôeSåNICmp
 (
 pDb
@@ -685,7 +667,7 @@ z
 n
 )==0 ) ;
 
-152 if–
+154 if–
 i
 >=
 db
@@ -693,7 +675,7 @@ db
 nDb
  ){
 
-153 
+155 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -701,11 +683,11 @@ pP¨£
 pDb«me
 );
 
-156 if–
+158 if–
 i
 <2 ){
 
-157 
+159 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -713,29 +695,11 @@ pP¨£
 pDb«me
 );
 
-160 #i‚de‡
+162 #i‚de‡
 SQLITE_OMIT_AUTHORIZATION
 
 
-161 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-,
-SQLITE_DETACH
-,
-db
-->
-aDb
-[
-i
-].
-zName
-,0,0)!=
-SQLITE_OK
- ){
-
-165 
+168 
 	`sqlôeBåìClo£
 (
 pDb
@@ -743,13 +707,13 @@ pDb
 pBt
 );
 
-166 
+169 
 pDb
 ->
 pBt
  = 0;
 
-167 
+170 
 	`sqlôeFªe
 (
 pDb
@@ -757,7 +721,7 @@ pDb
 zName
 );
 
-168 
+171 
 	`sqlôeRe£tI¡î«lSchema
 (
 db
@@ -765,7 +729,7 @@ db
 i
 );
 
-169 if–
+172 if–
 pDb
 ->
 pAux
@@ -775,13 +739,13 @@ xFªeAux
 	`xFªeAux
 (pDb->pAux);
 
-170 
+173 
 db
 ->
 nDb
 --;
 
-171 if–
+174 if–
 i
 <
 db
@@ -789,7 +753,7 @@ db
 nDb
  ){
 
-172 
+175 
 db
 ->
 aDb
@@ -799,7 +763,7 @@ i
 nDb
 ];
 
-173 
+176 
 	`mem£t
 (&
 db
@@ -809,7 +773,7 @@ aDb
 nDb
 ], 0, (db->aDb[0]));
 
-174 
+177 
 	`sqlôeRe£tI¡î«lSchema
 (
 db
@@ -817,57 +781,57 @@ db
 i
 );
 
-176 
+179 
 	}
 }
 
-185 
+188 
 	$sqlôeFixInô
 (
 
-186 
+189 
 DbFixî
  *
 pFix
 ,
 
-187 
+190 
 P¨£
  *
 pP¨£
 ,
 
-188 
+191 
 iDb
 ,
 
-189 c⁄° *
+192 c⁄° *
 zTy≥
 ,
 
-190 c⁄° 
+193 c⁄° 
 Tokí
  *
 pName
 
 
-192 
+195 
 sqlôe
  *
 db
 ;
 
-194 if–
+197 if–
 iDb
 <0 || iDb==1 )  0;
 
-195 
+198 
 db
  = 
 pP¨£
 ->db;
 
-196 
+199 
 	`as£π
 –
 db
@@ -877,13 +841,13 @@ nDb
 iDb
  );
 
-197 
+200 
 pFix
 ->
 pP¨£
  =ÖParse;
 
-198 
+201 
 pFix
 ->
 zDb
@@ -897,57 +861,57 @@ iDb
 zName
 ;
 
-199 
+202 
 pFix
 ->
 zTy≥
  = zType;
 
-200 
+203 
 pFix
 ->
 pName
  =ÖName;
 
-202 
+205 
 	}
 }
 
-218 
+221 
 	$sqlôeFixSrcLi°
 (
 
-219 
+222 
 DbFixî
  *
 pFix
 ,
 
-220 
+223 
 SrcLi°
  *
 pLi°
 
 
-222 
+225 
 i
 ;
 
-223 c⁄° *
+226 c⁄° *
 zDb
 ;
 
-225 if–
+228 if–
 pLi°
 ==0 )  0;
 
-226 
+229 
 zDb
  = 
 pFix
 ->zDb;
 
-227 
+230 
 i
 =0; i<
 pLi°
@@ -955,7 +919,7 @@ pLi°
 nSrc
 ; i++){
 
-228 if–
+231 if–
 pLi°
 ->
 a
@@ -965,7 +929,7 @@ i
 zD©aba£
 ==0 ){
 
-229 
+232 
 pLi°
 ->
 a
@@ -979,7 +943,7 @@ zD©aba£
 zDb
 );
 
-230 }if–
+233 }if–
 	`sqlôeSåICmp
 (
 pLi°
@@ -993,7 +957,7 @@ zD©aba£
 zDb
 )!=0 ){
 
-231 
+234 
 	`sqlôeEº‹Msg
 (
 pFix
@@ -1001,7 +965,7 @@ pFix
 pP¨£
 ,
 
-233 
+236 
 pFix
 ->
 zTy≥
@@ -1015,7 +979,7 @@ z
 n
 ),
 
-234 
+237 
 pLi°
 ->
 a
@@ -1025,7 +989,7 @@ i
 zD©aba£
 );
 
-237 if–
+240 if–
 	`sqlôeFixSñe˘
 (
 pFix
@@ -1039,7 +1003,7 @@ i
 pSñe˘
 ) )  1;
 
-238 if–
+241 if–
 	`sqlôeFixEx¥
 (
 pFix
@@ -1053,31 +1017,31 @@ i
 pOn
 ) )  1;
 
-241 
+244 
 	}
 }
 
-242 
+245 
 	$sqlôeFixSñe˘
 (
 
-243 
+246 
 DbFixî
  *
 pFix
 ,
 
-244 
+247 
 Sñe˘
  *
 pSñe˘
 
 
-246  
+249  
 pSñe˘
  ){
 
-247 if–
+250 if–
 	`sqlôeFixEx¥Li°
 (
 pFix
@@ -1087,7 +1051,7 @@ pSñe˘
 pELi°
 ) ){
 
-250 if–
+253 if–
 	`sqlôeFixSrcLi°
 (
 pFix
@@ -1097,7 +1061,7 @@ pSñe˘
 pSrc
 ) ){
 
-253 if–
+256 if–
 	`sqlôeFixEx¥
 (
 pFix
@@ -1107,7 +1071,7 @@ pSñe˘
 pWhîe
 ) ){
 
-256 if–
+259 if–
 	`sqlôeFixEx¥
 (
 pFix
@@ -1117,37 +1081,37 @@ pSñe˘
 pHavög
 ) ){
 
-259 
+262 
 pSñe˘
  =ÖSñe˘->
 pPri‹
 ;
 
-262 
+265 
 	}
 }
 
-263 
+266 
 	$sqlôeFixEx¥
 (
 
-264 
+267 
 DbFixî
  *
 pFix
 ,
 
-265 
+268 
 Ex¥
  *
 pEx¥
 
 
-267  
+270  
 pEx¥
  ){
 
-268 if–
+271 if–
 	`sqlôeFixSñe˘
 (
 pFix
@@ -1157,7 +1121,7 @@ pEx¥
 pSñe˘
 ) ){
 
-271 if–
+274 if–
 	`sqlôeFixEx¥Li°
 (
 pFix
@@ -1167,7 +1131,7 @@ pEx¥
 pLi°
 ) ){
 
-274 if–
+277 if–
 	`sqlôeFixEx¥
 (
 pFix
@@ -1177,41 +1141,41 @@ pEx¥
 pRight
 ) ){
 
-277 
+280 
 pEx¥
  =ÖEx¥->
 pLe·
 ;
 
-280 
+283 
 	}
 }
 
-281 
+284 
 	$sqlôeFixEx¥Li°
 (
 
-282 
+285 
 DbFixî
  *
 pFix
 ,
 
-283 
+286 
 Ex¥Li°
  *
 pLi°
 
 
-285 
+288 
 i
 ;
 
-286 if–
+289 if–
 pLi°
 ==0 )  0;
 
-287 
+290 
 i
 =0; i<
 pLi°
@@ -1219,7 +1183,7 @@ pLi°
 nEx¥
 ; i++){
 
-288 if–
+291 if–
 	`sqlôeFixEx¥
 (
 pFix
@@ -1233,31 +1197,31 @@ i
 pEx¥
 ) ){
 
-293 
+296 
 	}
 }
 
-294 
+297 
 	$sqlôeFixTriggîSãp
 (
 
-295 
+298 
 DbFixî
  *
 pFix
 ,
 
-296 
+299 
 TriggîSãp
  *
 pSãp
 
 
-298  
+301  
 pSãp
  ){
 
-299 if–
+302 if–
 	`sqlôeFixSñe˘
 (
 pFix
@@ -1267,7 +1231,7 @@ pSãp
 pSñe˘
 ) ){
 
-302 if–
+305 if–
 	`sqlôeFixEx¥
 (
 pFix
@@ -1277,7 +1241,7 @@ pSãp
 pWhîe
 ) ){
 
-305 if–
+308 if–
 	`sqlôeFixEx¥Li°
 (
 pFix
@@ -1287,647 +1251,13 @@ pSãp
 pEx¥Li°
 ) ){
 
-308 
+311 
 pSãp
  =ÖSãp->
 pNext
 ;
 
-311 
-	}
-}
-
-	@src/auth.c
-
-19 
-	~"sqlôeI¡.h
-"
-
-25 #i‚de‡
-SQLITE_OMIT_AUTHORIZATION
-
-
-73 
-sqlôe_£t_auth‹izî
-(
-
-74 
-sqlôe
- *
-db
-,
-
-75 (*
-xAuth
-)(*,,const *,const *,const *,const *),
-
-76 *
-pArg
-
-
-78 
-db
-->
-xAuth
- = xAuth;
-
-79 
-db
-->
-pAuthArg
- = 
-pArg
-;
-
-80  
-SQLITE_OK
-;
-
-81 
-	}
-}
-
-87 
-	$sqlôeAuthBadRëu∫Code
-(
-P¨£
- *
-pP¨£
-, 
-rc
-){
-
-88 
-	`sqlôeEº‹Msg
-(
-pP¨£
-, "illegalÑeturn value (%d) fromÅhe "
-
-90 "‹ SQLITE_DENY", 
-rc
-);
-
-91 
-pP¨£
-->
-rc
- = 
-SQLITE_MISUSE
-;
-
-92 
-	}
-}
-
-103 
-	$sqlôeAuthRód
-(
-
-104 
-P¨£
- *
-pP¨£
-,
-
-105 
-Ex¥
- *
-pEx¥
-,
-
-106 
-SrcLi°
- *
-pTabLi°
-
-
-108 
-sqlôe
- *
-db
- = 
-pP¨£
-->db;
-
-109 
-rc
-;
-
-110 
-TabÀ
- *
-pTab
-;
-
-111 c⁄° *
-zCﬁ
-;
-
-112 
-iSrc
-;
-
-113 c⁄° *
-zDBa£
-;
-
-114 
-TriggîSèck
- *
-pSèck
-;
-
-116 if–
-db
-->
-xAuth
-==0 ) ;
-
-117 
-	`as£π
-–
-pEx¥
-->
-›
-==
-TK_COLUMN
- );
-
-118 
-iSrc
-=0; iSrc<
-pTabLi°
-->
-nSrc
-; iSrc++){
-
-119 if–
-pEx¥
-->
-iTabÀ
-==
-pTabLi°
-->
-a
-[
-iSrc
-].
-iCurs‹
- ) ;
-
-121 if–
-iSrc
->=0 && iSrc<
-pTabLi°
-->
-nSrc
- ){
-
-122 
-pTab
- = 
-pTabLi°
-->
-a
-[
-iSrc
-].pTab;
-
-123 }if–(
-pSèck
- = 
-pP¨£
-->
-åigSèck
-)!=0 ){
-
-127 
-	`as£π
-–
-pEx¥
-->
-iTabÀ
-==
-pSèck
-->
-√wIdx
- ||ÖEx¥->iTabÀ=ıSèck->
-ﬁdIdx
- );
-
-128 
-pTab
- = 
-pSèck
-->pTab;
-
-132 if–
-pTab
-==0 ) ;
-
-133 if–
-pEx¥
-->
-iCﬁumn
->=0 ){
-
-134 
-	`as£π
-–
-pEx¥
-->
-iCﬁumn
-<
-pTab
-->
-nCﬁ
- );
-
-135 
-zCﬁ
- = 
-pTab
-->
-aCﬁ
-[
-pEx¥
-->
-iCﬁumn
-].
-zName
-;
-
-136 }if–
-pTab
-->
-iPKey
->=0 ){
-
-137 
-	`as£π
-–
-pTab
-->
-iPKey
-<pTab->
-nCﬁ
- );
-
-138 
-zCﬁ
- = 
-pTab
-->
-aCﬁ
-[pTab->
-iPKey
-].
-zName
-;
-
-140 
-zCﬁ
- = "ROWID";
-
-142 
-	`as£π
-–
-pEx¥
-->
-iDb
-<
-db
-->
-nDb
- );
-
-143 
-zDBa£
- = 
-db
-->
-aDb
-[
-pEx¥
-->
-iDb
-].
-zName
-;
-
-144 
-rc
- = 
-db
-->
-	`xAuth
-(db->
-pAuthArg
-, 
-SQLITE_READ
-, 
-pTab
-->
-zName
-, 
-zCﬁ
-, 
-zDBa£
-,
-
-145 
-pP¨£
-->
-zAuthC⁄ãxt
-);
-
-146 if–
-rc
-==
-SQLITE_IGNORE
- ){
-
-147 
-pEx¥
-->
-›
- = 
-TK_NULL
-;
-
-148 }if–
-rc
-==
-SQLITE_DENY
- ){
-
-149 if–
-db
-->
-nDb
->2 || 
-pEx¥
-->
-iDb
-!=0 ){
-
-150 
-	`sqlôeEº‹Msg
-(
-pP¨£
-, "accessÅo %s.%s.%s isÖrohibited",
-
-151 
-zDBa£
-, 
-pTab
-->
-zName
-, 
-zCﬁ
-);
-
-153 
-	`sqlôeEº‹Msg
-(
-pP¨£
-, "ac˚s†tÿ%s.%†i†¥ohibôed", 
-pTab
-->
-zName
-,
-zCﬁ
-);
-
-155 
-pP¨£
-->
-rc
- = 
-SQLITE_AUTH
-;
-
-156 }if–
-rc
-!=
-SQLITE_OK
- ){
-
-157 
-	`sqlôeAuthBadRëu∫Code
-(
-pP¨£
-, 
-rc
-);
-
-159 
-	}
-}
-
-167 
-	$sqlôeAuthCheck
-(
-
-168 
-P¨£
- *
-pP¨£
-,
-
-169 
-code
-,
-
-170 c⁄° *
-zArg1
-,
-
-171 c⁄° *
-zArg2
-,
-
-172 c⁄° *
-zArg3
-
-
-174 
-sqlôe
- *
-db
- = 
-pP¨£
-->db;
-
-175 
-rc
-;
-
-177 if–
-db
-->
-öô
-.
-busy
- || db->
-xAuth
-==0 ){
-
-178  
-SQLITE_OK
-;
-
-180 
-rc
- = 
-db
-->
-	`xAuth
-(db->
-pAuthArg
-, 
-code
-, 
-zArg1
-, 
-zArg2
-, 
-zArg3
-, 
-pP¨£
-->
-zAuthC⁄ãxt
-);
-
-181 if–
-rc
-==
-SQLITE_DENY
- ){
-
-182 
-	`sqlôeEº‹Msg
-(
-pP¨£
-, "notáuthorized");
-
-183 
-pP¨£
-->
-rc
- = 
-SQLITE_AUTH
-;
-
-184 }if–
-rc
-!=
-SQLITE_OK
- &&Ñc!=
-SQLITE_IGNORE
- ){
-
-185 
-rc
- = 
-SQLITE_DENY
-;
-
-186 
-	`sqlôeAuthBadRëu∫Code
-(
-pP¨£
-, 
-rc
-);
-
-188  
-rc
-;
-
-189 
-	}
-}
-
-196 
-	$sqlôeAuthC⁄ãxtPush
-(
-
-197 
-P¨£
- *
-pP¨£
-,
-
-198 
-AuthC⁄ãxt
- *
-pC⁄ãxt
-,
-
-199 c⁄° *
-zC⁄ãxt
-
-
-201 
-pC⁄ãxt
-->
-pP¨£
- =ÖParse;
-
-202 if–
-pP¨£
- ){
-
-203 
-pC⁄ãxt
-->
-zAuthC⁄ãxt
- = 
-pP¨£
-->zAuthContext;
-
-204 
-pP¨£
-->
-zAuthC⁄ãxt
- = 
-zC⁄ãxt
-;
-
-206 
-	}
-}
-
-212 
-	$sqlôeAuthC⁄ãxtP›
-(
-AuthC⁄ãxt
- *
-pC⁄ãxt
-){
-
-213 if–
-pC⁄ãxt
-->
-pP¨£
- ){
-
-214 
-pC⁄ãxt
-->
-pP¨£
-->
-zAuthC⁄ãxt
- =ÖContext->zAuthContext;
-
-215 
-pC⁄ãxt
-->
-pP¨£
- = 0;
-
-217 
+314 
 	}
 }
 
@@ -25355,81 +24685,43 @@ zDb
 isTemp
  ? "temp" : "main";
 
-446 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_INSERT
-, 
-	`SCHEMA_TABLE
-(
-isTemp
-), 0, 
-zDb
-) ){
-
-447 
-	`sqlôeFªe
-(
-zName
-);
-
-450 if–
+451 if–
 isVõw
  ){
 
-451 if–
+452 if–
 isTemp
  ){
 
-452 
+453 
 code
  = 
 SQLITE_CREATE_TEMP_VIEW
 ;
 
-454 
+455 
 code
  = 
 SQLITE_CREATE_VIEW
 ;
 
-457 if–
+458 if–
 isTemp
  ){
 
-458 
+459 
 code
  = 
 SQLITE_CREATE_TEMP_TABLE
 ;
 
-460 
+461 
 code
  = 
 SQLITE_CREATE_TABLE
 ;
 
-463 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-code
-, 
-zName
-, 0, 
-zDb
-) ){
-
-464 
-	`sqlôeFªe
-(
-zName
-);
-
-474 if–
+476 if–
 isTemp
  && 
 db
@@ -25443,7 +24735,7 @@ pP¨£
 ex∂aö
  ){
 
-475 
+477 
 rc
  = 
 	`sqlôeBåìFa˘‹y
@@ -25457,25 +24749,25 @@ aDb
 pBt
 );
 
-476 if–
+478 if–
 rc
 !=
 SQLITE_OK
  ){
 
-477 
+479 
 	`sqlôeEº‹Msg
 (
 pP¨£
 , "unableÅo openáÅemporary database "
 
-479 
+481 
 pP¨£
 ->
 nEº
 ++;
 
-482 if–
+484 if–
 db
 ->
 Êags
@@ -25483,7 +24775,7 @@ db
 SQLITE_InTøns
  ){
 
-483 
+485 
 rc
  = 
 	`sqlôeBåìBegöTøns
@@ -25495,19 +24787,19 @@ aDb
 pBt
 );
 
-484 if–
+486 if–
 rc
 !=
 SQLITE_OK
  ){
 
-485 
+487 
 	`sqlôeEº‹Msg
 (
 pP¨£
 , "unableÅo getá writeÜock on "
 
-499 
+501 
 pTabÀ
  = 
 	`sqlôeFödTabÀ
@@ -25517,7 +24809,7 @@ db
 zName
 , 0);
 
-500 
+502 
 iDb
  = 
 isTemp
@@ -25527,7 +24819,7 @@ db
 öô
 .iDb;
 
-501 if–
+503 if–
 pTabÀ
 !=0 && (pTabÀ->
 iDb
@@ -25539,7 +24831,7 @@ db
 busy
 ) ){
 
-502 
+504 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -25547,13 +24839,13 @@ pP¨£
 pName
 );
 
-503 
+505 
 	`sqlôeFªe
 (
 zName
 );
 
-506 if–(
+508 if–(
 pIdx
  = 
 	`sqlôeFödIndex
@@ -25563,7 +24855,7 @@ db
 zName
 , 0))!=0 &&
 
-507 (
+509 (
 pIdx
 ->
 iDb
@@ -25575,7 +24867,7 @@ db
 busy
 ) ){
 
-508 
+510 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -25583,13 +24875,13 @@ pP¨£
 zName
 );
 
-509 
+511 
 	`sqlôeFªe
 (
 zName
 );
 
-512 
+514 
 pTabÀ
  = 
 	`sqlôeMÆloc
@@ -25597,53 +24889,53 @@ pTabÀ
 TabÀ
 ) );
 
-513 if–
+515 if–
 pTabÀ
 ==0 ){
 
-514 
+516 
 	`sqlôeFªe
 (
 zName
 );
 
-517 
+519 
 pTabÀ
 ->
 zName
  = zName;
 
-518 
+520 
 pTabÀ
 ->
 nCﬁ
  = 0;
 
-519 
+521 
 pTabÀ
 ->
 aCﬁ
  = 0;
 
-520 
+522 
 pTabÀ
 ->
 iPKey
  = -1;
 
-521 
+523 
 pTabÀ
 ->
 pIndex
  = 0;
 
-522 
+524 
 pTabÀ
 ->
 iDb
  = iDb;
 
-523 if–
+525 if–
 pP¨£
 ->
 pNewTabÀ
@@ -25653,7 +24945,7 @@ pNewTabÀ
 db
 ,ÖParse->pNewTable);
 
-524 
+526 
 pP¨£
 ->
 pNewTabÀ
@@ -25661,7 +24953,7 @@ pNewTabÀ
 pTabÀ
 ;
 
-534 if–!
+536 if–!
 db
 ->
 öô
@@ -25675,7 +24967,7 @@ v
 pP¨£
 ))!=0 ){
 
-535 
+537 
 	`sqlôeBegöWrôeO≥øti⁄
 (
 pP¨£
@@ -25683,11 +24975,11 @@ pP¨£
 isTemp
 );
 
-536 if–!
+538 if–!
 isTemp
  ){
 
-537 
+539 
 	`sqlôeVdbeAddOp
 (
 v
@@ -25699,7 +24991,7 @@ db
 fûe_f‹m©
 , 0);
 
-538 
+540 
 	`sqlôeVdbeAddOp
 (
 v
@@ -25707,7 +24999,7 @@ v
 OP_SëCookõ
 , 0, 1);
 
-540 
+542 
 	`sqlôeO≥nMa°îTabÀ
 (
 v
@@ -25715,7 +25007,7 @@ v
 isTemp
 );
 
-541 
+543 
 	`sqlôeVdbeAddOp
 (
 v
@@ -25723,7 +25015,7 @@ v
 OP_NewRe˙o
 , 0, 0);
 
-542 
+544 
 	`sqlôeVdbeAddOp
 (
 v
@@ -25731,7 +25023,7 @@ v
 OP_Dup
 , 0, 0);
 
-543 
+545 
 	`sqlôeVdbeAddOp
 (
 v
@@ -25739,7 +25031,7 @@ v
 OP_Såög
 , 0, 0);
 
-544 
+546 
 	`sqlôeVdbeAddOp
 (
 v
@@ -25747,11 +25039,11 @@ v
 OP_PutI¡Key
 , 0, 0);
 
-546 
+548 
 	}
 }
 
-556 
+558 
 	$sqlôeAddCﬁumn
 (
 P¨£
@@ -25763,27 +25055,27 @@ Tokí
 pName
 ){
 
-557 
+559 
 TabÀ
  *
 p
 ;
 
-558 
+560 
 i
 ;
 
-559 *
+561 *
 z
  = 0;
 
-560 
+562 
 Cﬁumn
  *
 pCﬁ
 ;
 
-561 if–(
+563 if–(
 p
  = 
 pP¨£
@@ -25791,7 +25083,7 @@ pP¨£
 pNewTabÀ
 )==0 ) ;
 
-562 
+564 
 	`sqlôeSëNSåög
 (&
 z
@@ -25801,17 +25093,17 @@ pName
 n
 , 0);
 
-563 if–
+565 if–
 z
 ==0 ) ;
 
-564 
+566 
 	`sqlôeDequŸe
 (
 z
 );
 
-565 
+567 
 i
 =0; i<
 p
@@ -25819,7 +25111,7 @@ p
 nCﬁ
 ; i++){
 
-566 if–
+568 if–
 	`sqlôeSåICmp
 (
 z
@@ -25833,7 +25125,7 @@ i
 zName
 )==0 ){
 
-567 
+569 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -25841,25 +25133,25 @@ pP¨£
 z
 );
 
-568 
+570 
 	`sqlôeFªe
 (
 z
 );
 
-572 if–(
+574 if–(
 p
 ->
 nCﬁ
  & 0x7)==0 ){
 
-573 
+575 
 Cﬁumn
  *
 aNew
 ;
 
-574 
+576 
 aNew
  = 
 	`sqlôeRóŒoc
@@ -25871,11 +25163,11 @@ aCﬁ
 nCﬁ
 +8)*(p->aCol[0]));
 
-575 if–
+577 if–
 aNew
 ==0 ) ;
 
-576 
+578 
 p
 ->
 aCﬁ
@@ -25883,7 +25175,7 @@ aCﬁ
 aNew
 ;
 
-578 
+580 
 pCﬁ
  = &
 p
@@ -25893,7 +25185,7 @@ aCﬁ
 nCﬁ
 ];
 
-579 
+581 
 	`mem£t
 (
 pCﬁ
@@ -25903,7 +25195,7 @@ p
 aCﬁ
 [0]));
 
-580 
+582 
 pCﬁ
 ->
 zName
@@ -25911,7 +25203,7 @@ zName
 z
 ;
 
-581 
+583 
 pCﬁ
 ->
 s‹tOrdî
@@ -25919,17 +25211,17 @@ s‹tOrdî
 SQLITE_SO_NUM
 ;
 
-582 
+584 
 p
 ->
 nCﬁ
 ++;
 
-583 
+585 
 	}
 }
 
-591 
+593 
 	$sqlôeAddNŸNuŒ
 (
 P¨£
@@ -25939,17 +25231,17 @@ pP¨£
 ⁄Eº‹
 ){
 
-592 
+594 
 TabÀ
  *
 p
 ;
 
-593 
+595 
 i
 ;
 
-594 if–(
+596 if–(
 p
  = 
 pP¨£
@@ -25957,7 +25249,7 @@ pP¨£
 pNewTabÀ
 )==0 ) ;
 
-595 
+597 
 i
  = 
 p
@@ -25965,7 +25257,7 @@ p
 nCﬁ
 -1;
 
-596 if–
+598 if–
 i
 >=0 ) 
 p
@@ -25977,11 +25269,11 @@ nŸNuŒ
 ⁄Eº‹
 ;
 
-597 
+599 
 	}
 }
 
-608 
+610 
 	$sqlôeAddCﬁumnTy≥
 (
 P¨£
@@ -25995,35 +25287,35 @@ pFú°
 pLa°
 ){
 
-609 
+611 
 TabÀ
  *
 p
 ;
 
-610 
+612 
 i
 , 
 j
 ;
 
-611 
+613 
 n
 ;
 
-612 *
+614 *
 z
 , **
 pz
 ;
 
-613 
+615 
 Cﬁumn
  *
 pCﬁ
 ;
 
-614 if–(
+616 if–(
 p
  = 
 pP¨£
@@ -26031,7 +25323,7 @@ pP¨£
 pNewTabÀ
 )==0 ) ;
 
-615 
+617 
 i
  = 
 p
@@ -26039,11 +25331,11 @@ p
 nCﬁ
 -1;
 
-616 if–
+618 if–
 i
 <0 ) ;
 
-617 
+619 
 pCﬁ
  = &
 p
@@ -26053,7 +25345,7 @@ aCﬁ
 i
 ];
 
-618 
+620 
 pz
  = &
 pCﬁ
@@ -26061,7 +25353,7 @@ pCﬁ
 zTy≥
 ;
 
-619 
+621 
 n
  = 
 pLa°
@@ -26073,7 +25365,7 @@ z
 pFú°
 ->z);
 
-620 
+622 
 	`sqlôeSëNSåög
 (
 pz
@@ -26085,17 +25377,17 @@ z
 n
 , 0);
 
-621 
+623 
 z
  = *
 pz
 ;
 
-622 if–
+624 if–
 z
 ==0 ) ;
 
-623 
+625 
 i
 =
 j
@@ -26103,7 +25395,7 @@ j
 z
 [i]; i++){
 
-624 
+626 
 c
  = 
 z
@@ -26111,13 +25403,13 @@ z
 i
 ];
 
-625 if–
+627 if–
 	`is•a˚
 (
 c
 ) ) ;
 
-626 
+628 
 z
 [
 j
@@ -26125,13 +25417,13 @@ j
 c
 ;
 
-628 
+630 
 z
 [
 j
 ] = 0;
 
-629 if–
+631 if–
 pP¨£
 ->
 db
@@ -26139,7 +25431,7 @@ db
 fûe_f‹m©
 >=4 ){
 
-630 
+632 
 pCﬁ
 ->
 s‹tOrdî
@@ -26151,7 +25443,7 @@ z
 n
 );
 
-632 
+634 
 pCﬁ
 ->
 s‹tOrdî
@@ -26159,11 +25451,11 @@ s‹tOrdî
 SQLITE_SO_NUM
 ;
 
-634 
+636 
 	}
 }
 
-644 
+646 
 	$sqlôeAddDeÁu…VÆue
 (
 P¨£
@@ -26177,21 +25469,21 @@ pVÆ
 möusFœg
 ){
 
-645 
+647 
 TabÀ
  *
 p
 ;
 
-646 
+648 
 i
 ;
 
-647 **
+649 **
 pz
 ;
 
-648 if–(
+650 if–(
 p
  = 
 pP¨£
@@ -26199,7 +25491,7 @@ pP¨£
 pNewTabÀ
 )==0 ) ;
 
-649 
+651 
 i
  = 
 p
@@ -26207,11 +25499,11 @@ p
 nCﬁ
 -1;
 
-650 if–
+652 if–
 i
 <0 ) ;
 
-651 
+653 
 pz
  = &
 p
@@ -26223,11 +25515,11 @@ i
 zDÊt
 ;
 
-652 if–
+654 if–
 möusFœg
  ){
 
-653 
+655 
 	`sqlôeSëNSåög
 (
 pz
@@ -26239,7 +25531,7 @@ z
 n
 , 0);
 
-655 
+657 
 	`sqlôeSëNSåög
 (
 pz
@@ -26251,17 +25543,17 @@ z
 n
 , 0);
 
-657 
+659 
 	`sqlôeDequŸe
 (*
 pz
 );
 
-658 
+660 
 	}
 }
 
-680 
+682 
 	$sqlôeAddPrim¨yKey
 (
 P¨£
@@ -26275,7 +25567,7 @@ pLi°
 ⁄Eº‹
 ){
 
-681 
+683 
 TabÀ
  *
 pTab
@@ -26285,55 +25577,55 @@ pP¨£
 pNewTabÀ
 ;
 
-682 *
+684 *
 zTy≥
  = 0;
 
-683 
+685 
 iCﬁ
  = -1, 
 i
 ;
 
-684 if–
+686 if–
 pTab
 ==0 ) 
 ¥im¨y_key_exô
 ;
 
-685 if–
+687 if–
 pTab
 ->
 hasPrimKey
  ){
 
-686 
+688 
 	`sqlôeEº‹Msg
 (
 pP¨£
 ,
 
-687 "èbÀ \"%s\" ha†m‹êth™ o√Örim¨y key", 
+689 "èbÀ \"%s\" ha†m‹êth™ o√Örim¨y key", 
 pTab
 ->
 zName
 );
 
-688 
+690 
 ¥im¨y_key_exô
 ;
 
-690 
+692 
 pTab
 ->
 hasPrimKey
  = 1;
 
-691 if–
+693 if–
 pLi°
 ==0 ){
 
-692 
+694 
 iCﬁ
  = 
 pTab
@@ -26341,7 +25633,7 @@ pTab
 nCﬁ
  - 1;
 
-693 
+695 
 pTab
 ->
 aCﬁ
@@ -26351,7 +25643,7 @@ iCﬁ
 isPrimKey
  = 1;
 
-695 
+697 
 i
 =0; i<
 pLi°
@@ -26359,7 +25651,7 @@ pLi°
 nId
 ; i++){
 
-696 
+698 
 iCﬁ
 =0; iCﬁ<
 pTab
@@ -26367,7 +25659,7 @@ pTab
 nCﬁ
 ; iCol++){
 
-697 if–
+699 if–
 	`sqlôeSåICmp
 (
 pLi°
@@ -26385,7 +25677,7 @@ aCﬁ
 iCﬁ
 ].zName)==0 ) ;
 
-699 if–
+701 if–
 iCﬁ
 <
 pTab
@@ -26397,7 +25689,7 @@ aCﬁ
 isPrimKey
  = 1;
 
-701 if–
+703 if–
 pLi°
 ->
 nId
@@ -26405,7 +25697,7 @@ nId
 iCﬁ
  = -1;
 
-703 if–
+705 if–
 iCﬁ
 >=0 && iCﬁ<
 pTab
@@ -26413,7 +25705,7 @@ pTab
 nCﬁ
  ){
 
-704 
+706 
 zTy≥
  = 
 pTab
@@ -26423,7 +25715,7 @@ aCﬁ
 iCﬁ
 ].zType;
 
-706 if–
+708 if–
 pP¨£
 ->
 db
@@ -26431,13 +25723,13 @@ db
 fûe_f‹m©
 >=1 &&
 
-707 
+709 
 zTy≥
  && 
 	`sqlôeSåICmp
 (zType, "INTEGER")==0 ){
 
-708 
+710 
 pTab
 ->
 iPKey
@@ -26445,7 +25737,7 @@ iPKey
 iCﬁ
 ;
 
-709 
+711 
 pTab
 ->
 keyC⁄f
@@ -26453,7 +25745,7 @@ keyC⁄f
 ⁄Eº‹
 ;
 
-711 
+713 
 	`sqlôeCª©eIndex
 (
 pP¨£
@@ -26463,25 +25755,25 @@ pLi°
 ⁄Eº‹
 , 0, 0);
 
-712 
+714 
 pLi°
  = 0;
 
-715 
+717 
 ¥im¨y_key_exô
 :
 
-716 
+718 
 	`sqlôeIdLi°Dñëe
 (
 pLi°
 );
 
-718 
+720 
 	}
 }
 
-728 
+730 
 	$sqlôeCﬁœãTy≥
 (c⁄° *
 zTy≥
@@ -26489,23 +25781,23 @@ zTy≥
 nTy≥
 ){
 
-729 
+731 
 i
 ;
 
-730 
+732 
 i
 =0; i<
 nTy≥
 -3; i++){
 
-731 
+733 
 c
  = *(
 zTy≥
 ++) | 0x60;
 
-732 if–(
+734 if–(
 c
 =='b' || c=='c'Ë&& 
 	`sqlôeSåNICmp
@@ -26513,11 +25805,11 @@ c
 zTy≥
 , "lob", 3)==0 ){
 
-733  
+735  
 SQLITE_SO_TEXT
 ;
 
-735 if–
+737 if–
 c
 =='c' && 
 	`sqlôeSåNICmp
@@ -26525,11 +25817,11 @@ c
 zTy≥
 , "har", 3)==0 ){
 
-736  
+738  
 SQLITE_SO_TEXT
 ;
 
-738 if–
+740 if–
 c
 =='t' && 
 	`sqlôeSåNICmp
@@ -26537,19 +25829,19 @@ c
 zTy≥
 , "ext", 3)==0 ){
 
-739  
+741  
 SQLITE_SO_TEXT
 ;
 
-742  
+744  
 SQLITE_SO_NUM
 ;
 
-743 
+745 
 	}
 }
 
-751 
+753 
 	$sqlôeAddCﬁœãTy≥
 (
 P¨£
@@ -26559,17 +25851,17 @@ pP¨£
 cﬁlTy≥
 ){
 
-752 
+754 
 TabÀ
  *
 p
 ;
 
-753 
+755 
 i
 ;
 
-754 if–(
+756 if–(
 p
  = 
 pP¨£
@@ -26577,7 +25869,7 @@ pP¨£
 pNewTabÀ
 )==0 ) ;
 
-755 
+757 
 i
  = 
 p
@@ -26585,7 +25877,7 @@ p
 nCﬁ
 -1;
 
-756 if–
+758 if–
 i
 >=0 ) 
 p
@@ -26597,11 +25889,11 @@ s‹tOrdî
 cﬁlTy≥
 ;
 
-757 
+759 
 	}
 }
 
-776 
+778 
 	$sqlôeCh™geCookõ
 (
 sqlôe
@@ -26613,7 +25905,7 @@ Vdbe
 v
 ){
 
-777 if–
+779 if–
 db
 ->
 √xt_cookõ
@@ -26623,17 +25915,17 @@ aDb
 schema_cookõ
  ){
 
-778 
+780 
 r
 ;
 
-779 
+781 
 	`sqlôeR™dom√ss
 (1, &
 r
 );
 
-780 
+782 
 db
 ->
 √xt_cookõ
@@ -26645,7 +25937,7 @@ schema_cookõ
 r
  + 1;
 
-781 
+783 
 db
 ->
 Êags
@@ -26653,7 +25945,7 @@ db
 SQLITE_I¡înCh™ges
 ;
 
-782 
+784 
 	`sqlôeVdbeAddOp
 (
 v
@@ -26665,7 +25957,7 @@ db
 √xt_cookõ
 , 0);
 
-783 
+785 
 	`sqlôeVdbeAddOp
 (
 v
@@ -26673,31 +25965,31 @@ v
 OP_SëCookõ
 , 0, 0);
 
-785 
+787 
 	}
 }
 
-792 
+794 
 	$idítLígth
 (c⁄° *
 z
 ){
 
-793 
+795 
 n
 ;
 
-794 
+796 
 √edQuŸe
  = 0;
 
-795 
+797 
 n
 =0; *
 z
 ;Ç++, z++){
 
-796 if–*
+798 if–*
 z
 =='\'' ){ 
 n
@@ -26705,17 +25997,17 @@ n
 √edQuŸe
 =1; }
 
-798  
+800  
 n
  + 
 √edQuŸe
 *2;
 
-799 
+801 
 	}
 }
 
-805 
+807 
 	$idítPut
 (*
 z
@@ -26725,7 +26017,7 @@ pIdx
 zIdít
 ){
 
-806 
+808 
 i
 , 
 j
@@ -26733,19 +26025,19 @@ j
 √edQuŸe
 ;
 
-807 
+809 
 i
  = *
 pIdx
 ;
 
-808 
+810 
 j
 =0; 
 zIdít
 [j]; j++){
 
-809 if–!
+811 if–!
 	`iß um
 (
 zIdít
@@ -26753,7 +26045,7 @@ zIdít
 j
 ]) && zIdent[j]!='_' ) ;
 
-811 
+813 
 √edQuŸe
  = 
 zIdít
@@ -26763,7 +26055,7 @@ j
 	`isdigô
 (zIdent[0])
 
-812 || 
+814 || 
 	`sqlôeKeyw‹dCode
 (
 zIdít
@@ -26773,7 +26065,7 @@ j
 TK_ID
 ;
 
-813 if–
+815 if–
 √edQuŸe
  ) 
 z
@@ -26781,13 +26073,13 @@ z
 i
 ++] = '\'';
 
-814 
+816 
 j
 =0; 
 zIdít
 [j]; j++){
 
-815 
+817 
 z
 [
 i
@@ -26797,7 +26089,7 @@ zIdít
 j
 ];
 
-816 if–
+818 if–
 zIdít
 [
 j
@@ -26807,7 +26099,7 @@ z
 i
 ++] = '\'';
 
-818 if–
+820 if–
 √edQuŸe
  ) 
 z
@@ -26815,23 +26107,23 @@ z
 i
 ++] = '\'';
 
-819 
+821 
 z
 [
 i
 ] = 0;
 
-820 *
+822 *
 pIdx
  = 
 i
 ;
 
-821 
+823 
 	}
 }
 
-828 *
+830 *
 	$¸óãTabÀStmt
 (
 TabÀ
@@ -26839,7 +26131,7 @@ TabÀ
 p
 ){
 
-829 
+831 
 i
 , 
 k
@@ -26847,11 +26139,11 @@ k
 n
 ;
 
-830 *
+832 *
 zStmt
 ;
 
-831 *
+833 *
 zSï
 , *
 zSï2
@@ -26859,11 +26151,11 @@ zSï2
 zEnd
 ;
 
-832 
+834 
 n
  = 0;
 
-833 
+835 
 i
 =0; i<
 p
@@ -26871,7 +26163,7 @@ p
 nCﬁ
 ; i++){
 
-834 
+836 
 n
  +
 	`idítLígth
@@ -26885,7 +26177,7 @@ i
 zName
 );
 
-836 
+838 
 n
  +
 	`idítLígth
@@ -26895,35 +26187,35 @@ p
 zName
 );
 
-837 if–
+839 if–
 n
 <40 ){
 
-838 
+840 
 zSï
  = "";
 
-839 
+841 
 zSï2
  = ",";
 
-840 
+842 
 zEnd
  = ")";
 
-842 
+844 
 zSï
  = "\n ";
 
-843 
+845 
 zSï2
  = ",\n ";
 
-844 
+846 
 zEnd
  = "\n)";
 
-846 
+848 
 n
  +35 + 6*
 p
@@ -26931,7 +26223,7 @@ p
 nCﬁ
 ;
 
-847 
+849 
 zStmt
  = 
 	`sqlôeMÆlocRaw
@@ -26939,11 +26231,11 @@ zStmt
 n
  );
 
-848 if–
+850 if–
 zStmt
 ==0 )  0;
 
-849 
+851 
 	`°r˝y
 (
 zStmt
@@ -26953,7 +26245,7 @@ p
 iDb
 ==1 ? "CREATE TEMP TABLE " : "CREATE TABLE ");
 
-850 
+852 
 k
  = 
 	`°æí
@@ -26961,7 +26253,7 @@ k
 zStmt
 );
 
-851 
+853 
 	`idítPut
 (
 zStmt
@@ -26973,13 +26265,13 @@ p
 zName
 );
 
-852 
+854 
 zStmt
 [
 k
 ++] = '(';
 
-853 
+855 
 i
 =0; i<
 p
@@ -26987,7 +26279,7 @@ p
 nCﬁ
 ; i++){
 
-854 
+856 
 	`°r˝y
 (&
 zStmt
@@ -26997,7 +26289,7 @@ k
 zSï
 );
 
-855 
+857 
 k
  +
 	`°æí
@@ -27005,13 +26297,13 @@ k
 zStmt
 [k]);
 
-856 
+858 
 zSï
  = 
 zSï2
 ;
 
-857 
+859 
 	`idítPut
 (
 zStmt
@@ -27027,7 +26319,7 @@ i
 zName
 );
 
-859 
+861 
 	`°r˝y
 (&
 zStmt
@@ -27037,15 +26329,15 @@ k
 zEnd
 );
 
-860  
+862  
 zStmt
 ;
 
-861 
+863 
 	}
 }
 
-883 
+885 
 	$sqlôeEndTabÀ
 (
 P¨£
@@ -27061,13 +26353,13 @@ Sñe˘
 pSñe˘
 ){
 
-884 
+886 
 TabÀ
  *
 p
 ;
 
-885 
+887 
 sqlôe
  *
 db
@@ -27075,7 +26367,7 @@ db
 pP¨£
 ->db;
 
-887 if–(
+889 if–(
 pEnd
 ==0 && 
 pSñe˘
@@ -27087,7 +26379,7 @@ nEº
 sqlôe_mÆloc_Áûed
  ) ;
 
-888 
+890 
 p
  = 
 pP¨£
@@ -27095,15 +26387,15 @@ pP¨£
 pNewTabÀ
 ;
 
-889 if–
+891 if–
 p
 ==0 ) ;
 
-894 if–
+896 if–
 pSñe˘
  ){
 
-895 
+897 
 TabÀ
  *
 pSñTab
@@ -27115,11 +26407,11 @@ pP¨£
 pSñe˘
 );
 
-896 if–
+898 if–
 pSñTab
 ==0 ) ;
 
-897 
+899 
 	`as£π
 –
 p
@@ -27127,7 +26419,7 @@ p
 aCﬁ
 ==0 );
 
-898 
+900 
 p
 ->
 nCﬁ
@@ -27135,7 +26427,7 @@ nCﬁ
 pSñTab
 ->nCol;
 
-899 
+901 
 p
 ->
 aCﬁ
@@ -27143,25 +26435,25 @@ aCﬁ
 pSñTab
 ->aCol;
 
-900 
+902 
 pSñTab
 ->
 nCﬁ
  = 0;
 
-901 
+903 
 pSñTab
 ->
 aCﬁ
  = 0;
 
-902 
+904 
 	`sqlôeDñëeTabÀ
 (0, 
 pSñTab
 );
 
-911 if–
+913 if–
 db
 ->
 öô
@@ -27169,7 +26461,7 @@ db
 busy
  ){
 
-912 
+914 
 p
 ->
 äum
@@ -27181,7 +26473,7 @@ db
 √wTnum
 ;
 
-922 if–!
+924 if–!
 db
 ->
 öô
@@ -27189,17 +26481,17 @@ db
 busy
  ){
 
-923 
+925 
 n
 ;
 
-924 
+926 
 Vdbe
  *
 v
 ;
 
-926 
+928 
 v
  = 
 	`sqlôeGëVdbe
@@ -27207,17 +26499,17 @@ v
 pP¨£
 );
 
-927 if–
+929 if–
 v
 ==0 ) ;
 
-928 if–
+930 if–
 p
 ->
 pSñe˘
 ==0 ){
 
-930 
+932 
 	`sqlôeVdbeOp3
 (
 v
@@ -27233,7 +26525,7 @@ iDb
 P3_POINTER
 );
 
-933 
+935 
 	`sqlôeVdbeAddOp
 (
 v
@@ -27241,13 +26533,13 @@ v
 OP_I¡egî
 , 0, 0);
 
-935 
+937 
 p
 ->
 äum
  = 0;
 
-936 
+938 
 	`sqlôeVdbeAddOp
 (
 v
@@ -27255,7 +26547,7 @@ v
 OP_PuŒ
 , 1, 0);
 
-937 
+939 
 	`sqlôeVdbeOp3
 (
 v
@@ -27269,31 +26561,31 @@ pSñe˘
 P3_STATIC
 );
 
-938 
-	`sqlôeVdbeOp3
-(
-v
-, 
-OP_Såög
-, 0, 0, 
-p
-->
-zName
-, 0);
-
-939 
-	`sqlôeVdbeOp3
-(
-v
-, 
-OP_Såög
-, 0, 0, 
-p
-->
-zName
-, 0);
-
 940 
+	`sqlôeVdbeOp3
+(
+v
+, 
+OP_Såög
+, 0, 0, 
+p
+->
+zName
+, 0);
+
+941 
+	`sqlôeVdbeOp3
+(
+v
+, 
+OP_Såög
+, 0, 0, 
+p
+->
+zName
+, 0);
+
+942 
 	`sqlôeVdbeAddOp
 (
 v
@@ -27301,7 +26593,7 @@ v
 OP_Dup
 , 4, 0);
 
-941 
+943 
 	`sqlôeVdbeAddOp
 (
 v
@@ -27309,11 +26601,11 @@ v
 OP_Såög
 , 0, 0);
 
-942 if–
+944 if–
 pSñe˘
  ){
 
-943 *
+945 *
 z
  = 
 	`¸óãTabÀStmt
@@ -27321,7 +26613,7 @@ z
 p
 );
 
-944 
+946 
 n
  = 
 z
@@ -27329,7 +26621,7 @@ z
 	`°æí
 (z) : 0;
 
-945 
+947 
 	`sqlôeVdbeCh™geP3
 (
 v
@@ -27339,19 +26631,19 @@ z
 n
 );
 
-946 
+948 
 	`sqlôeFªe
 (
 z
 );
 
-948 
+950 
 	`as£π
 –
 pEnd
 !=0 );
 
-949 
+951 
 n
  = 
 	`Addr
@@ -27365,7 +26657,7 @@ pP¨£
 sFú°Tokí
 .z) + 1;
 
-950 
+952 
 	`sqlôeVdbeCh™geP3
 (
 v
@@ -27379,7 +26671,7 @@ z
 n
 );
 
-952 
+954 
 	`sqlôeVdbeAddOp
 (
 v
@@ -27387,7 +26679,7 @@ v
 OP_MakeRec‹d
 , 5, 0);
 
-953 
+955 
 	`sqlôeVdbeAddOp
 (
 v
@@ -27395,13 +26687,13 @@ v
 OP_PutI¡Key
 , 0, 0);
 
-954 if–!
+956 if–!
 p
 ->
 iDb
  ){
 
-955 
+957 
 	`sqlôeCh™geCookõ
 (
 db
@@ -27409,7 +26701,7 @@ db
 v
 );
 
-957 
+959 
 	`sqlôeVdbeAddOp
 (
 v
@@ -27417,11 +26709,11 @@ v
 OP_Clo£
 , 0, 0);
 
-958 if–
+960 if–
 pSñe˘
  ){
 
-959 
+961 
 	`sqlôeVdbeAddOp
 (
 v
@@ -27433,7 +26725,7 @@ p
 iDb
 , 0);
 
-960 
+962 
 	`sqlôeVdbeAddOp
 (
 v
@@ -27441,13 +26733,13 @@ v
 OP_O≥nWrôe
 , 1, 0);
 
-961 
+963 
 pP¨£
 ->
 nTab
  = 2;
 
-962 
+964 
 	`sqlôeSñe˘
 (
 pP¨£
@@ -27457,13 +26749,13 @@ pSñe˘
 SRT_TabÀ
 , 1, 0, 0, 0);
 
-964 
+966 
 	`sqlôeEndWrôeO≥øti⁄
 (
 pP¨£
 );
 
-969 if–
+971 if–
 pP¨£
 ->
 ex∂aö
@@ -27471,19 +26763,19 @@ ex∂aö
 nEº
 ==0 ){
 
-970 
+972 
 TabÀ
  *
 pOld
 ;
 
-971 
+973 
 FKey
  *
 pFKey
 ;
 
-972 
+974 
 pOld
  = 
 	`sqlôeHashIn£π
@@ -27499,7 +26791,7 @@ iDb
 tblHash
 ,
 
-973 
+975 
 p
 ->
 zName
@@ -27507,11 +26799,11 @@ zName
 	`°æí
 (p->zName)+1,Ö);
 
-974 if–
+976 if–
 pOld
  ){
 
-975 
+977 
 	`as£π
 –
 p
@@ -27519,7 +26811,7 @@ p
 pOld
  );
 
-978 
+980 
 pFKey
 =
 p
@@ -27527,7 +26819,7 @@ p
 pNextFrom
 ){
 
-979 
+981 
 nTo
  = 
 	`°æí
@@ -27537,7 +26829,7 @@ pFKey
 zTo
 ) + 1;
 
-980 
+982 
 pFKey
 ->
 pNextTo
@@ -27559,7 +26851,7 @@ zTo
 nTo
 );
 
-981 
+983 
 	`sqlôeHashIn£π
 (&
 db
@@ -27579,19 +26871,19 @@ zTo
 nTo
 ,ÖFKey);
 
-983 
+985 
 pP¨£
 ->
 pNewTabÀ
  = 0;
 
-984 
+986 
 db
 ->
 nTabÀ
 ++;
 
-985 
+987 
 db
 ->
 Êags
@@ -27599,69 +26891,69 @@ db
 SQLITE_I¡înCh™ges
 ;
 
-987 
+989 
 	}
 }
 
-992 
+994 
 	$sqlôeCª©eVõw
 (
 
-993 
+995 
 P¨£
  *
 pP¨£
 ,
 
-994 
+996 
 Tokí
  *
 pBegö
 ,
 
-995 
+997 
 Tokí
  *
 pName
 ,
 
-996 
+998 
 Sñe˘
  *
 pSñe˘
 ,
 
-997 
+999 
 isTemp
 
 
-999 
+1001 
 TabÀ
  *
 p
 ;
 
-1000 
+1002 
 n
 ;
 
-1001 c⁄° *
+1003 c⁄° *
 z
 ;
 
-1002 
+1004 
 Tokí
  
 sEnd
 ;
 
-1003 
+1005 
 DbFixî
  
 sFix
 ;
 
-1005 
+1007 
 	`sqlôeSèπTabÀ
 (
 pP¨£
@@ -27673,7 +26965,7 @@ pName
 isTemp
 , 1);
 
-1006 
+1008 
 p
  = 
 pP¨£
@@ -27681,7 +26973,7 @@ pP¨£
 pNewTabÀ
 ;
 
-1007 if–
+1009 if–
 p
 ==0 || 
 pP¨£
@@ -27689,13 +26981,13 @@ pP¨£
 nEº
  ){
 
-1008 
+1010 
 	`sqlôeSñe˘Dñëe
 (
 pSñe˘
 );
 
-1011 if–
+1013 if–
 	`sqlôeFixInô
 (&
 sFix
@@ -27709,7 +27001,7 @@ iDb
 pName
 )
 
-1012 && 
+1014 && 
 	`sqlôeFixSñe˘
 (&
 sFix
@@ -27717,13 +27009,13 @@ sFix
 pSñe˘
 )
 
-1014 
+1016 
 	`sqlôeSñe˘Dñëe
 (
 pSñe˘
 );
 
-1023 
+1025 
 p
 ->
 pSñe˘
@@ -27731,13 +27023,13 @@ pSñe˘
 	`sqlôeSñe˘Dup
 (pSelect);
 
-1024 
+1026 
 	`sqlôeSñe˘Dñëe
 (
 pSñe˘
 );
 
-1025 if–!
+1027 if–!
 pP¨£
 ->
 db
@@ -27747,7 +27039,7 @@ db
 busy
  ){
 
-1026 
+1028 
 	`sqlôeVõwGëCﬁumnNames
 (
 pP¨£
@@ -27755,7 +27047,7 @@ pP¨£
 p
 );
 
-1032 
+1034 
 sEnd
  = 
 pP¨£
@@ -27763,13 +27055,13 @@ pP¨£
 sLa°Tokí
 ;
 
-1033 if–
+1035 if–
 sEnd
 .
 z
 [0]!=0 && sEnd.z[0]!=';' ){
 
-1034 
+1036 
 sEnd
 .
 z
@@ -27777,13 +27069,13 @@ z
 n
 ;
 
-1036 
+1038 
 sEnd
 .
 n
  = 0;
 
-1037 
+1039 
 n
  = 
 sEnd
@@ -27793,13 +27085,13 @@ z
 pBegö
 ->z;
 
-1038 
+1040 
 z
  = 
 pBegö
 ->z;
 
-1039  
+1041  
 n
 >0 && (
 z
@@ -27807,7 +27099,7 @@ z
 	`is•a˚
 (z[n-1])) ){Ç--; }
 
-1040 
+1042 
 sEnd
 .
 z
@@ -27815,13 +27107,13 @@ z
 n
 -1];
 
-1041 
+1043 
 sEnd
 .
 n
  = 1;
 
-1044 
+1046 
 	`sqlôeEndTabÀ
 (
 pP¨£
@@ -27829,11 +27121,11 @@ pP¨£
 sEnd
 , 0);
 
-1046 
+1048 
 	}
 }
 
-1053 
+1055 
 	$sqlôeVõwGëCﬁumnNames
 (
 P¨£
@@ -27845,47 +27137,47 @@ TabÀ
 pTabÀ
 ){
 
-1054 
+1056 
 Ex¥Li°
  *
 pELi°
 ;
 
-1055 
+1057 
 Sñe˘
  *
 pSñ
 ;
 
-1056 
+1058 
 TabÀ
  *
 pSñTab
 ;
 
-1057 
+1059 
 nEº
  = 0;
 
-1059 
+1061 
 	`as£π
 –
 pTabÀ
  );
 
-1064 if–
+1066 if–
 pTabÀ
 ->
 nCﬁ
 >0 )  0;
 
-1076 if–
+1078 if–
 pTabÀ
 ->
 nCﬁ
 <0 ){
 
-1077 
+1079 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -27895,7 +27187,7 @@ pTabÀ
 zName
 );
 
-1083 
+1085 
 	`as£π
 –
 pTabÀ
@@ -27903,7 +27195,7 @@ pTabÀ
 pSñe˘
  );
 
-1084 
+1086 
 pSñ
  = 
 pTabÀ
@@ -27911,13 +27203,13 @@ pTabÀ
 pSñe˘
 ;
 
-1091 
+1093 
 pELi°
  = 
 pSñ
 ->pEList;
 
-1092 
+1094 
 pSñ
 ->
 pELi°
@@ -27925,25 +27217,25 @@ pELi°
 	`sqlôeEx¥Li°Dup
 (pEList);
 
-1093 if–
+1095 if–
 pSñ
 ->
 pELi°
 ==0 ){
 
-1094 
+1096 
 pSñ
 ->
 pELi°
  =ÖEList;
 
-1097 
+1099 
 pTabÀ
 ->
 nCﬁ
  = -1;
 
-1098 
+1100 
 pSñTab
  = 
 	`sqlôeResu…SëOfSñe˘
@@ -27953,11 +27245,11 @@ pP¨£
 pSñ
 );
 
-1099 if–
+1101 if–
 pSñTab
  ){
 
-1100 
+1102 
 	`as£π
 –
 pTabÀ
@@ -27965,7 +27257,7 @@ pTabÀ
 aCﬁ
 ==0 );
 
-1101 
+1103 
 pTabÀ
 ->
 nCﬁ
@@ -27973,7 +27265,7 @@ nCﬁ
 pSñTab
 ->nCol;
 
-1102 
+1104 
 pTabÀ
 ->
 aCﬁ
@@ -27981,25 +27273,25 @@ aCﬁ
 pSñTab
 ->aCol;
 
-1103 
+1105 
 pSñTab
 ->
 nCﬁ
  = 0;
 
-1104 
+1106 
 pSñTab
 ->
 aCﬁ
  = 0;
 
-1105 
+1107 
 	`sqlôeDñëeTabÀ
 (0, 
 pSñTab
 );
 
-1106 
+1108 
 	`DbSëPr›îty
 (
 pP¨£
@@ -28013,23 +27305,23 @@ iDb
 DB_Uƒe£tVõws
 );
 
-1108 
+1110 
 pTabÀ
 ->
 nCﬁ
  = 0;
 
-1109 
+1111 
 nEº
 ++;
 
-1111 
+1113 
 	`sqlôeSñe˘Unböd
 (
 pSñ
 );
 
-1112 
+1114 
 	`sqlôeEx¥Li°Dñëe
 (
 pSñ
@@ -28037,21 +27329,21 @@ pSñ
 pELi°
 );
 
-1113 
+1115 
 pSñ
 ->
 pELi°
  =ÖEList;
 
-1114  
+1116  
 nEº
 ;
 
-1115 
+1117 
 	}
 }
 
-1125 
+1127 
 	$sqlôeVõwRe£tCﬁumnNames
 (
 TabÀ
@@ -28059,17 +27351,17 @@ TabÀ
 pTabÀ
 ){
 
-1126 
+1128 
 i
 ;
 
-1127 
+1129 
 Cﬁumn
  *
 pCﬁ
 ;
 
-1128 
+1130 
 	`as£π
 –
 pTabÀ
@@ -28077,7 +27369,7 @@ pTabÀ
 pSñe˘
 !=0 );
 
-1129 
+1131 
 i
 =0, 
 pCﬁ
@@ -28089,7 +27381,7 @@ aCﬁ
 nCﬁ
 ; i++,ÖCol++){
 
-1130 
+1132 
 	`sqlôeFªe
 (
 pCﬁ
@@ -28097,7 +27389,7 @@ pCﬁ
 zName
 );
 
-1131 
+1133 
 	`sqlôeFªe
 (
 pCﬁ
@@ -28105,7 +27397,7 @@ pCﬁ
 zDÊt
 );
 
-1132 
+1134 
 	`sqlôeFªe
 (
 pCﬁ
@@ -28113,7 +27405,7 @@ pCﬁ
 zTy≥
 );
 
-1134 
+1136 
 	`sqlôeFªe
 (
 pTabÀ
@@ -28121,23 +27413,23 @@ pTabÀ
 aCﬁ
 );
 
-1135 
+1137 
 pTabÀ
 ->
 aCﬁ
  = 0;
 
-1136 
+1138 
 pTabÀ
 ->
 nCﬁ
  = 0;
 
-1137 
+1139 
 	}
 }
 
-1142 
+1144 
 	$sqlôeVõwRe£tAŒ
 (
 sqlôe
@@ -28147,13 +27439,13 @@ db
 idx
 ){
 
-1143 
+1145 
 HashEÀm
  *
 i
 ;
 
-1144 if–!
+1146 if–!
 	`DbHasPr›îty
 (
 db
@@ -28163,7 +27455,7 @@ idx
 DB_Uƒe£tVõws
 ) ) ;
 
-1145 
+1147 
 i
 =
 	`sqlôeHashFú°
@@ -28179,7 +27471,7 @@ tblHash
 	`sqlôeHashNext
 (i)){
 
-1146 
+1148 
 TabÀ
  *
 pTab
@@ -28189,19 +27481,19 @@ pTab
 i
 );
 
-1147 if–
+1149 if–
 pTab
 ->
 pSñe˘
  ){
 
-1148 
+1150 
 	`sqlôeVõwRe£tCﬁumnNames
 (
 pTab
 );
 
-1151 
+1153 
 	`DbCÀ¨Pr›îty
 (
 db
@@ -28211,11 +27503,11 @@ idx
 DB_Uƒe£tVõws
 );
 
-1152 
+1154 
 	}
 }
 
-1158 
+1160 
 TabÀ
  *
 	$sqlôeTabÀFromTokí
@@ -28229,17 +27521,17 @@ Tokí
 pTok
 ){
 
-1159 *
+1161 *
 zName
 ;
 
-1160 
+1162 
 TabÀ
  *
 pTab
 ;
 
-1161 
+1163 
 zName
  = 
 	`sqlôeTabÀNameFromTokí
@@ -28247,11 +27539,11 @@ zName
 pTok
 );
 
-1162 if–
+1164 if–
 zName
 ==0 )  0;
 
-1163 
+1165 
 pTab
  = 
 	`sqlôeFödTabÀ
@@ -28263,17 +27555,17 @@ db
 zName
 , 0);
 
-1164 
+1166 
 	`sqlôeFªe
 (
 zName
 );
 
-1165 if–
+1167 if–
 pTab
 ==0 ){
 
-1166 
+1168 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -28281,15 +27573,15 @@ pP¨£
 pTok
 );
 
-1168  
+1170  
 pTab
 ;
 
-1169 
+1171 
 	}
 }
 
-1175 
+1177 
 	$sqlôeDr›TabÀ
 (
 P¨£
@@ -28303,23 +27595,23 @@ pName
 isVõw
 ){
 
-1176 
+1178 
 TabÀ
  *
 pTabÀ
 ;
 
-1177 
+1179 
 Vdbe
  *
 v
 ;
 
-1178 
+1180 
 ba£
 ;
 
-1179 
+1181 
 sqlôe
  *
 db
@@ -28327,11 +27619,11 @@ db
 pP¨£
 ->db;
 
-1180 
+1182 
 iDb
 ;
 
-1182 if–
+1184 if–
 pP¨£
 ->
 nEº
@@ -28339,7 +27631,7 @@ nEº
 sqlôe_mÆloc_Áûed
  ) ;
 
-1183 
+1185 
 pTabÀ
  = 
 	`sqlôeTabÀFromTokí
@@ -28349,17 +27641,17 @@ pP¨£
 pName
 );
 
-1184 if–
+1186 if–
 pTabÀ
 ==0 ) ;
 
-1185 
+1187 
 iDb
  = 
 pTabÀ
 ->iDb;
 
-1186 
+1188 
 	`as£π
 –
 iDb
@@ -28369,15 +27661,15 @@ db
 nDb
  );
 
-1187 #i‚de‡
+1189 #i‚de‡
 SQLITE_OMIT_AUTHORIZATION
 
 
-1189 
+1191 
 code
 ;
 
-1190 c⁄° *
+1192 c⁄° *
 zTab
  = 
 	`SCHEMA_TABLE
@@ -28387,7 +27679,7 @@ pTabÀ
 iDb
 );
 
-1191 c⁄° *
+1193 c⁄° *
 zDb
  = 
 db
@@ -28401,89 +27693,49 @@ iDb
 zName
 ;
 
-1192 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_DELETE
-, 
-zTab
-, 0, 
-zDb
-)){
-
-1195 if–
+1198 if–
 isVõw
  ){
 
-1196 if–
+1199 if–
 iDb
 ==1 ){
 
-1197 
+1200 
 code
  = 
 SQLITE_DROP_TEMP_VIEW
 ;
 
-1199 
+1202 
 code
  = 
 SQLITE_DROP_VIEW
 ;
 
-1202 if–
+1205 if–
 iDb
 ==1 ){
 
-1203 
+1206 
 code
  = 
 SQLITE_DROP_TEMP_TABLE
 ;
 
-1205 
+1208 
 code
  = 
 SQLITE_DROP_TABLE
 ;
 
-1208 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-code
-, 
-pTabÀ
-->
-zName
-, 0, 
-zDb
-) ){
-
-1211 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_DELETE
-, 
-pTabÀ
-->
-zName
-, 0, 
-zDb
-) ){
-
-1216 if–
+1222 if–
 pTabÀ
 ->
 ªadO∆y
  ){
 
-1217 
+1223 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -28493,13 +27745,13 @@ pTabÀ
 zName
 );
 
-1218 
+1224 
 pP¨£
 ->
 nEº
 ++;
 
-1221 if–
+1227 if–
 isVõw
  && 
 pTabÀ
@@ -28507,7 +27759,7 @@ pTabÀ
 pSñe˘
 ==0 ){
 
-1222 
+1228 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -28517,7 +27769,7 @@ pTabÀ
 zName
 );
 
-1225 if–!
+1231 if–!
 isVõw
  && 
 pTabÀ
@@ -28525,7 +27777,7 @@ pTabÀ
 pSñe˘
  ){
 
-1226 
+1232 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -28535,7 +27787,7 @@ pTabÀ
 zName
 );
 
-1233 
+1239 
 v
  = 
 	`sqlôeGëVdbe
@@ -28543,67 +27795,67 @@ v
 pP¨£
 );
 
-1234 if–
+1240 if–
 v
  ){
 
-1235 
+1241 
 VdbeOpLi°
  
 dr›TabÀ
 [] = {
 
-1236 { 
+1242 { 
 OP_Rewöd
 , 0, 
 	`ADDR
 (8), 0},
 
-1237 { 
+1243 { 
 OP_Såög
 , 0, 0, 0},
 
-1238 { 
+1244 { 
 OP_MemSt‹e
 , 1, 1, 0},
 
-1239 { 
+1245 { 
 OP_MemLﬂd
 , 1, 0, 0},
 
-1240 { 
+1246 { 
 OP_Cﬁumn
 , 0, 2, 0},
 
-1241 { 
+1247 { 
 OP_Ne
 , 0, 
 	`ADDR
 (7), 0},
 
-1242 { 
+1248 { 
 OP_Dñëe
 , 0, 0, 0},
 
-1243 { 
+1249 { 
 OP_Next
 , 0, 
 	`ADDR
 (3), 0},
 
-1245 
+1251 
 Index
  *
 pIdx
 ;
 
-1246 
+1252 
 Triggî
  *
 pTriggî
 ;
 
-1247 
+1253 
 	`sqlôeBegöWrôeO≥øti⁄
 (
 pP¨£
@@ -28613,17 +27865,17 @@ pTabÀ
 iDb
 );
 
-1250 
+1256 
 pTriggî
  = 
 pTabÀ
 ->pTrigger;
 
-1251  
+1257  
 pTriggî
  ){
 
-1252 
+1258 
 	`as£π
 –
 pTriggî
@@ -28633,7 +27885,7 @@ iDb
 pTabÀ
 ->iDb ||ÖTrigger->iDb==1 );
 
-1253 
+1259 
 	`sqlôeDr›TriggîPå
 (
 pP¨£
@@ -28641,25 +27893,25 @@ pP¨£
 pTriggî
 , 1);
 
-1254 if–
+1260 if–
 pP¨£
 ->
 ex∂aö
  ){
 
-1255 
+1261 
 pTriggî
  =ÖTriggî->
 pNext
 ;
 
-1257 
+1263 
 pTriggî
  = 
 pTabÀ
 ->pTrigger;
 
-1262 
+1268 
 	`sqlôeO≥nMa°îTabÀ
 (
 v
@@ -28668,42 +27920,6 @@ pTabÀ
 ->
 iDb
 );
-
-1263 
-ba£
- = 
-	`sqlôeVdbeAddOpLi°
-(
-v
-, 
-	`AºaySize
-(
-dr›TabÀ
-), dropTable);
-
-1264 
-	`sqlôeVdbeCh™geP3
-(
-v
-, 
-ba£
-+1, 
-pTabÀ
-->
-zName
-, 0);
-
-1267 if–
-pTabÀ
-->
-iDb
-!=1 ){
-
-1268 
-	`sqlôeO≥nMa°îTabÀ
-(
-v
-, 1);
 
 1269 
 ba£
@@ -28733,9 +27949,45 @@ zName
 pTabÀ
 ->
 iDb
-==0 ){
+!=1 ){
 
 1274 
+	`sqlôeO≥nMa°îTabÀ
+(
+v
+, 1);
+
+1275 
+ba£
+ = 
+	`sqlôeVdbeAddOpLi°
+(
+v
+, 
+	`AºaySize
+(
+dr›TabÀ
+), dropTable);
+
+1276 
+	`sqlôeVdbeCh™geP3
+(
+v
+, 
+ba£
++1, 
+pTabÀ
+->
+zName
+, 0);
+
+1279 if–
+pTabÀ
+->
+iDb
+==0 ){
+
+1280 
 	`sqlôeCh™geCookõ
 (
 db
@@ -28743,7 +27995,7 @@ db
 v
 );
 
-1276 
+1282 
 	`sqlôeVdbeAddOp
 (
 v
@@ -28751,11 +28003,11 @@ v
 OP_Clo£
 , 0, 0);
 
-1277 if–!
+1283 if–!
 isVõw
  ){
 
-1278 
+1284 
 	`sqlôeVdbeAddOp
 (
 v
@@ -28769,7 +28021,7 @@ pTabÀ
 iDb
 );
 
-1279 
+1285 
 pIdx
 =
 pTabÀ
@@ -28779,7 +28031,7 @@ pIndex
 pNext
 ){
 
-1280 
+1286 
 	`sqlôeVdbeAddOp
 (
 v
@@ -28793,19 +28045,19 @@ pIdx
 iDb
 );
 
-1283 
+1289 
 	`sqlôeEndWrôeO≥øti⁄
 (
 pP¨£
 );
 
-1291 if–!
+1297 if–!
 pP¨£
 ->
 ex∂aö
  ){
 
-1292 
+1298 
 	`sqlôeU∆ökAndDñëeTabÀ
 (
 db
@@ -28813,7 +28065,7 @@ db
 pTabÀ
 );
 
-1293 
+1299 
 db
 ->
 Êags
@@ -28821,7 +28073,7 @@ db
 SQLITE_I¡înCh™ges
 ;
 
-1295 
+1301 
 	`sqlôeVõwRe£tAŒ
 (
 db
@@ -28829,11 +28081,11 @@ db
 iDb
 );
 
-1296 
+1302 
 	}
 }
 
-1308 
+1314 
 	$sqlôeAddIdxKeyTy≥
 (
 Vdbe
@@ -28845,23 +28097,23 @@ Index
 pIdx
 ){
 
-1309 *
+1315 *
 zTy≥
 ;
 
-1310 
+1316 
 TabÀ
  *
 pTab
 ;
 
-1311 
+1317 
 i
 , 
 n
 ;
 
-1312 
+1318 
 	`as£π
 –
 pIdx
@@ -28869,7 +28121,7 @@ pIdx
 pTabÀ
 !=0 );
 
-1313 
+1319 
 pTab
  = 
 pIdx
@@ -28877,7 +28129,7 @@ pIdx
 pTabÀ
 ;
 
-1314 
+1320 
 n
  = 
 pIdx
@@ -28885,7 +28137,7 @@ pIdx
 nCﬁumn
 ;
 
-1315 
+1321 
 zTy≥
  = 
 	`sqlôeMÆlocRaw
@@ -28893,17 +28145,17 @@ zTy≥
 n
 +1 );
 
-1316 if–
+1322 if–
 zTy≥
 ==0 ) ;
 
-1317 
+1323 
 i
 =0; i<
 n
 ; i++){
 
-1318 
+1324 
 iCﬁ
  = 
 pIdx
@@ -28913,7 +28165,7 @@ aiCﬁumn
 i
 ];
 
-1319 
+1325 
 	`as£π
 –
 iCﬁ
@@ -28923,7 +28175,7 @@ pTab
 nCﬁ
  );
 
-1320 if–(
+1326 if–(
 pTab
 ->
 aCﬁ
@@ -28937,25 +28189,25 @@ SQLITE_SO_TYPEMASK
 SQLITE_SO_TEXT
  ){
 
-1321 
+1327 
 zTy≥
 [
 i
 ] = 't';
 
-1323 
+1329 
 zTy≥
 [
 i
 ] = 'n';
 
-1326 
+1332 
 zTy≥
 [
 n
 ] = 0;
 
-1327 
+1333 
 	`sqlôeVdbeCh™geP3
 (
 v
@@ -28965,49 +28217,49 @@ zTy≥
 n
 );
 
-1328 
+1334 
 	`sqlôeFªe
 (
 zTy≥
 );
 
-1329 
+1335 
 	}
 }
 
-1349 
+1355 
 	$sqlôeCª©eF‹eignKey
 (
 
-1350 
+1356 
 P¨£
  *
 pP¨£
 ,
 
-1351 
+1357 
 IdLi°
  *
 pFromCﬁ
 ,
 
-1352 
+1358 
 Tokí
  *
 pTo
 ,
 
-1353 
+1359 
 IdLi°
  *
 pToCﬁ
 ,
 
-1354 
+1360 
 Êags
 
 
-1356 
+1362 
 TabÀ
  *
 p
@@ -29017,35 +28269,35 @@ pP¨£
 pNewTabÀ
 ;
 
-1357 
+1363 
 nByã
 ;
 
-1358 
+1364 
 i
 ;
 
-1359 
+1365 
 nCﬁ
 ;
 
-1360 *
+1366 *
 z
 ;
 
-1361 
+1367 
 FKey
  *
 pFKey
  = 0;
 
-1363 
+1369 
 	`as£π
 –
 pTo
 !=0 );
 
-1364 if–
+1370 if–
 p
 ==0 || 
 pP¨£
@@ -29055,11 +28307,11 @@ nEº
 fk_íd
 ;
 
-1365 if–
+1371 if–
 pFromCﬁ
 ==0 ){
 
-1366 
+1372 
 iCﬁ
  = 
 p
@@ -29067,25 +28319,25 @@ p
 nCﬁ
 -1;
 
-1367 if–
+1373 if–
 iCﬁ
 <0 ) 
 fk_íd
 ;
 
-1368 if–
+1374 if–
 pToCﬁ
  &&ÖToCﬁ->
 nId
 !=1 ){
 
-1369 
+1375 
 	`sqlôeEº‹Msg
 (
 pP¨£
 , "foreign key on %s"
 
-1371 
+1377 
 p
 ->
 aCﬁ
@@ -29097,15 +28349,15 @@ zName
 pTo
 );
 
-1372 
+1378 
 fk_íd
 ;
 
-1374 
+1380 
 nCﬁ
  = 1;
 
-1375 }if–
+1381 }if–
 pToCﬁ
  &&ÖToCﬁ->
 nId
@@ -29113,17 +28365,17 @@ nId
 pFromCﬁ
 ->nId ){
 
-1376 
+1382 
 	`sqlôeEº‹Msg
 (
 pP¨£
 ,
 
-1379 
+1385 
 fk_íd
 ;
 
-1381 
+1387 
 nCﬁ
  = 
 pFromCﬁ
@@ -29131,7 +28383,7 @@ pFromCﬁ
 nId
 ;
 
-1383 
+1389 
 nByã
  = (*
 pFKey
@@ -29145,11 +28397,11 @@ pTo
 n
  + 1;
 
-1384 if–
+1390 if–
 pToCﬁ
  ){
 
-1385 
+1391 
 i
 =0; i<
 pToCﬁ
@@ -29157,7 +28409,7 @@ pToCﬁ
 nId
 ; i++){
 
-1386 
+1392 
 nByã
  +
 	`°æí
@@ -29171,7 +28423,7 @@ i
 zName
 ) + 1;
 
-1389 
+1395 
 pFKey
  = 
 	`sqlôeMÆloc
@@ -29179,13 +28431,13 @@ pFKey
 nByã
  );
 
-1390 if–
+1396 if–
 pFKey
 ==0 ) 
 fk_íd
 ;
 
-1391 
+1397 
 pFKey
 ->
 pFrom
@@ -29193,7 +28445,7 @@ pFrom
 p
 ;
 
-1392 
+1398 
 pFKey
 ->
 pNextFrom
@@ -29201,13 +28453,13 @@ pNextFrom
 p
 ->pFKey;
 
-1393 
+1399 
 z
  = (*)&
 pFKey
 [1];
 
-1394 
+1400 
 pFKey
 ->
 aCﬁ
@@ -29217,7 +28469,7 @@ sCﬁM≠
 z
 ;
 
-1395 
+1401 
 z
  +(
 sCﬁM≠
@@ -29225,7 +28477,7 @@ sCﬁM≠
 nCﬁ
 ;
 
-1396 
+1402 
 pFKey
 ->
 zTo
@@ -29233,7 +28485,7 @@ zTo
 z
 ;
 
-1397 
+1403 
 	`mem˝y
 (
 z
@@ -29243,7 +28495,7 @@ pTo
 n
 );
 
-1398 
+1404 
 z
 [
 pTo
@@ -29251,7 +28503,7 @@ pTo
 n
 ] = 0;
 
-1399 
+1405 
 z
  +
 pTo
@@ -29259,23 +28511,23 @@ pTo
 n
 +1;
 
-1400 
+1406 
 pFKey
 ->
 pNextTo
  = 0;
 
-1401 
+1407 
 pFKey
 ->
 nCﬁ
  =ÇCol;
 
-1402 if–
+1408 if–
 pFromCﬁ
 ==0 ){
 
-1403 
+1409 
 pFKey
 ->
 aCﬁ
@@ -29287,17 +28539,17 @@ p
 nCﬁ
 -1;
 
-1405 
+1411 
 i
 =0; i<
 nCﬁ
 ; i++){
 
-1406 
+1412 
 j
 ;
 
-1407 
+1413 
 j
 =0; j<
 p
@@ -29305,7 +28557,7 @@ p
 nCﬁ
 ; j++){
 
-1408 if–
+1414 if–
 	`sqlôeSåICmp
 (
 p
@@ -29323,7 +28575,7 @@ a
 i
 ].zName)==0 ){
 
-1409 
+1415 
 pFKey
 ->
 aCﬁ
@@ -29335,7 +28587,7 @@ iFrom
 j
 ;
 
-1413 if–
+1419 if–
 j
 >=
 p
@@ -29343,13 +28595,13 @@ p
 nCﬁ
  ){
 
-1414 
+1420 
 	`sqlôeEº‹Msg
 (
 pP¨£
 ,
 
-1416 
+1422 
 pFromCﬁ
 ->
 a
@@ -29359,21 +28611,21 @@ i
 zName
 );
 
-1417 
+1423 
 fk_íd
 ;
 
-1421 if–
+1427 if–
 pToCﬁ
  ){
 
-1422 
+1428 
 i
 =0; i<
 nCﬁ
 ; i++){
 
-1423 
+1429 
 n
  = 
 	`°æí
@@ -29387,7 +28639,7 @@ i
 zName
 );
 
-1424 
+1430 
 pFKey
 ->
 aCﬁ
@@ -29399,7 +28651,7 @@ zCﬁ
 z
 ;
 
-1425 
+1431 
 	`mem˝y
 (
 z
@@ -29415,25 +28667,25 @@ zName
 n
 );
 
-1426 
+1432 
 z
 [
 n
 ] = 0;
 
-1427 
+1433 
 z
  +
 n
 +1;
 
-1430 
+1436 
 pFKey
 ->
 isDe„ºed
  = 0;
 
-1431 
+1437 
 pFKey
 ->
 dñëeC⁄f
@@ -29441,7 +28693,7 @@ dñëeC⁄f
 Êags
  & 0xff;
 
-1432 
+1438 
 pFKey
 ->
 upd©eC⁄f
@@ -29449,7 +28701,7 @@ upd©eC⁄f
 Êags
  >> 8 ) & 0xff;
 
-1433 
+1439 
 pFKey
 ->
 ö£πC⁄f
@@ -29457,43 +28709,43 @@ pFKey
 Êags
  >> 16 ) & 0xff;
 
-1437 
+1443 
 p
 ->
 pFKey
  =ÖFKey;
 
-1438 
+1444 
 pFKey
  = 0;
 
-1440 
+1446 
 fk_íd
 :
 
-1441 
+1447 
 	`sqlôeFªe
 (
 pFKey
 );
 
-1442 
+1448 
 	`sqlôeIdLi°Dñëe
 (
 pFromCﬁ
 );
 
-1443 
+1449 
 	`sqlôeIdLi°Dñëe
 (
 pToCﬁ
 );
 
-1444 
+1450 
 	}
 }
 
-1453 
+1459 
 	$sqlôeDe„rF‹eignKey
 (
 P¨£
@@ -29503,19 +28755,19 @@ pP¨£
 isDe„ºed
 ){
 
-1454 
+1460 
 TabÀ
  *
 pTab
 ;
 
-1455 
+1461 
 FKey
  *
 pFKey
 ;
 
-1456 if–(
+1462 if–(
 pTab
  = 
 pP¨£
@@ -29525,99 +28777,99 @@ pNewTabÀ
 pFKey
  =ÖTab->pFKey)==0 ) ;
 
-1457 
+1463 
 pFKey
 ->
 isDe„ºed
  = isDeferred;
 
-1458 
+1464 
 	}
 }
 
-1472 
+1478 
 	$sqlôeCª©eIndex
 (
 
-1473 
+1479 
 P¨£
  *
 pP¨£
 ,
 
-1474 
+1480 
 Tokí
  *
 pName
 ,
 
-1475 
+1481 
 SrcLi°
  *
 pTabÀ
 ,
 
-1476 
+1482 
 IdLi°
  *
 pLi°
 ,
 
-1477 
+1483 
 ⁄Eº‹
 ,
 
-1478 
+1484 
 Tokí
  *
 pSèπ
 ,
 
-1479 
+1485 
 Tokí
  *
 pEnd
 
 
-1481 
+1487 
 TabÀ
  *
 pTab
 ;
 
-1482 
+1488 
 Index
  *
 pIndex
 ;
 
-1483 *
+1489 *
 zName
  = 0;
 
-1484 
+1490 
 i
 , 
 j
 ;
 
-1485 
+1491 
 Tokí
  
 nuŒId
 ;
 
-1486 
+1492 
 DbFixî
  
 sFix
 ;
 
-1487 
+1493 
 isTemp
 ;
 
-1488 
+1494 
 sqlôe
  *
 db
@@ -29625,7 +28877,7 @@ db
 pP¨£
 ->db;
 
-1490 if–
+1496 if–
 pP¨£
 ->
 nEº
@@ -29635,7 +28887,7 @@ sqlôe_mÆloc_Áûed
 exô_¸óã_ödex
 ;
 
-1491 if–
+1497 if–
 db
 ->
 öô
@@ -29643,7 +28895,7 @@ db
 busy
 
 
-1492 && 
+1498 && 
 	`sqlôeFixInô
 (&
 sFix
@@ -29659,7 +28911,7 @@ iDb
 pName
 )
 
-1493 && 
+1499 && 
 	`sqlôeFixSrcLi°
 (&
 sFix
@@ -29667,21 +28919,21 @@ sFix
 pTabÀ
 )
 
-1495 
+1501 
 exô_¸óã_ödex
 ;
 
-1501 if–
+1507 if–
 pTabÀ
 !=0 ){
 
-1502 
+1508 
 	`as£π
 –
 pName
 !=0 );
 
-1503 
+1509 
 	`as£π
 –
 pTabÀ
@@ -29689,7 +28941,7 @@ pTabÀ
 nSrc
 ==1 );
 
-1504 
+1510 
 pTab
  = 
 	`sqlôeSrcLi°Lookup
@@ -29699,13 +28951,13 @@ pP¨£
 pTabÀ
 );
 
-1506 
+1512 
 	`as£π
 –
 pName
 ==0 );
 
-1507 
+1513 
 pTab
  = 
 pP¨£
@@ -29713,7 +28965,7 @@ pP¨£
 pNewTabÀ
 ;
 
-1509 if–
+1515 if–
 pTab
 ==0 || 
 pP¨£
@@ -29723,13 +28975,13 @@ nEº
 exô_¸óã_ödex
 ;
 
-1510 if–
+1516 if–
 pTab
 ->
 ªadO∆y
  ){
 
-1511 
+1517 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -29739,11 +28991,11 @@ pTab
 zName
 );
 
-1512 
+1518 
 exô_¸óã_ödex
 ;
 
-1514 if–
+1520 if–
 pTab
 ->
 iDb
@@ -29755,7 +29007,7 @@ db
 busy
 ==0 ){
 
-1515 
+1521 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -29765,27 +29017,27 @@ pTab
 zName
 );
 
-1516 
+1522 
 exô_¸óã_ödex
 ;
 
-1518 if–
+1524 if–
 pTab
 ->
 pSñe˘
  ){
 
-1519 
+1525 
 	`sqlôeEº‹Msg
 (
 pP¨£
 , "views mayÇot be indexed");
 
-1520 
+1526 
 exô_¸óã_ödex
 ;
 
-1522 
+1528 
 isTemp
  = 
 pTab
@@ -29793,7 +29045,7 @@ pTab
 iDb
 ==1;
 
-1537 if–
+1543 if–
 pName
  && !
 db
@@ -29803,19 +29055,19 @@ db
 busy
  ){
 
-1538 
+1544 
 Index
  *
 pISameName
 ;
 
-1539 
+1545 
 TabÀ
  *
 pTSameName
 ;
 
-1540 
+1546 
 zName
  = 
 	`sqlôeTabÀNameFromTokí
@@ -29823,13 +29075,13 @@ zName
 pName
 );
 
-1541 if–
+1547 if–
 zName
 ==0 ) 
 exô_¸óã_ödex
 ;
 
-1542 if–(
+1548 if–(
 pISameName
  = 
 	`sqlôeFödIndex
@@ -29839,7 +29091,7 @@ db
 zName
 , 0))!=0 ){
 
-1543 
+1549 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -29847,11 +29099,11 @@ pP¨£
 zName
 );
 
-1544 
+1550 
 exô_¸óã_ödex
 ;
 
-1546 if–(
+1552 if–(
 pTSameName
  = 
 	`sqlôeFödTabÀ
@@ -29861,7 +29113,7 @@ db
 zName
 , 0))!=0 ){
 
-1547 
+1553 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -29869,29 +29121,29 @@ pP¨£
 zName
 );
 
-1548 
+1554 
 exô_¸óã_ödex
 ;
 
-1550 }if–
+1556 }if–
 pName
 ==0 ){
 
-1551 
+1557 
 zBuf
 [30];
 
-1552 
+1558 
 n
 ;
 
-1553 
+1559 
 Index
  *
 pLo›
 ;
 
-1554 
+1560 
 pLo›
 =
 pTab
@@ -29903,7 +29155,7 @@ n
 pNext
 ,Ç++){}
 
-1555 
+1561 
 	`•rötf
 (
 zBuf
@@ -29911,11 +29163,11 @@ zBuf
 n
 );
 
-1556 
+1562 
 zName
  = 0;
 
-1557 
+1563 
 	`sqlôeSëSåög
 (&
 zName
@@ -29925,13 +29177,13 @@ pTab
 zBuf
 , (*)0);
 
-1558 if–
+1564 if–
 zName
 ==0 ) 
 exô_¸óã_ödex
 ;
 
-1560 
+1566 
 zName
  = 
 	`sqlôeTabÀNameFromTokí
@@ -29939,11 +29191,11 @@ zName
 pName
 );
 
-1565 #i‚de‡
+1571 #i‚de‡
 SQLITE_OMIT_AUTHORIZATION
 
 
-1567 c⁄° *
+1573 c⁄° *
 zDb
  = 
 db
@@ -29957,7 +29209,7 @@ iDb
 zName
 ;
 
-1569 
+1575 
 	`as£π
 –
 pTab
@@ -29971,31 +29223,13 @@ db
 isTemp
  );
 
-1570 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_INSERT
-, 
-	`SCHEMA_TABLE
-(
-isTemp
-), 0, 
-zDb
-) ){
-
-1571 
-exô_¸óã_ödex
-;
-
-1573 
+1581 
 i
  = 
 SQLITE_CREATE_INDEX
 ;
 
-1574 if–
+1582 if–
 isTemp
  ) 
 i
@@ -30003,29 +29237,11 @@ i
 SQLITE_CREATE_TEMP_INDEX
 ;
 
-1575 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-i
-, 
-zName
-, 
-pTab
-->zName, 
-zDb
-) ){
-
-1576 
-exô_¸óã_ödex
-;
-
-1585 if–
+1596 if–
 pLi°
 ==0 ){
 
-1586 
+1597 
 nuŒId
 .
 z
@@ -30039,7 +29255,7 @@ nCﬁ
 zName
 ;
 
-1587 
+1598 
 nuŒId
 .
 n
@@ -30049,7 +29265,7 @@ n
 z
 );
 
-1588 
+1599 
 pLi°
  = 
 	`sqlôeIdLi°Aµíd
@@ -30057,13 +29273,13 @@ pLi°
 nuŒId
 );
 
-1589 if–
+1600 if–
 pLi°
 ==0 ) 
 exô_¸óã_ödex
 ;
 
-1595 
+1606 
 pIndex
  = 
 	`sqlôeMÆloc
@@ -30075,25 +29291,25 @@ Index
 zName
 ) + 1 +
 
-1596 ()*
+1607 ()*
 pLi°
 ->
 nId
  );
 
-1597 if–
+1608 if–
 pIndex
 ==0 ) 
 exô_¸óã_ödex
 ;
 
-1598 
+1609 
 pIndex
 ->
 aiCﬁumn
  = (*)&pIndex[1];
 
-1599 
+1610 
 pIndex
 ->
 zName
@@ -30105,7 +29321,7 @@ pLi°
 nId
 ];
 
-1600 
+1611 
 	`°r˝y
 (
 pIndex
@@ -30113,7 +29329,7 @@ pIndex
 zName
 , zName);
 
-1601 
+1612 
 pIndex
 ->
 pTabÀ
@@ -30121,7 +29337,7 @@ pTabÀ
 pTab
 ;
 
-1602 
+1613 
 pIndex
 ->
 nCﬁumn
@@ -30131,13 +29347,13 @@ pLi°
 nId
 ;
 
-1603 
+1614 
 pIndex
 ->
 ⁄Eº‹
  = onError;
 
-1604 
+1615 
 pIndex
 ->
 autoIndex
@@ -30145,7 +29361,7 @@ autoIndex
 pName
 ==0;
 
-1605 
+1616 
 pIndex
 ->
 iDb
@@ -30157,7 +29373,7 @@ db
 öô
 .iDb;
 
-1611 
+1622 
 i
 =0; i<
 pLi°
@@ -30165,7 +29381,7 @@ pLi°
 nId
 ; i++){
 
-1612 
+1623 
 j
 =0; j<
 pTab
@@ -30173,7 +29389,7 @@ pTab
 nCﬁ
 ; j++){
 
-1613 if–
+1624 if–
 	`sqlôeSåICmp
 (
 pLi°
@@ -30191,7 +29407,7 @@ aCﬁ
 j
 ].zName)==0 ) ;
 
-1615 if–
+1626 if–
 j
 >=
 pTab
@@ -30199,13 +29415,13 @@ pTab
 nCﬁ
  ){
 
-1616 
+1627 
 	`sqlôeEº‹Msg
 (
 pP¨£
 , "table %s hasÇo columnÇamed %s",
 
-1617 
+1628 
 pTab
 ->
 zName
@@ -30217,17 +29433,17 @@ a
 i
 ].zName);
 
-1618 
+1629 
 	`sqlôeFªe
 (
 pIndex
 );
 
-1619 
+1630 
 exô_¸óã_ödex
 ;
 
-1621 
+1632 
 pIndex
 ->
 aiCﬁumn
@@ -30237,19 +29453,19 @@ i
 j
 ;
 
-1627 if–!
+1638 if–!
 pP¨£
 ->
 ex∂aö
  ){
 
-1628 
+1639 
 Index
  *
 p
 ;
 
-1629 
+1640 
 p
  = 
 	`sqlôeHashIn£π
@@ -30265,7 +29481,7 @@ iDb
 idxHash
 ,
 
-1630 
+1641 
 pIndex
 ->
 zName
@@ -30273,11 +29489,11 @@ zName
 	`°æí
 (pIndex->zName)+1,ÖIndex);
 
-1631 if–
+1642 if–
 p
  ){
 
-1632 
+1643 
 	`as£π
 –
 p
@@ -30285,17 +29501,17 @@ p
 pIndex
  );
 
-1633 
+1644 
 	`sqlôeFªe
 (
 pIndex
 );
 
-1634 
+1645 
 exô_¸óã_ödex
 ;
 
-1636 
+1647 
 db
 ->
 Êags
@@ -30303,7 +29519,7 @@ db
 SQLITE_I¡înCh™ges
 ;
 
-1644 if–
+1655 if–
 ⁄Eº‹
 !=
 OE_Rïœ˚
@@ -30313,7 +29529,7 @@ pTab
 pIndex
 ==0
 
-1645 || 
+1656 || 
 pTab
 ->
 pIndex
@@ -30323,7 +29539,7 @@ pIndex
 OE_Rïœ˚
 ){
 
-1646 
+1657 
 pIndex
 ->
 pNext
@@ -30331,13 +29547,13 @@ pNext
 pTab
 ->pIndex;
 
-1647 
+1658 
 pTab
 ->
 pIndex
  =ÖIndex;
 
-1649 
+1660 
 Index
  *
 pOthî
@@ -30347,7 +29563,7 @@ pTab
 pIndex
 ;
 
-1650  
+1661  
 pOthî
 ->
 pNext
@@ -30357,13 +29573,13 @@ pNext
 OE_Rïœ˚
  ){
 
-1651 
+1662 
 pOthî
  =ÖOthî->
 pNext
 ;
 
-1653 
+1664 
 pIndex
 ->
 pNext
@@ -30371,7 +29587,7 @@ pNext
 pOthî
 ->pNext;
 
-1654 
+1665 
 pOthî
 ->
 pNext
@@ -30379,7 +29595,7 @@ pNext
 pIndex
 ;
 
-1661 if–
+1672 if–
 db
 ->
 öô
@@ -30389,7 +29605,7 @@ busy
 pTabÀ
 !=0 ){
 
-1662 
+1673 
 pIndex
 ->
 äum
@@ -30401,7 +29617,7 @@ db
 √wTnum
 ;
 
-1680 if–
+1691 if–
 db
 ->
 öô
@@ -30409,31 +29625,31 @@ db
 busy
 ==0 ){
 
-1681 
+1692 
 n
 ;
 
-1682 
+1693 
 Vdbe
  *
 v
 ;
 
-1683 
+1694 
 lbl1
 , 
 lbl2
 ;
 
-1684 
+1695 
 i
 ;
 
-1685 
+1696 
 addr
 ;
 
-1687 
+1698 
 v
  = 
 	`sqlôeGëVdbe
@@ -30441,17 +29657,17 @@ v
 pP¨£
 );
 
-1688 if–
+1699 if–
 v
 ==0 ) 
 exô_¸óã_ödex
 ;
 
-1689 if–
+1700 if–
 pTabÀ
 !=0 ){
 
-1690 
+1701 
 	`sqlôeBegöWrôeO≥øti⁄
 (
 pP¨£
@@ -30459,7 +29675,7 @@ pP¨£
 isTemp
 );
 
-1691 
+1702 
 	`sqlôeO≥nMa°îTabÀ
 (
 v
@@ -30467,7 +29683,7 @@ v
 isTemp
 );
 
-1693 
+1704 
 	`sqlôeVdbeAddOp
 (
 v
@@ -30475,7 +29691,7 @@ v
 OP_NewRe˙o
 , 0, 0);
 
-1694 
+1705 
 	`sqlôeVdbeOp3
 (
 v
@@ -30485,7 +29701,7 @@ OP_Såög
 P3_STATIC
 );
 
-1695 
+1706 
 	`sqlôeVdbeOp3
 (
 v
@@ -30497,7 +29713,7 @@ pIndex
 zName
 , 0);
 
-1696 
+1707 
 	`sqlôeVdbeOp3
 (
 v
@@ -30509,7 +29725,7 @@ pTab
 zName
 , 0);
 
-1697 
+1708 
 	`sqlôeVdbeOp3
 (
 v
@@ -30525,37 +29741,37 @@ pIndex
 P3_POINTER
 );
 
-1698 
+1709 
 pIndex
 ->
 äum
  = 0;
 
-1699 if–
+1710 if–
 pTabÀ
  ){
 
-1700 
+1711 
 	`sqlôeVdbeCode
 (
 v
 ,
 
-1701 
+1712 
 OP_Dup
 , 0, 0,
 
-1702 
+1713 
 OP_I¡egî
 , 
 isTemp
 , 0,
 
-1703 
+1714 
 OP_O≥nWrôe
 , 1, 0,
 
-1706 
+1717 
 addr
  = 
 	`sqlôeVdbeAddOp
@@ -30565,13 +29781,13 @@ v
 OP_Såög
 , 0, 0);
 
-1707 if–
+1718 if–
 pSèπ
  && 
 pEnd
  ){
 
-1708 
+1719 
 n
  = 
 	`Addr
@@ -30583,7 +29799,7 @@ z
 pSèπ
 ->z) + 1;
 
-1709 
+1720 
 	`sqlôeVdbeCh™geP3
 (
 v
@@ -30597,7 +29813,7 @@ z
 n
 );
 
-1711 
+1722 
 	`sqlôeVdbeAddOp
 (
 v
@@ -30605,7 +29821,7 @@ v
 OP_MakeRec‹d
 , 5, 0);
 
-1712 
+1723 
 	`sqlôeVdbeAddOp
 (
 v
@@ -30613,11 +29829,11 @@ v
 OP_PutI¡Key
 , 0, 0);
 
-1713 if–
+1724 if–
 pTabÀ
  ){
 
-1714 
+1725 
 	`sqlôeVdbeAddOp
 (
 v
@@ -30629,7 +29845,7 @@ pTab
 iDb
 , 0);
 
-1715 
+1726 
 	`sqlôeVdbeOp3
 (
 v
@@ -30643,7 +29859,7 @@ pTab
 zName
 , 0);
 
-1716 
+1727 
 lbl2
  = 
 	`sqlôeVdbeMakeLabñ
@@ -30651,7 +29867,7 @@ lbl2
 v
 );
 
-1717 
+1728 
 	`sqlôeVdbeAddOp
 (
 v
@@ -30661,7 +29877,7 @@ OP_Rewöd
 lbl2
 );
 
-1718 
+1729 
 lbl1
  = 
 	`sqlôeVdbeAddOp
@@ -30671,7 +29887,7 @@ v
 OP_Re˙o
 , 2, 0);
 
-1719 
+1730 
 i
 =0; i<
 pIndex
@@ -30679,7 +29895,7 @@ pIndex
 nCﬁumn
 ; i++){
 
-1720 
+1731 
 iCﬁ
  = 
 pIndex
@@ -30689,7 +29905,7 @@ aiCﬁumn
 i
 ];
 
-1721 if–
+1732 if–
 pTab
 ->
 iPKey
@@ -30697,7 +29913,7 @@ iPKey
 iCﬁ
  ){
 
-1722 
+1733 
 	`sqlôeVdbeAddOp
 (
 v
@@ -30707,7 +29923,7 @@ OP_Dup
 i
 , 0);
 
-1724 
+1735 
 	`sqlôeVdbeAddOp
 (
 v
@@ -30717,7 +29933,7 @@ OP_Cﬁumn
 iCﬁ
 );
 
-1727 
+1738 
 	`sqlôeVdbeAddOp
 (
 v
@@ -30729,7 +29945,7 @@ pIndex
 nCﬁumn
 , 0);
 
-1728 if–
+1739 if–
 db
 ->
 fûe_f‹m©
@@ -30741,7 +29957,7 @@ v
 pIndex
 );
 
-1729 
+1740 
 	`sqlôeVdbeOp3
 (
 v
@@ -30755,11 +29971,11 @@ pIndex
 OE_N⁄e
 ,
 
-1730 "ödexed cﬁumn†¨ênŸ unique", 
+1741 "ödexed cﬁumn†¨ênŸ unique", 
 P3_STATIC
 );
 
-1731 
+1742 
 	`sqlôeVdbeAddOp
 (
 v
@@ -30769,7 +29985,7 @@ OP_Next
 lbl1
 );
 
-1732 
+1743 
 	`sqlôeVdbeResﬁveLabñ
 (
 v
@@ -30777,7 +29993,7 @@ v
 lbl2
 );
 
-1733 
+1744 
 	`sqlôeVdbeAddOp
 (
 v
@@ -30785,7 +30001,7 @@ v
 OP_Clo£
 , 2, 0);
 
-1734 
+1745 
 	`sqlôeVdbeAddOp
 (
 v
@@ -30793,15 +30009,15 @@ v
 OP_Clo£
 , 1, 0);
 
-1736 if–
+1747 if–
 pTabÀ
 !=0 ){
 
-1737 if–!
+1748 if–!
 isTemp
  ){
 
-1738 
+1749 
 	`sqlôeCh™geCookõ
 (
 db
@@ -30809,7 +30025,7 @@ db
 v
 );
 
-1740 
+1751 
 	`sqlôeVdbeAddOp
 (
 v
@@ -30817,39 +30033,39 @@ v
 OP_Clo£
 , 0, 0);
 
-1741 
+1752 
 	`sqlôeEndWrôeO≥øti⁄
 (
 pP¨£
 );
 
-1746 
+1757 
 exô_¸óã_ödex
 :
 
-1747 
+1758 
 	`sqlôeIdLi°Dñëe
 (
 pLi°
 );
 
-1748 
+1759 
 	`sqlôeSrcLi°Dñëe
 (
 pTabÀ
 );
 
-1749 
+1760 
 	`sqlôeFªe
 (
 zName
 );
 
-1751 
+1762 
 	}
 }
 
-1757 
+1768 
 	$sqlôeDr›Index
 (
 P¨£
@@ -30861,19 +30077,19 @@ SrcLi°
 pName
 ){
 
-1758 
+1769 
 Index
  *
 pIndex
 ;
 
-1759 
+1770 
 Vdbe
  *
 v
 ;
 
-1760 
+1771 
 sqlôe
  *
 db
@@ -30881,7 +30097,7 @@ db
 pP¨£
 ->db;
 
-1762 if–
+1773 if–
 pP¨£
 ->
 nEº
@@ -30889,7 +30105,7 @@ nEº
 sqlôe_mÆloc_Áûed
  ) ;
 
-1763 
+1774 
 	`as£π
 –
 pName
@@ -30897,7 +30113,7 @@ pName
 nSrc
 ==1 );
 
-1764 
+1775 
 pIndex
  = 
 	`sqlôeFödIndex
@@ -30913,11 +30129,11 @@ zName
 zD©aba£
 );
 
-1765 if–
+1776 if–
 pIndex
 ==0 ){
 
-1766 
+1777 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -30925,53 +30141,53 @@ pP¨£
 pName
 , 0);
 
-1767 
+1778 
 exô_dr›_ödex
 ;
 
-1769 if–
+1780 if–
 pIndex
 ->
 autoIndex
  ){
 
-1770 
+1781 
 	`sqlôeEº‹Msg
 (
 pP¨£
 , "indexássociated with UNIQUE "
 
-1772 
+1783 
 exô_dr›_ödex
 ;
 
-1774 if–
+1785 if–
 pIndex
 ->
 iDb
 >1 ){
 
-1775 
+1786 
 	`sqlôeEº‹Msg
 (
 pP¨£
 , "cannotálter schema ofáttached "
 
-1777 
+1788 
 exô_dr›_ödex
 ;
 
-1779 #i‚de‡
+1790 #i‚de‡
 SQLITE_OMIT_AUTHORIZATION
 
 
-1781 
+1792 
 code
  = 
 SQLITE_DROP_INDEX
 ;
 
-1782 
+1793 
 TabÀ
  *
 pTab
@@ -30981,7 +30197,7 @@ pIndex
 pTabÀ
 ;
 
-1783 c⁄° *
+1794 c⁄° *
 zDb
  = 
 db
@@ -30995,7 +30211,7 @@ iDb
 zName
 ;
 
-1784 c⁄° *
+1795 c⁄° *
 zTab
  = 
 	`SCHEMA_TABLE
@@ -31005,23 +30221,7 @@ pIndex
 iDb
 );
 
-1785 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_DELETE
-, 
-zTab
-, 0, 
-zDb
-) ){
-
-1786 
-exô_dr›_ödex
-;
-
-1788 if–
+1801 if–
 pIndex
 ->
 iDb
@@ -31031,27 +30231,7 @@ code
 SQLITE_DROP_TEMP_INDEX
 ;
 
-1789 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-code
-, 
-pIndex
-->
-zName
-, 
-pTab
-->zName, 
-zDb
-) ){
-
-1790 
-exô_dr›_ödex
-;
-
-1796 
+1811 
 v
  = 
 	`sqlôeGëVdbe
@@ -31059,65 +30239,65 @@ v
 pP¨£
 );
 
-1797 if–
+1812 if–
 v
  ){
 
-1798 
+1813 
 VdbeOpLi°
  
 dr›Index
 [] = {
 
-1799 { 
+1814 { 
 OP_Rewöd
 , 0, 
 	`ADDR
 (9), 0},
 
-1800 { 
+1815 { 
 OP_Såög
 , 0, 0, 0},
 
-1801 { 
+1816 { 
 OP_MemSt‹e
 , 1, 1, 0},
 
-1802 { 
+1817 { 
 OP_MemLﬂd
 , 1, 0, 0},
 
-1803 { 
+1818 { 
 OP_Cﬁumn
 , 0, 1, 0},
 
-1804 { 
+1819 { 
 OP_Eq
 , 0, 
 	`ADDR
 (8), 0},
 
-1805 { 
+1820 { 
 OP_Next
 , 0, 
 	`ADDR
 (3), 0},
 
-1806 { 
+1821 { 
 OP_GŸo
 , 0, 
 	`ADDR
 (9), 0},
 
-1807 { 
+1822 { 
 OP_Dñëe
 , 0, 0, 0},
 
-1809 
+1824 
 ba£
 ;
 
-1811 
+1826 
 	`sqlôeBegöWrôeO≥øti⁄
 (
 pP¨£
@@ -31127,7 +30307,7 @@ pIndex
 iDb
 );
 
-1812 
+1827 
 	`sqlôeO≥nMa°îTabÀ
 (
 v
@@ -31137,7 +30317,7 @@ pIndex
 iDb
 );
 
-1813 
+1828 
 ba£
  = 
 	`sqlôeVdbeAddOpLi°
@@ -31149,7 +30329,7 @@ v
 dr›Index
 ), dropIndex);
 
-1814 
+1829 
 	`sqlôeVdbeCh™geP3
 (
 v
@@ -31161,13 +30341,13 @@ pIndex
 zName
 , 0);
 
-1815 if–
+1830 if–
 pIndex
 ->
 iDb
 ==0 ){
 
-1816 
+1831 
 	`sqlôeCh™geCookõ
 (
 db
@@ -31175,7 +30355,7 @@ db
 v
 );
 
-1818 
+1833 
 	`sqlôeVdbeAddOp
 (
 v
@@ -31183,7 +30363,7 @@ v
 OP_Clo£
 , 0, 0);
 
-1819 
+1834 
 	`sqlôeVdbeAddOp
 (
 v
@@ -31197,19 +30377,19 @@ pIndex
 iDb
 );
 
-1820 
+1835 
 	`sqlôeEndWrôeO≥øti⁄
 (
 pP¨£
 );
 
-1825 if–!
+1840 if–!
 pP¨£
 ->
 ex∂aö
  ){
 
-1826 
+1841 
 	`sqlôeU∆ökAndDñëeIndex
 (
 db
@@ -31217,7 +30397,7 @@ db
 pIndex
 );
 
-1827 
+1842 
 db
 ->
 Êags
@@ -31225,21 +30405,21 @@ db
 SQLITE_I¡înCh™ges
 ;
 
-1830 
+1845 
 exô_dr›_ödex
 :
 
-1831 
+1846 
 	`sqlôeSrcLi°Dñëe
 (
 pName
 );
 
-1832 
+1847 
 	}
 }
 
-1840 
+1855 
 IdLi°
  *
 	$sqlôeIdLi°Aµíd
@@ -31253,11 +30433,11 @@ Tokí
 pTokí
 ){
 
-1841 if–
+1856 if–
 pLi°
 ==0 ){
 
-1842 
+1857 
 pLi°
  = 
 	`sqlôeMÆloc
@@ -31265,17 +30445,17 @@ pLi°
 IdLi°
 ) );
 
-1843 if–
+1858 if–
 pLi°
 ==0 )  0;
 
-1844 
+1859 
 pLi°
 ->
 nAŒoc
  = 0;
 
-1846 if–
+1861 if–
 pLi°
 ->
 nId
@@ -31283,19 +30463,19 @@ nId
 nAŒoc
  ){
 
-1847 
+1862 
 IdLi°_ôem
  *
 a
 ;
 
-1848 
+1863 
 pLi°
 ->
 nAŒoc
  =ÖList->nAlloc*2 + 5;
 
-1849 
+1864 
 a
  = 
 	`sqlôeRóŒoc
@@ -31305,23 +30485,23 @@ pLi°
 nAŒoc
 *(pList->a[0]) );
 
-1850 if–
+1865 if–
 a
 ==0 ){
 
-1851 
+1866 
 	`sqlôeIdLi°Dñëe
 (
 pLi°
 );
 
-1854 
+1869 
 pLi°
 ->
 a
  =á;
 
-1856 
+1871 
 	`mem£t
 (&
 pLi°
@@ -31331,11 +30511,11 @@ a
 nId
 ], 0, (pList->a[0]));
 
-1857 if–
+1872 if–
 pTokí
  ){
 
-1858 **
+1873 **
 pz
  = &
 pLi°
@@ -31347,7 +30527,7 @@ nId
 zName
 ;
 
-1859 
+1874 
 	`sqlôeSëNSåög
 (
 pz
@@ -31359,37 +30539,37 @@ z
 n
 , 0);
 
-1860 if–*
+1875 if–*
 pz
 ==0 ){
 
-1861 
+1876 
 	`sqlôeIdLi°Dñëe
 (
 pLi°
 );
 
-1864 
+1879 
 	`sqlôeDequŸe
 (*
 pz
 );
 
-1867 
+1882 
 pLi°
 ->
 nId
 ++;
 
-1868  
+1883  
 pLi°
 ;
 
-1869 
+1884 
 	}
 }
 
-1896 
+1911 
 SrcLi°
  *
 	$sqlôeSrcLi°Aµíd
@@ -31405,11 +30585,11 @@ pTabÀ
 pD©aba£
 ){
 
-1897 if–
+1912 if–
 pLi°
 ==0 ){
 
-1898 
+1913 
 pLi°
  = 
 	`sqlôeMÆloc
@@ -31417,17 +30597,17 @@ pLi°
 SrcLi°
 ) );
 
-1899 if–
+1914 if–
 pLi°
 ==0 )  0;
 
-1900 
+1915 
 pLi°
 ->
 nAŒoc
  = 1;
 
-1902 if–
+1917 if–
 pLi°
 ->
 nSrc
@@ -31435,19 +30615,19 @@ nSrc
 nAŒoc
  ){
 
-1903 
+1918 
 SrcLi°
  *
 pNew
 ;
 
-1904 
+1919 
 pLi°
 ->
 nAŒoc
  *= 2;
 
-1905 
+1920 
 pNew
  = 
 	`sqlôeRóŒoc
@@ -31455,7 +30635,7 @@ pNew
 pLi°
 ,
 
-1906 (*
+1921 (*
 pLi°
 Ë+ (pLi°->
 nAŒoc
@@ -31463,23 +30643,23 @@ nAŒoc
 a
 [0]) );
 
-1907 if–
+1922 if–
 pNew
 ==0 ){
 
-1908 
+1923 
 	`sqlôeSrcLi°Dñëe
 (
 pLi°
 );
 
-1911 
+1926 
 pLi°
  = 
 pNew
 ;
 
-1913 
+1928 
 	`mem£t
 (&
 pLi°
@@ -31489,23 +30669,23 @@ a
 nSrc
 ], 0, (pList->a[0]));
 
-1914 if–
+1929 if–
 pD©aba£
  &&ÖD©aba£->
 z
 ==0 ){
 
-1915 
+1930 
 pD©aba£
  = 0;
 
-1917 if–
+1932 if–
 pD©aba£
  && 
 pTabÀ
  ){
 
-1918 
+1933 
 Tokí
  *
 pTemp
@@ -31513,23 +30693,23 @@ pTemp
 pD©aba£
 ;
 
-1919 
+1934 
 pD©aba£
  = 
 pTabÀ
 ;
 
-1920 
+1935 
 pTabÀ
  = 
 pTemp
 ;
 
-1922 if–
+1937 if–
 pTabÀ
  ){
 
-1923 **
+1938 **
 pz
  = &
 pLi°
@@ -31541,7 +30721,7 @@ nSrc
 zName
 ;
 
-1924 
+1939 
 	`sqlôeSëNSåög
 (
 pz
@@ -31553,27 +30733,27 @@ z
 n
 , 0);
 
-1925 if–*
+1940 if–*
 pz
 ==0 ){
 
-1926 
+1941 
 	`sqlôeSrcLi°Dñëe
 (
 pLi°
 );
 
-1929 
+1944 
 	`sqlôeDequŸe
 (*
 pz
 );
 
-1932 if–
+1947 if–
 pD©aba£
  ){
 
-1933 **
+1948 **
 pz
  = &
 pLi°
@@ -31585,7 +30765,7 @@ nSrc
 zD©aba£
 ;
 
-1934 
+1949 
 	`sqlôeSëNSåög
 (
 pz
@@ -31597,23 +30777,23 @@ z
 n
 , 0);
 
-1935 if–*
+1950 if–*
 pz
 ==0 ){
 
-1936 
+1951 
 	`sqlôeSrcLi°Dñëe
 (
 pLi°
 );
 
-1939 
+1954 
 	`sqlôeDequŸe
 (*
 pz
 );
 
-1942 
+1957 
 pLi°
 ->
 a
@@ -31623,21 +30803,21 @@ nSrc
 iCurs‹
  = -1;
 
-1943 
+1958 
 pLi°
 ->
 nSrc
 ++;
 
-1944  
+1959  
 pLi°
 ;
 
-1945 
+1960 
 	}
 }
 
-1950 
+1965 
 	$sqlôeSrcLi°AssignCurs‹s
 (
 P¨£
@@ -31649,11 +30829,11 @@ SrcLi°
 pLi°
 ){
 
-1951 
+1966 
 i
 ;
 
-1952 
+1967 
 i
 =0; i<
 pLi°
@@ -31661,7 +30841,7 @@ pLi°
 nSrc
 ; i++){
 
-1953 if–
+1968 if–
 pLi°
 ->
 a
@@ -31671,7 +30851,7 @@ i
 iCurs‹
 <0 ){
 
-1954 
+1969 
 pLi°
 ->
 a
@@ -31685,11 +30865,11 @@ pP¨£
 nTab
 ++;
 
-1957 
+1972 
 	}
 }
 
-1962 
+1977 
 	$sqlôeSrcLi°AddAlüs
 (
 SrcLi°
@@ -31701,13 +30881,13 @@ Tokí
 pTokí
 ){
 
-1963 if–
+1978 if–
 pLi°
  &&ÖLi°->
 nSrc
 >0 ){
 
-1964 
+1979 
 i
  = 
 pLi°
@@ -31715,7 +30895,7 @@ pLi°
 nSrc
  - 1;
 
-1965 
+1980 
 	`sqlôeSëNSåög
 (&
 pLi°
@@ -31733,7 +30913,7 @@ z
 n
 , 0);
 
-1966 
+1981 
 	`sqlôeDequŸe
 (
 pLi°
@@ -31745,11 +30925,11 @@ i
 zAlüs
 );
 
-1968 
+1983 
 	}
 }
 
-1973 
+1988 
 	$sqlôeIdLi°Dñëe
 (
 IdLi°
@@ -31757,15 +30937,15 @@ IdLi°
 pLi°
 ){
 
-1974 
+1989 
 i
 ;
 
-1975 if–
+1990 if–
 pLi°
 ==0 ) ;
 
-1976 
+1991 
 i
 =0; i<
 pLi°
@@ -31773,7 +30953,7 @@ pLi°
 nId
 ; i++){
 
-1977 
+1992 
 	`sqlôeFªe
 (
 pLi°
@@ -31785,7 +30965,7 @@ i
 zName
 );
 
-1979 
+1994 
 	`sqlôeFªe
 (
 pLi°
@@ -31793,17 +30973,17 @@ pLi°
 a
 );
 
-1980 
+1995 
 	`sqlôeFªe
 (
 pLi°
 );
 
-1981 
+1996 
 	}
 }
 
-1987 
+2002 
 	$sqlôeIdLi°Index
 (
 IdLi°
@@ -31813,15 +30993,15 @@ pLi°
 zName
 ){
 
-1988 
+2003 
 i
 ;
 
-1989 if–
+2004 if–
 pLi°
 ==0 )  -1;
 
-1990 
+2005 
 i
 =0; i<
 pLi°
@@ -31829,7 +31009,7 @@ pLi°
 nId
 ; i++){
 
-1991 if–
+2006 if–
 	`sqlôeSåICmp
 (
 pLi°
@@ -31841,11 +31021,11 @@ i
 zName
 , zName)==0 )  i;
 
-1994 
+2009 
 	}
 }
 
-1999 
+2014 
 	$sqlôeSrcLi°Dñëe
 (
 SrcLi°
@@ -31853,15 +31033,15 @@ SrcLi°
 pLi°
 ){
 
-2000 
+2015 
 i
 ;
 
-2001 if–
+2016 if–
 pLi°
 ==0 ) ;
 
-2002 
+2017 
 i
 =0; i<
 pLi°
@@ -31869,7 +31049,7 @@ pLi°
 nSrc
 ; i++){
 
-2003 
+2018 
 	`sqlôeFªe
 (
 pLi°
@@ -31881,7 +31061,7 @@ i
 zD©aba£
 );
 
-2004 
+2019 
 	`sqlôeFªe
 (
 pLi°
@@ -31893,7 +31073,7 @@ i
 zName
 );
 
-2005 
+2020 
 	`sqlôeFªe
 (
 pLi°
@@ -31905,7 +31085,7 @@ i
 zAlüs
 );
 
-2006 if–
+2021 if–
 pLi°
 ->
 a
@@ -31917,7 +31097,7 @@ pTab
 isTønsõ¡
  ){
 
-2007 
+2022 
 	`sqlôeDñëeTabÀ
 (0, 
 pLi°
@@ -31929,7 +31109,7 @@ i
 pTab
 );
 
-2009 
+2024 
 	`sqlôeSñe˘Dñëe
 (
 pLi°
@@ -31941,7 +31121,7 @@ i
 pSñe˘
 );
 
-2010 
+2025 
 	`sqlôeEx¥Dñëe
 (
 pLi°
@@ -31953,7 +31133,7 @@ i
 pOn
 );
 
-2011 
+2026 
 	`sqlôeIdLi°Dñëe
 (
 pLi°
@@ -31965,17 +31145,17 @@ i
 pUsög
 );
 
-2013 
+2028 
 	`sqlôeFªe
 (
 pLi°
 );
 
-2014 
+2029 
 	}
 }
 
-2019 
+2034 
 	$sqlôeBegöTønß˘i⁄
 (
 P¨£
@@ -31985,13 +31165,13 @@ pP¨£
 ⁄Eº‹
 ){
 
-2020 
+2035 
 sqlôe
  *
 db
 ;
 
-2022 if–
+2037 if–
 pP¨£
 ==0 || (
 db
@@ -32001,7 +31181,7 @@ aDb
 pBt
 ==0 ) ;
 
-2023 if–
+2038 if–
 pP¨£
 ->
 nEº
@@ -32009,15 +31189,7 @@ nEº
 sqlôe_mÆloc_Áûed
  ) ;
 
-2024 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_TRANSACTION
-, "BEGIN", 0, 0) ) ;
-
-2025 if–
+2040 if–
 db
 ->
 Êags
@@ -32025,25 +31197,25 @@ db
 SQLITE_InTøns
  ){
 
-2026 
+2041 
 	`sqlôeEº‹Msg
 (
 pP¨£
 , "cannot startáÅransaction withináÅransaction");
 
-2029 
+2044 
 	`sqlôeBegöWrôeO≥øti⁄
 (
 pP¨£
 , 0, 0);
 
-2030 if–!
+2045 if–!
 pP¨£
 ->
 ex∂aö
  ){
 
-2031 
+2046 
 db
 ->
 Êags
@@ -32051,17 +31223,17 @@ db
 SQLITE_InTøns
 ;
 
-2032 
+2047 
 db
 ->
 ⁄Eº‹
  = onError;
 
-2034 
+2049 
 	}
 }
 
-2039 
+2054 
 	$sqlôeCommôTønß˘i⁄
 (
 P¨£
@@ -32069,13 +31241,13 @@ P¨£
 pP¨£
 ){
 
-2040 
+2055 
 sqlôe
  *
 db
 ;
 
-2042 if–
+2057 if–
 pP¨£
 ==0 || (
 db
@@ -32085,7 +31257,7 @@ aDb
 pBt
 ==0 ) ;
 
-2043 if–
+2058 if–
 pP¨£
 ->
 nEº
@@ -32093,15 +31265,7 @@ nEº
 sqlôe_mÆloc_Áûed
  ) ;
 
-2044 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_TRANSACTION
-, "COMMIT", 0, 0) ) ;
-
-2045 if–(
+2060 if–(
 db
 ->
 Êags
@@ -32109,19 +31273,19 @@ db
 SQLITE_InTøns
 )==0 ){
 
-2046 
+2061 
 	`sqlôeEº‹Msg
 (
 pP¨£
 , "cannot commit -ÇoÅransaction isáctive");
 
-2049 if–!
+2064 if–!
 pP¨£
 ->
 ex∂aö
  ){
 
-2050 
+2065 
 db
 ->
 Êags
@@ -32129,19 +31293,19 @@ db
 SQLITE_InTøns
 ;
 
-2052 
+2067 
 	`sqlôeEndWrôeO≥øti⁄
 (
 pP¨£
 );
 
-2053 if–!
+2068 if–!
 pP¨£
 ->
 ex∂aö
  ){
 
-2054 
+2069 
 db
 ->
 ⁄Eº‹
@@ -32149,11 +31313,11 @@ db
 OE_DeÁu…
 ;
 
-2056 
+2071 
 	}
 }
 
-2061 
+2076 
 	$sqlôeRﬁlbackTønß˘i⁄
 (
 P¨£
@@ -32161,19 +31325,19 @@ P¨£
 pP¨£
 ){
 
-2062 
+2077 
 sqlôe
  *
 db
 ;
 
-2063 
+2078 
 Vdbe
  *
 v
 ;
 
-2065 if–
+2080 if–
 pP¨£
 ==0 || (
 db
@@ -32183,7 +31347,7 @@ aDb
 pBt
 ==0 ) ;
 
-2066 if–
+2081 if–
 pP¨£
 ->
 nEº
@@ -32191,15 +31355,7 @@ nEº
 sqlôe_mÆloc_Áûed
  ) ;
 
-2067 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_TRANSACTION
-, "ROLLBACK", 0, 0) ) ;
-
-2068 if–(
+2083 if–(
 db
 ->
 Êags
@@ -32207,13 +31363,13 @@ db
 SQLITE_InTøns
 )==0 ){
 
-2069 
+2084 
 	`sqlôeEº‹Msg
 (
 pP¨£
 , "cannotÑollback -ÇoÅransaction isáctive");
 
-2072 
+2087 
 v
  = 
 	`sqlôeGëVdbe
@@ -32221,11 +31377,11 @@ v
 pP¨£
 );
 
-2073 if–
+2088 if–
 v
  ){
 
-2074 
+2089 
 	`sqlôeVdbeAddOp
 (
 v
@@ -32233,13 +31389,13 @@ v
 OP_Rﬁlback
 , 0, 0);
 
-2076 if–!
+2091 if–!
 pP¨£
 ->
 ex∂aö
  ){
 
-2077 
+2092 
 db
 ->
 Êags
@@ -32247,7 +31403,7 @@ db
 SQLITE_InTøns
 ;
 
-2078 
+2093 
 db
 ->
 ⁄Eº‹
@@ -32255,11 +31411,11 @@ db
 OE_DeÁu…
 ;
 
-2080 
+2095 
 	}
 }
 
-2086 
+2101 
 	$sqlôeCodeVîifySchema
 (
 P¨£
@@ -32269,7 +31425,7 @@ pP¨£
 iDb
 ){
 
-2087 
+2102 
 sqlôe
  *
 db
@@ -32277,7 +31433,7 @@ db
 pP¨£
 ->db;
 
-2088 
+2103 
 Vdbe
  *
 v
@@ -32287,7 +31443,7 @@ v
 pP¨£
 );
 
-2089 
+2104 
 	`as£π
 –
 iDb
@@ -32297,7 +31453,7 @@ db
 nDb
  );
 
-2090 
+2105 
 	`as£π
 –
 db
@@ -32309,7 +31465,7 @@ iDb
 pBt
 !=0 );
 
-2091 if–
+2106 if–
 iDb
 !=1 && !
 	`DbHasPr›îty
@@ -32319,7 +31475,7 @@ db
 DB_Cookõ
 ) ){
 
-2092 
+2107 
 	`sqlôeVdbeAddOp
 (
 v
@@ -32335,7 +31491,7 @@ aDb
 schema_cookõ
 );
 
-2093 
+2108 
 	`DbSëPr›îty
 (
 db
@@ -32345,11 +31501,11 @@ iDb
 DB_Cookõ
 );
 
-2095 
+2110 
 	}
 }
 
-2115 
+2130 
 	$sqlôeBegöWrôeO≥øti⁄
 (
 P¨£
@@ -32361,13 +31517,13 @@ pP¨£
 iDb
 ){
 
-2116 
+2131 
 Vdbe
  *
 v
 ;
 
-2117 
+2132 
 sqlôe
  *
 db
@@ -32375,7 +31531,7 @@ db
 pP¨£
 ->db;
 
-2118 if–
+2133 if–
 	`DbHasPr›îty
 (
 db
@@ -32385,7 +31541,7 @@ iDb
 DB_Locked
 ) ) ;
 
-2119 
+2134 
 v
  = 
 	`sqlôeGëVdbe
@@ -32393,11 +31549,11 @@ v
 pP¨£
 );
 
-2120 if–
+2135 if–
 v
 ==0 ) ;
 
-2121 if–!
+2136 if–!
 db
 ->
 aDb
@@ -32407,7 +31563,7 @@ iDb
 öTøns
  ){
 
-2122 
+2137 
 	`sqlôeVdbeAddOp
 (
 v
@@ -32417,7 +31573,7 @@ OP_Tønß˘i⁄
 iDb
 , 0);
 
-2123 
+2138 
 	`DbSëPr›îty
 (
 db
@@ -32427,7 +31583,7 @@ iDb
 DB_Locked
 );
 
-2124 
+2139 
 	`sqlôeCodeVîifySchema
 (
 pP¨£
@@ -32435,11 +31591,11 @@ pP¨£
 iDb
 );
 
-2125 if–
+2140 if–
 iDb
 !=1 ){
 
-2126 
+2141 
 	`sqlôeBegöWrôeO≥øti⁄
 (
 pP¨£
@@ -32447,11 +31603,11 @@ pP¨£
 £tCheckpoöt
 , 1);
 
-2128 }if–
+2143 }if–
 £tCheckpoöt
  ){
 
-2129 
+2144 
 	`sqlôeVdbeAddOp
 (
 v
@@ -32461,7 +31617,7 @@ OP_Checkpoöt
 iDb
 , 0);
 
-2130 
+2145 
 	`DbSëPr›îty
 (
 db
@@ -32471,11 +31627,11 @@ iDb
 DB_Locked
 );
 
-2132 
+2147 
 	}
 }
 
-2144 
+2159 
 	$sqlôeEndWrôeO≥øti⁄
 (
 P¨£
@@ -32483,13 +31639,13 @@ P¨£
 pP¨£
 ){
 
-2145 
+2160 
 Vdbe
  *
 v
 ;
 
-2146 
+2161 
 sqlôe
  *
 db
@@ -32497,13 +31653,13 @@ db
 pP¨£
 ->db;
 
-2147 if–
+2162 if–
 pP¨£
 ->
 åigSèck
  ) ;
 
-2148 
+2163 
 v
  = 
 	`sqlôeGëVdbe
@@ -32511,11 +31667,11 @@ v
 pP¨£
 );
 
-2149 if–
+2164 if–
 v
 ==0 ) ;
 
-2150 if–
+2165 if–
 db
 ->
 Êags
@@ -32523,7 +31679,7 @@ db
 SQLITE_InTøns
  ){
 
-2154 
+2169 
 	`sqlôeVdbeAddOp
 (
 v
@@ -32531,515 +31687,7 @@ v
 OP_Commô
 , 0, 0);
 
-2156 
-	}
-}
-
-	@src/copy.c
-
-16 
-	~"sqlôeI¡.h
-"
-
-29 
-	$sqlôeC›y
-(
-
-30 
-P¨£
- *
-pP¨£
-,
-
-31 
-SrcLi°
- *
-pTabÀName
-,
-
-32 
-Tokí
- *
-pFûíame
-,
-
-33 
-Tokí
- *
-pDñimôî
-,
-
-34 
-⁄Eº‹
-
-
-36 
-TabÀ
- *
-pTab
-;
-
-37 
-i
-;
-
-38 
-Vdbe
- *
-v
-;
-
-39 
-addr
-, 
-íd
-;
-
-40 *
-zFûe
- = 0;
-
-41 c⁄° *
-zDb
-;
-
-42 
-sqlôe
- *
-db
- = 
-pP¨£
-->db;
-
-45 if–
-sqlôe_mÆloc_Áûed
- ) 
-c›y_˛ónup
-;
-
-46 
-	`as£π
-–
-pTabÀName
-->
-nSrc
-==1 );
-
-47 
-pTab
- = 
-	`sqlôeSrcLi°Lookup
-(
-pP¨£
-, 
-pTabÀName
-);
-
-48 if–
-pTab
-==0 || 
-	`sqlôeIsRódO∆y
-(
-pP¨£
-,ÖTab, 0ËË
-c›y_˛ónup
-;
-
-49 
-zFûe
- = 
-	`sqlôeSåNDup
-(
-pFûíame
-->
-z
-,ÖFûíame->
-n
-);
-
-50 
-	`sqlôeDequŸe
-(
-zFûe
-);
-
-51 
-	`as£π
-–
-pTab
-->
-iDb
-<
-db
-->
-nDb
- );
-
-52 
-zDb
- = 
-db
-->
-aDb
-[
-pTab
-->
-iDb
-].
-zName
-;
-
-53 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_INSERT
-, 
-pTab
-->
-zName
-, 0, 
-zDb
-)
-
-54 || 
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_COPY
-, 
-pTab
-->
-zName
-, 
-zFûe
-, 
-zDb
-) ){
-
-55 
-c›y_˛ónup
-;
-
-57 
-v
- = 
-	`sqlôeGëVdbe
-(
-pP¨£
-);
-
-58 if–
-v
- ){
-
-59 
-	`sqlôeBegöWrôeO≥øti⁄
-(
-pP¨£
-, 1, 
-pTab
-->
-iDb
-);
-
-60 
-addr
- = 
-	`sqlôeVdbeOp3
-(
-v
-, 
-OP_FûeO≥n
-, 0, 0, 
-pFûíame
-->
-z
-,ÖFûíame->
-n
-);
-
-61 
-	`sqlôeVdbeDequŸeP3
-(
-v
-, 
-addr
-);
-
-62 
-	`sqlôeO≥nTabÀAndIndi˚s
-(
-pP¨£
-, 
-pTab
-, 0);
-
-63 if–
-db
-->
-Êags
- & 
-SQLITE_Cou¡Rows
- ){
-
-64 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_I¡egî
-, 0, 0);
-
-66 
-íd
- = 
-	`sqlôeVdbeMakeLabñ
-(
-v
-);
-
-67 
-addr
- = 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_FûeRód
-, 
-pTab
-->
-nCﬁ
-, 
-íd
-);
-
-68 if–
-pDñimôî
- ){
-
-69 
-	`sqlôeVdbeCh™geP3
-(
-v
-, 
-addr
-, 
-pDñimôî
-->
-z
-,ÖDñimôî->
-n
-);
-
-70 
-	`sqlôeVdbeDequŸeP3
-(
-v
-, 
-addr
-);
-
-72 
-	`sqlôeVdbeCh™geP3
-(
-v
-, 
-addr
-, "\t", 1);
-
-74 if–
-pTab
-->
-iPKey
->=0 ){
-
-75 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_FûeCﬁumn
-, 
-pTab
-->
-iPKey
-, 0);
-
-76 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_Mu°BeI¡
-, 0, 0);
-
-78 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_NewRe˙o
-, 0, 0);
-
-80 
-i
-=0; i<
-pTab
-->
-nCﬁ
-; i++){
-
-81 if–
-i
-==
-pTab
-->
-iPKey
- ){
-
-84 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_Såög
-, 0, 0);
-
-86 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_FûeCﬁumn
-, 
-i
-, 0);
-
-89 
-	`sqlôeGíî©eC⁄°øötChecks
-(
-pP¨£
-, 
-pTab
-, 0, 0,ÖTab->
-iPKey
->=0,
-
-90 0, 
-⁄Eº‹
-, 
-addr
-);
-
-91 
-	`sqlôeCom∂ëeIn£πi⁄
-(
-pP¨£
-, 
-pTab
-, 0, 0, 0, 0, -1);
-
-92 if–(
-db
-->
-Êags
- & 
-SQLITE_Cou¡Rows
-)!=0 ){
-
-93 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_AddImm
-, 1, 0);
-
-95 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_GŸo
-, 0, 
-addr
-);
-
-96 
-	`sqlôeVdbeResﬁveLabñ
-(
-v
-, 
-íd
-);
-
-97 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_No›
-, 0, 0);
-
-98 
-	`sqlôeEndWrôeO≥øti⁄
-(
-pP¨£
-);
-
-99 if–
-db
-->
-Êags
- & 
-SQLITE_Cou¡Rows
- ){
-
-100 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_CﬁumnName
-, 0, 1);
-
-101 
-	`sqlôeVdbeCh™geP3
-(
-v
-, -1, "row†ö£πed", 
-P3_STATIC
-);
-
-102 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_CÆlback
-, 1, 0);
-
-106 
-c›y_˛ónup
-:
-
-107 
-	`sqlôeSrcLi°Dñëe
-(
-pTabÀName
-);
-
-108 
-	`sqlôeFªe
-(
-zFûe
-);
-
-110 
+2171 
 	}
 }
 
@@ -36451,25 +35099,7 @@ iDb
 zName
 ;
 
-104 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_DELETE
-, 
-pTab
-->
-zName
-, 0, 
-zDb
-) ){
-
-105 
-dñëe_‰om_˛ónup
-;
-
-110 if–
+112 if–
 isVõw
  && 
 	`sqlôeVõwGëCﬁumnNames
@@ -36479,15 +35109,15 @@ pP¨£
 pTab
 ) ){
 
-111 
+113 
 dñëe_‰om_˛ónup
 ;
 
-116 if–
+118 if–
 row_åiggîs_exi°
  ){
 
-117 
+119 
 ﬁdIdx
  = 
 pP¨£
@@ -36495,7 +35125,7 @@ pP¨£
 nTab
 ++;
 
-122 
+124 
 	`as£π
 –
 pTabLi°
@@ -36503,7 +35133,7 @@ pTabLi°
 nSrc
 ==1 );
 
-123 
+125 
 iCur
  = 
 pTabLi°
@@ -36517,11 +35147,11 @@ pP¨£
 nTab
 ++;
 
-124 if–
+126 if–
 pWhîe
  ){
 
-125 if–
+127 if–
 	`sqlôeEx¥ResﬁveIds
 (
 pP¨£
@@ -36531,11 +35161,11 @@ pTabLi°
 pWhîe
 ) ){
 
-126 
+128 
 dñëe_‰om_˛ónup
 ;
 
-128 if–
+130 if–
 	`sqlôeEx¥Check
 (
 pP¨£
@@ -36543,27 +35173,15 @@ pP¨£
 pWhîe
 , 0, 0) ){
 
-129 
+131 
 dñëe_‰om_˛ónup
 ;
 
-135 if–
+137 if–
 isVõw
  ){
 
-136 
-	`sqlôeAuthC⁄ãxtPush
-(
-pP¨£
-, &
-sC⁄ãxt
-, 
-pTab
-->
-zName
-);
-
-141 
+143 
 v
  = 
 	`sqlôeGëVdbe
@@ -36571,15 +35189,15 @@ v
 pP¨£
 );
 
-142 if–
+144 if–
 v
 ==0 ){
 
-143 
+145 
 dñëe_‰om_˛ónup
 ;
 
-145 
+147 
 	`sqlôeBegöWrôeO≥øti⁄
 (
 pP¨£
@@ -36591,11 +35209,11 @@ pTab
 iDb
 );
 
-150 if–
+152 if–
 isVõw
  ){
 
-151 
+153 
 Sñe˘
  *
 pVõw
@@ -36607,7 +35225,7 @@ pTab
 pSñe˘
 );
 
-152 
+154 
 	`sqlôeSñe˘
 (
 pP¨£
@@ -36619,13 +35237,13 @@ SRT_TempTabÀ
 iCur
 , 0, 0, 0);
 
-153 
+155 
 	`sqlôeSñe˘Dñëe
 (
 pVõw
 );
 
-159 if–
+161 if–
 db
 ->
 Êags
@@ -36633,7 +35251,7 @@ db
 SQLITE_Cou¡Rows
  ){
 
-160 
+162 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36641,13 +35259,13 @@ v
 OP_I¡egî
 , 0, 0);
 
-167 if–
+169 if–
 pWhîe
 ==0 && !
 row_åiggîs_exi°
  ){
 
-168 if–
+170 if–
 db
 ->
 Êags
@@ -36655,7 +35273,7 @@ db
 SQLITE_Cou¡Rows
  ){
 
-171 
+173 
 ídOfLo›
  = 
 	`sqlôeVdbeMakeLabñ
@@ -36663,15 +35281,15 @@ SQLITE_Cou¡Rows
 v
 );
 
-172 
+174 
 addr
 ;
 
-173 if–!
+175 if–!
 isVõw
  ){
 
-174 
+176 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36683,7 +35301,7 @@ pTab
 iDb
 , 0);
 
-175 
+177 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36697,7 +35315,7 @@ pTab
 äum
 );
 
-177 
+179 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36709,7 +35327,7 @@ iCur
 	`sqlôeVdbeCuºítAddr
 (v)+2);
 
-178 
+180 
 addr
  = 
 	`sqlôeVdbeAddOp
@@ -36719,7 +35337,7 @@ v
 OP_AddImm
 , 1, 0);
 
-179 
+181 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36731,7 +35349,7 @@ iCur
 addr
 );
 
-180 
+182 
 	`sqlôeVdbeResﬁveLabñ
 (
 v
@@ -36739,7 +35357,7 @@ v
 ídOfLo›
 );
 
-181 
+183 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36749,11 +35367,11 @@ OP_Clo£
 iCur
 , 0);
 
-183 if–!
+185 if–!
 isVõw
  ){
 
-184 
+186 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36767,7 +35385,7 @@ pTab
 iDb
 );
 
-185 
+187 
 pIdx
 =
 pTab
@@ -36777,7 +35395,7 @@ pIndex
 pNext
 ){
 
-186 
+188 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36791,7 +35409,7 @@ pIdx
 iDb
 );
 
-197 
+199 
 pWInfo
  = 
 	`sqlôeWhîeBegö
@@ -36803,13 +35421,13 @@ pTabLi°
 pWhîe
 , 1, 0);
 
-198 if–
+200 if–
 pWInfo
 ==0 ) 
 dñëe_‰om_˛ónup
 ;
 
-202 
+204 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36817,7 +35435,7 @@ v
 OP_Li°Wrôe
 , 0, 0);
 
-203 if–
+205 if–
 db
 ->
 Êags
@@ -36825,7 +35443,7 @@ db
 SQLITE_Cou¡Rows
  ){
 
-204 
+206 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36833,17 +35451,17 @@ v
 OP_AddImm
 , 1, 0);
 
-209 
+211 
 	`sqlôeWhîeEnd
 (
 pWInfo
 );
 
-213 if–
+215 if–
 row_åiggîs_exi°
  ){
 
-214 
+216 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36853,7 +35471,7 @@ OP_O≥nP£udo
 ﬁdIdx
 , 0);
 
-221 
+223 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36861,7 +35479,7 @@ v
 OP_Li°Rewöd
 , 0, 0);
 
-222 
+224 
 íd
  = 
 	`sqlôeVdbeMakeLabñ
@@ -36869,11 +35487,11 @@ OP_Li°Rewöd
 v
 );
 
-227 if–
+229 if–
 row_åiggîs_exi°
  ){
 
-228 
+230 
 addr
  = 
 	`sqlôeVdbeAddOp
@@ -36885,7 +35503,7 @@ OP_Li°Ród
 íd
 );
 
-229 
+231 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36893,11 +35511,11 @@ v
 OP_Dup
 , 0, 0);
 
-230 if–!
+232 if–!
 isVõw
  ){
 
-231 
+233 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36909,7 +35527,7 @@ pTab
 iDb
 , 0);
 
-232 
+234 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36923,7 +35541,7 @@ pTab
 äum
 );
 
-234 
+236 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36933,7 +35551,7 @@ OP_MoveTo
 iCur
 , 0);
 
-236 
+238 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36943,7 +35561,7 @@ OP_Re˙o
 iCur
 , 0);
 
-237 
+239 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36953,7 +35571,7 @@ OP_RowD©a
 iCur
 , 0);
 
-238 
+240 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36963,11 +35581,11 @@ OP_PutI¡Key
 ﬁdIdx
 , 0);
 
-239 if–!
+241 if–!
 isVõw
  ){
 
-240 
+242 
 	`sqlôeVdbeAddOp
 (
 v
@@ -36977,7 +35595,7 @@ OP_Clo£
 iCur
 , 0);
 
-243 
+245 
 	`sqlôeCodeRowTriggî
 (
 pP¨£
@@ -36989,7 +35607,7 @@ TK_BEFORE
 pTab
 , -1,
 
-244 
+246 
 ﬁdIdx
 , (
 pP¨£
@@ -37001,15 +35619,15 @@ pP¨£
 OE_DeÁu…
 ,
 
-245 
+247 
 addr
 );
 
-248 if–!
+250 if–!
 isVõw
  ){
 
-255 
+257 
 pP¨£
 ->
 nTab
@@ -37017,7 +35635,7 @@ nTab
 iCur
  + 1;
 
-256 
+258 
 	`sqlôeO≥nTabÀAndIndi˚s
 (
 pP¨£
@@ -37027,11 +35645,11 @@ pTab
 iCur
 );
 
-260 if–!
+262 if–!
 row_åiggîs_exi°
  ){
 
-261 
+263 
 addr
  = 
 	`sqlôeVdbeAddOp
@@ -37043,7 +35661,7 @@ OP_Li°Ród
 íd
 );
 
-265 
+267 
 	`sqlôeGíî©eRowDñëe
 (
 db
@@ -37059,15 +35677,15 @@ pP¨£
 åigSèck
 ==0);
 
-271 if–
+273 if–
 row_åiggîs_exi°
  ){
 
-272 if–!
+274 if–!
 isVõw
  ){
 
-273 
+275 
 i
 =1, 
 pIdx
@@ -37079,7 +35697,7 @@ pIndex
 pNext
 ){
 
-274 
+276 
 	`sqlôeVdbeAddOp
 (
 v
@@ -37095,7 +35713,7 @@ pIdx
 äum
 );
 
-276 
+278 
 	`sqlôeVdbeAddOp
 (
 v
@@ -37105,7 +35723,7 @@ OP_Clo£
 iCur
 , 0);
 
-278 
+280 
 	`sqlôeCodeRowTriggî
 (
 pP¨£
@@ -37117,7 +35735,7 @@ TK_AFTER
 pTab
 , -1,
 
-279 
+281 
 ﬁdIdx
 , (
 pP¨£
@@ -37129,11 +35747,11 @@ pP¨£
 OE_DeÁu…
 ,
 
-280 
+282 
 addr
 );
 
-284 
+286 
 	`sqlôeVdbeAddOp
 (
 v
@@ -37143,7 +35761,7 @@ OP_GŸo
 addr
 );
 
-285 
+287 
 	`sqlôeVdbeResﬁveLabñ
 (
 v
@@ -37151,7 +35769,7 @@ v
 íd
 );
 
-286 
+288 
 	`sqlôeVdbeAddOp
 (
 v
@@ -37159,11 +35777,11 @@ v
 OP_Li°Re£t
 , 0, 0);
 
-289 if–!
+291 if–!
 row_åiggîs_exi°
  ){
 
-290 
+292 
 i
 =1, 
 pIdx
@@ -37175,7 +35793,7 @@ pIndex
 pNext
 ){
 
-291 
+293 
 	`sqlôeVdbeAddOp
 (
 v
@@ -37191,7 +35809,7 @@ pIdx
 äum
 );
 
-293 
+295 
 	`sqlôeVdbeAddOp
 (
 v
@@ -37201,7 +35819,7 @@ OP_Clo£
 iCur
 , 0);
 
-294 
+296 
 pP¨£
 ->
 nTab
@@ -37209,7 +35827,7 @@ nTab
 iCur
 ;
 
-297 
+299 
 	`sqlôeVdbeAddOp
 (
 v
@@ -37217,13 +35835,13 @@ v
 OP_SëCou¡s
 , 0, 0);
 
-298 
+300 
 	`sqlôeEndWrôeO≥øti⁄
 (
 pP¨£
 );
 
-303 if–
+305 if–
 db
 ->
 Êags
@@ -37231,7 +35849,7 @@ db
 SQLITE_Cou¡Rows
  ){
 
-304 
+306 
 	`sqlôeVdbeAddOp
 (
 v
@@ -37239,7 +35857,7 @@ v
 OP_CﬁumnName
 , 0, 1);
 
-305 
+307 
 	`sqlôeVdbeCh™geP3
 (
 v
@@ -37247,7 +35865,7 @@ v
 P3_STATIC
 );
 
-306 
+308 
 	`sqlôeVdbeAddOp
 (
 v
@@ -37255,67 +35873,61 @@ v
 OP_CÆlback
 , 1, 0);
 
-309 
+311 
 dñëe_‰om_˛ónup
 :
 
-310 
-	`sqlôeAuthC⁄ãxtP›
-(&
-sC⁄ãxt
-);
-
-311 
+313 
 	`sqlôeSrcLi°Dñëe
 (
 pTabLi°
 );
 
-312 
+314 
 	`sqlôeEx¥Dñëe
 (
 pWhîe
 );
 
-314 
+316 
 	}
 }
 
-336 
+338 
 	$sqlôeGíî©eRowDñëe
 (
 
-337 
+339 
 sqlôe
  *
 db
 ,
 
-338 
+340 
 Vdbe
  *
 v
 ,
 
-339 
+341 
 TabÀ
  *
 pTab
 ,
 
-340 
+342 
 iCur
 ,
 
-341 
+343 
 cou¡
 
 
-343 
+345 
 addr
 ;
 
-344 
+346 
 addr
  = 
 	`sqlôeVdbeAddOp
@@ -37327,7 +35939,7 @@ OP_NŸExi°s
 iCur
 , 0);
 
-345 
+347 
 	`sqlôeGíî©eRowIndexDñëe
 (
 db
@@ -37339,7 +35951,7 @@ pTab
 iCur
 , 0);
 
-346 
+348 
 	`sqlôeVdbeAddOp
 (
 v
@@ -37349,7 +35961,7 @@ OP_Dñëe
 iCur
 ,
 
-347 (
+349 (
 cou¡
 ?
 OPFLAG_NCHANGE
@@ -37357,7 +35969,7 @@ OPFLAG_NCHANGE
 OPFLAG_CSCHANGE
 );
 
-348 
+350 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -37367,51 +35979,51 @@ addr
 	`sqlôeVdbeCuºítAddr
 (v));
 
-349 
+351 
 	}
 }
 
-367 
+369 
 	$sqlôeGíî©eRowIndexDñëe
 (
 
-368 
+370 
 sqlôe
  *
 db
 ,
 
-369 
+371 
 Vdbe
  *
 v
 ,
 
-370 
+372 
 TabÀ
  *
 pTab
 ,
 
-371 
+373 
 iCur
 ,
 
-372 *
+374 *
 aIdxU£d
 
 
-374 
+376 
 i
 ;
 
-375 
+377 
 Index
  *
 pIdx
 ;
 
-377 
+379 
 i
 =1, 
 pIdx
@@ -37423,17 +36035,17 @@ pIndex
 pNext
 ){
 
-378 
+380 
 j
 ;
 
-379 if–
+381 if–
 aIdxU£d
 !=0 &&áIdxU£d[
 i
 -1]==0 ) ;
 
-380 
+382 
 	`sqlôeVdbeAddOp
 (
 v
@@ -37443,7 +36055,7 @@ OP_Re˙o
 iCur
 , 0);
 
-381 
+383 
 j
 =0; j<
 pIdx
@@ -37451,7 +36063,7 @@ pIdx
 nCﬁumn
 ; j++){
 
-382 
+384 
 idx
  = 
 pIdx
@@ -37461,7 +36073,7 @@ aiCﬁumn
 j
 ];
 
-383 if–
+385 if–
 idx
 ==
 pTab
@@ -37469,7 +36081,7 @@ pTab
 iPKey
  ){
 
-384 
+386 
 	`sqlôeVdbeAddOp
 (
 v
@@ -37479,7 +36091,7 @@ OP_Dup
 j
 , 0);
 
-386 
+388 
 	`sqlôeVdbeAddOp
 (
 v
@@ -37491,7 +36103,7 @@ iCur
 idx
 );
 
-389 
+391 
 	`sqlôeVdbeAddOp
 (
 v
@@ -37503,7 +36115,7 @@ pIdx
 nCﬁumn
 , 0);
 
-390 if–
+392 if–
 db
 ->
 fûe_f‹m©
@@ -37515,7 +36127,7 @@ v
 pIdx
 );
 
-391 
+393 
 	`sqlôeVdbeAddOp
 (
 v
@@ -37527,7 +36139,7 @@ iCur
 i
 , 0);
 
-393 
+395 
 	}
 }
 
@@ -40698,16 +39310,6 @@ pEx¥
  = 
 TK_COLUMN
 ;
-
-594 
-	`sqlôeAuthRód
-(
-pP¨£
-, 
-pEx¥
-, 
-pSrcLi°
-);
 
 595  
 ˙t
@@ -50057,46 +48659,8 @@ iDb
 zName
 ;
 
-133 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_INSERT
-, 
-pTab
-->
-zName
-, 0, 
-zDb
-) ){
-
-134 
-ö£π_˛ónup
-;
-
-141 
-bef‹e_åiggîs
- = 
-	`sqlôeTriggîsExi°
-(
-pP¨£
-, 
-pTab
-->
-pTriggî
-, 
-TK_INSERT
-,
-
-142 
-TK_BEFORE
-, 
-TK_ROW
-, 0);
-
 143 
-a·î_åiggîs
+bef‹e_åiggîs
  = 
 	`sqlôeTriggîsExi°
 (
@@ -50110,12 +48674,32 @@ TK_INSERT
 ,
 
 144 
-TK_AFTER
+TK_BEFORE
 , 
 TK_ROW
 , 0);
 
 145 
+a·î_åiggîs
+ = 
+	`sqlôeTriggîsExi°
+(
+pP¨£
+, 
+pTab
+->
+pTriggî
+, 
+TK_INSERT
+,
+
+146 
+TK_AFTER
+, 
+TK_ROW
+, 0);
+
+147 
 row_åiggîs_exi°
  = 
 bef‹e_åiggîs
@@ -50123,7 +48707,7 @@ bef‹e_åiggîs
 a·î_åiggîs
 ;
 
-146 
+148 
 isVõw
  = 
 pTab
@@ -50131,7 +48715,7 @@ pTab
 pSñe˘
 !=0;
 
-147 if–
+149 if–
 	`sqlôeIsRódO∆y
 (
 pP¨£
@@ -50141,17 +48725,17 @@ pTab
 bef‹e_åiggîs
 ) ){
 
-148 
+150 
 ö£π_˛ónup
 ;
 
-150 if–
+152 if–
 pTab
 ==0 ) 
 ö£π_˛ónup
 ;
 
-154 if–
+156 if–
 isVõw
  && 
 	`sqlôeVõwGëCﬁumnNames
@@ -50161,11 +48745,11 @@ pP¨£
 pTab
 ) ){
 
-155 
+157 
 ö£π_˛ónup
 ;
 
-160 
+162 
 v
  = 
 	`sqlôeGëVdbe
@@ -50173,13 +48757,13 @@ v
 pP¨£
 );
 
-161 if–
+163 if–
 v
 ==0 ) 
 ö£π_˛ónup
 ;
 
-162 
+164 
 	`sqlôeBegöWrôeO≥øti⁄
 (
 pP¨£
@@ -50193,11 +48777,11 @@ pTab
 iDb
 );
 
-165 if–
+167 if–
 row_åiggîs_exi°
  ){
 
-166 
+168 
 √wIdx
  = 
 pP¨£
@@ -50205,17 +48789,17 @@ pP¨£
 nTab
 ++;
 
-177 if–
+179 if–
 pSñe˘
  ){
 
-180 
+182 
 rc
 , 
 iInôCode
 ;
 
-181 
+183 
 iInôCode
  = 
 	`sqlôeVdbeAddOp
@@ -50225,7 +48809,7 @@ v
 OP_GŸo
 , 0, 0);
 
-182 
+184 
 iSñe˘Lo›
  = 
 	`sqlôeVdbeCuºítAddr
@@ -50233,7 +48817,7 @@ iSñe˘Lo›
 v
 );
 
-183 
+185 
 iIn£πBlock
  = 
 	`sqlôeVdbeMakeLabñ
@@ -50241,7 +48825,7 @@ iIn£πBlock
 v
 );
 
-184 
+186 
 rc
  = 
 	`sqlôeSñe˘
@@ -50255,7 +48839,7 @@ SRT_Subroutöe
 iIn£πBlock
 , 0,0,0);
 
-185 if–
+187 if–
 rc
  || 
 pP¨£
@@ -50267,7 +48851,7 @@ sqlôe_mÆloc_Áûed
 ö£π_˛ónup
 ;
 
-186 
+188 
 iCÀ™up
  = 
 	`sqlôeVdbeMakeLabñ
@@ -50275,7 +48859,7 @@ iCÀ™up
 v
 );
 
-187 
+189 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50285,7 +48869,7 @@ OP_GŸo
 iCÀ™up
 );
 
-188 
+190 
 	`as£π
 –
 pSñe˘
@@ -50293,7 +48877,7 @@ pSñe˘
 pELi°
  );
 
-189 
+191 
 nCﬁumn
  = 
 pSñe˘
@@ -50303,15 +48887,15 @@ pELi°
 nEx¥
 ;
 
-199 if–
+201 if–
 row_åiggîs_exi°
  ){
 
-200 
+202 
 u£TempTabÀ
  = 1;
 
-202 
+204 
 addr
  = 
 	`sqlôeVdbeFödOp
@@ -50325,15 +48909,15 @@ pTab
 äum
 );
 
-203 
+205 
 u£TempTabÀ
  = 0;
 
-204 if–
+206 if–
 addr
 >0 ){
 
-205 
+207 
 VdbeOp
  *
 pOp
@@ -50345,7 +48929,7 @@ v
 addr
 -2);
 
-206 if–
+208 if–
 pOp
 ->
 ›code
@@ -50359,15 +48943,15 @@ pTab
 iDb
  ){
 
-207 
+209 
 u£TempTabÀ
  = 1;
 
-212 if–
+214 if–
 u£TempTabÀ
  ){
 
-216 
+218 
 §cTab
  = 
 pP¨£
@@ -50375,7 +48959,7 @@ pP¨£
 nTab
 ++;
 
-217 
+219 
 	`sqlôeVdbeResﬁveLabñ
 (
 v
@@ -50383,7 +48967,7 @@ v
 iIn£πBlock
 );
 
-218 
+220 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50393,7 +48977,7 @@ OP_MakeRec‹d
 nCﬁumn
 , 0);
 
-219 
+221 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50403,7 +48987,7 @@ OP_NewRe˙o
 §cTab
 , 0);
 
-220 
+222 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50411,7 +48995,7 @@ v
 OP_PuŒ
 , 1, 0);
 
-221 
+223 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50421,7 +49005,7 @@ OP_PutI¡Key
 §cTab
 , 0);
 
-222 
+224 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50429,7 +49013,7 @@ v
 OP_Rëu∫
 , 0, 0);
 
-228 
+230 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -50439,7 +49023,7 @@ iInôCode
 	`sqlôeVdbeCuºítAddr
 (v));
 
-229 
+231 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50449,7 +49033,7 @@ OP_O≥nTemp
 §cTab
 , 0);
 
-230 
+232 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50459,7 +49043,7 @@ OP_GŸo
 iSñe˘Lo›
 );
 
-231 
+233 
 	`sqlôeVdbeResﬁveLabñ
 (
 v
@@ -50467,7 +49051,7 @@ v
 iCÀ™up
 );
 
-233 
+235 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -50477,33 +49061,33 @@ iInôCode
 	`sqlôeVdbeCuºítAddr
 (v));
 
-239 
+241 
 SrcLi°
  
 dummy
 ;
 
-240 
+242 
 	`as£π
 –
 pLi°
 !=0 );
 
-241 
+243 
 §cTab
  = -1;
 
-242 
+244 
 u£TempTabÀ
  = 0;
 
-243 
+245 
 	`as£π
 –
 pLi°
  );
 
-244 
+246 
 nCﬁumn
  = 
 pLi°
@@ -50511,19 +49095,19 @@ pLi°
 nEx¥
 ;
 
-245 
+247 
 dummy
 .
 nSrc
  = 0;
 
-246 
+248 
 i
 =0; i<
 nCﬁumn
 ; i++){
 
-247 if–
+249 if–
 	`sqlôeEx¥ResﬁveIds
 (
 pP¨£
@@ -50539,11 +49123,11 @@ i
 pEx¥
 ) ){
 
-248 
+250 
 ö£π_˛ónup
 ;
 
-250 if–
+252 if–
 	`sqlôeEx¥Check
 (
 pP¨£
@@ -50557,11 +49141,11 @@ i
 pEx¥
 , 0, 0) ){
 
-251 
+253 
 ö£π_˛ónup
 ;
 
-259 if–
+261 if–
 pCﬁumn
 ==0 && 
 nCﬁumn
@@ -50571,13 +49155,13 @@ pTab
 nCﬁ
  ){
 
-260 
+262 
 	`sqlôeEº‹Msg
 (
 pP¨£
 ,
 
-262 
+264 
 pTabLi°
 , 0, 
 pTab
@@ -50587,11 +49171,11 @@ nCﬁ
 nCﬁumn
 );
 
-263 
+265 
 ö£π_˛ónup
 ;
 
-265 if–
+267 if–
 pCﬁumn
 !=0 && 
 nCﬁumn
@@ -50599,7 +49183,7 @@ nCﬁumn
 nId
  ){
 
-266 
+268 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -50611,15 +49195,15 @@ pCﬁumn
 nId
 );
 
-267 
+269 
 ö£π_˛ónup
 ;
 
-281 if–
+283 if–
 pCﬁumn
  ){
 
-282 
+284 
 i
 =0; i<
 pCﬁumn
@@ -50627,7 +49211,7 @@ pCﬁumn
 nId
 ; i++){
 
-283 
+285 
 pCﬁumn
 ->
 a
@@ -50637,7 +49221,7 @@ i
 idx
  = -1;
 
-285 
+287 
 i
 =0; i<
 pCﬁumn
@@ -50645,7 +49229,7 @@ pCﬁumn
 nId
 ; i++){
 
-286 
+288 
 j
 =0; j<
 pTab
@@ -50653,7 +49237,7 @@ pTab
 nCﬁ
 ; j++){
 
-287 if–
+289 if–
 	`sqlôeSåICmp
 (
 pCﬁumn
@@ -50671,7 +49255,7 @@ aCﬁ
 j
 ].zName)==0 ){
 
-288 
+290 
 pCﬁumn
 ->
 a
@@ -50683,7 +49267,7 @@ idx
 j
 ;
 
-289 if–
+291 if–
 j
 ==
 pTab
@@ -50691,13 +49275,13 @@ pTab
 iPKey
  ){
 
-290 
+292 
 keyCﬁumn
  = 
 i
 ;
 
-295 if–
+297 if–
 j
 >=
 pTab
@@ -50705,7 +49289,7 @@ pTab
 nCﬁ
  ){
 
-296 if–
+298 if–
 	`sqlôeIsRowid
 (
 pCﬁumn
@@ -50717,19 +49301,19 @@ i
 zName
 ) ){
 
-297 
+299 
 keyCﬁumn
  = 
 i
 ;
 
-299 
+301 
 	`sqlôeEº‹Msg
 (
 pP¨£
 , "table %S hasÇo columnÇamed %s",
 
-300 
+302 
 pTabLi°
 , 0, 
 pCﬁumn
@@ -50741,21 +49325,21 @@ i
 zName
 );
 
-301 
+303 
 pP¨£
 ->
 nEº
 ++;
 
-302 
+304 
 ö£π_˛ónup
 ;
 
-312 if–
+314 if–
 pCﬁumn
 ==0 ){
 
-313 
+315 
 keyCﬁumn
  = 
 pTab
@@ -50763,11 +49347,11 @@ pTab
 iPKey
 ;
 
-318 if–
+320 if–
 row_åiggîs_exi°
  ){
 
-319 
+321 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50777,7 +49361,7 @@ OP_O≥nP£udo
 √wIdx
 , 0);
 
-324 if–
+326 if–
 db
 ->
 Êags
@@ -50785,7 +49369,7 @@ db
 SQLITE_Cou¡Rows
  ){
 
-325 
+327 
 iC¡Mem
  = 
 pP¨£
@@ -50793,7 +49377,7 @@ pP¨£
 nMem
 ++;
 
-326 
+328 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50801,7 +49385,7 @@ v
 OP_I¡egî
 , 0, 0);
 
-327 
+329 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50811,11 +49395,11 @@ OP_MemSt‹e
 iC¡Mem
 , 1);
 
-331 if–!
+333 if–!
 row_åiggîs_exi°
  ){
 
-332 
+334 
 ba£
  = 
 pP¨£
@@ -50823,7 +49407,7 @@ pP¨£
 nTab
 ;
 
-333 
+335 
 idx
  = 
 	`sqlôeO≥nTabÀAndIndi˚s
@@ -50835,7 +49419,7 @@ pTab
 ba£
 );
 
-334 
+336 
 pP¨£
 ->
 nTab
@@ -50843,11 +49427,11 @@ nTab
 idx
 ;
 
-342 if–
+344 if–
 u£TempTabÀ
  ){
 
-343 
+345 
 iBªak
  = 
 	`sqlôeVdbeMakeLabñ
@@ -50855,7 +49439,7 @@ iBªak
 v
 );
 
-344 
+346 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50867,7 +49451,7 @@ OP_Rewöd
 iBªak
 );
 
-345 
+347 
 iC⁄t
  = 
 	`sqlôeVdbeCuºítAddr
@@ -50875,11 +49459,11 @@ iC⁄t
 v
 );
 
-346 }if–
+348 }if–
 pSñe˘
  ){
 
-347 
+349 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50889,7 +49473,7 @@ OP_GŸo
 iSñe˘Lo›
 );
 
-348 
+350 
 	`sqlôeVdbeResﬁveLabñ
 (
 v
@@ -50897,7 +49481,7 @@ v
 iIn£πBlock
 );
 
-353 
+355 
 ídOfLo›
  = 
 	`sqlôeVdbeMakeLabñ
@@ -50905,15 +49489,15 @@ iIn£πBlock
 v
 );
 
-354 if–
+356 if–
 bef‹e_åiggîs
  ){
 
-362 if–
+364 if–
 keyCﬁumn
 <0 ){
 
-363 
+365 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50921,11 +49505,11 @@ v
 OP_I¡egî
 , -1, 0);
 
-364 }if–
+366 }if–
 u£TempTabÀ
  ){
 
-365 
+367 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50937,11 +49521,11 @@ OP_Cﬁumn
 keyCﬁumn
 );
 
-366 }if–
+368 }if–
 pSñe˘
  ){
 
-367 
+369 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50953,7 +49537,7 @@ nCﬁumn
 keyCﬁumn
  - 1, 1);
 
-369 
+371 
 	`sqlôeEx¥Code
 (
 pP¨£
@@ -50967,7 +49551,7 @@ keyCﬁumn
 pEx¥
 );
 
-370 
+372 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50977,7 +49561,7 @@ OP_NŸNuŒ
 	`sqlôeVdbeCuºítAddr
 (v)+3);
 
-371 
+373 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50985,7 +49569,7 @@ v
 OP_P›
 , 1, 0);
 
-372 
+374 
 	`sqlôeVdbeAddOp
 (
 v
@@ -50993,7 +49577,7 @@ v
 OP_I¡egî
 , -1, 0);
 
-373 
+375 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51001,7 +49585,7 @@ v
 OP_Mu°BeI¡
 , 0, 0);
 
-378 
+380 
 i
 =0; i<
 pTab
@@ -51009,17 +49593,17 @@ pTab
 nCﬁ
 ; i++){
 
-379 if–
+381 if–
 pCﬁumn
 ==0 ){
 
-380 
+382 
 j
  = 
 i
 ;
 
-382 
+384 
 j
 =0; j<
 pCﬁumn
@@ -51027,7 +49611,7 @@ pCﬁumn
 nId
 ; j++){
 
-383 if–
+385 if–
 pCﬁumn
 ->
 a
@@ -51039,7 +49623,7 @@ idx
 i
  ) ;
 
-386 if–
+388 if–
 pCﬁumn
  && 
 j
@@ -51047,7 +49631,7 @@ j
 nId
  ){
 
-387 
+389 
 	`sqlôeVdbeOp3
 (
 v
@@ -51065,11 +49649,11 @@ zDÊt
 P3_STATIC
 );
 
-388 }if–
+390 }if–
 u£TempTabÀ
  ){
 
-389 
+391 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51081,11 +49665,11 @@ OP_Cﬁumn
 j
 );
 
-390 }if–
+392 }if–
 pSñe˘
  ){
 
-391 
+393 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51097,7 +49681,7 @@ nCﬁumn
 j
 -1, 1);
 
-393 
+395 
 	`sqlôeEx¥Code
 (
 pP¨£
@@ -51111,7 +49695,7 @@ j
 pEx¥
 );
 
-396 
+398 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51123,7 +49707,7 @@ pTab
 nCﬁ
 , 0);
 
-397 
+399 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51133,7 +49717,7 @@ OP_PutI¡Key
 √wIdx
 , 0);
 
-400 if–
+402 if–
 	`sqlôeCodeRowTriggî
 (
 pP¨£
@@ -51145,7 +49729,7 @@ TK_BEFORE
 pTab
 ,
 
-401 
+403 
 √wIdx
 , -1, 
 ⁄Eº‹
@@ -51153,17 +49737,17 @@ pTab
 ídOfLo›
 ) ){
 
-402 
+404 
 ö£π_˛ónup
 ;
 
-409 if–
+411 if–
 row_åiggîs_exi°
  && !
 isVõw
  ){
 
-410 
+412 
 ba£
  = 
 pP¨£
@@ -51171,7 +49755,7 @@ pP¨£
 nTab
 ;
 
-411 
+413 
 idx
  = 
 	`sqlôeO≥nTabÀAndIndi˚s
@@ -51183,7 +49767,7 @@ pTab
 ba£
 );
 
-412 
+414 
 pP¨£
 ->
 nTab
@@ -51191,19 +49775,19 @@ nTab
 idx
 ;
 
-420 if–!
+422 if–!
 isVõw
  ){
 
-421 if–
+423 if–
 keyCﬁumn
 >=0 ){
 
-422 if–
+424 if–
 u£TempTabÀ
  ){
 
-423 
+425 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51215,11 +49799,11 @@ OP_Cﬁumn
 keyCﬁumn
 );
 
-424 }if–
+426 }if–
 pSñe˘
  ){
 
-425 
+427 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51231,7 +49815,7 @@ nCﬁumn
 keyCﬁumn
  - 1, 1);
 
-427 
+429 
 	`sqlôeEx¥Code
 (
 pP¨£
@@ -51245,7 +49829,7 @@ keyCﬁumn
 pEx¥
 );
 
-432 
+434 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51255,7 +49839,7 @@ OP_NŸNuŒ
 	`sqlôeVdbeCuºítAddr
 (v)+3);
 
-433 
+435 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51263,7 +49847,7 @@ v
 OP_P›
 , 1, 0);
 
-434 
+436 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51273,7 +49857,7 @@ OP_NewRe˙o
 ba£
 , 0);
 
-435 
+437 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51281,7 +49865,7 @@ v
 OP_Mu°BeI¡
 , 0, 0);
 
-437 
+439 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51291,7 +49875,7 @@ OP_NewRe˙o
 ba£
 , 0);
 
-443 
+445 
 i
 =0; i<
 pTab
@@ -51299,7 +49883,7 @@ pTab
 nCﬁ
 ; i++){
 
-444 if–
+446 if–
 i
 ==
 pTab
@@ -51307,7 +49891,7 @@ pTab
 iPKey
  ){
 
-449 
+451 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51315,17 +49899,17 @@ v
 OP_Såög
 , 0, 0);
 
-452 if–
+454 if–
 pCﬁumn
 ==0 ){
 
-453 
+455 
 j
  = 
 i
 ;
 
-455 
+457 
 j
 =0; j<
 pCﬁumn
@@ -51333,7 +49917,7 @@ pCﬁumn
 nId
 ; j++){
 
-456 if–
+458 if–
 pCﬁumn
 ->
 a
@@ -51345,7 +49929,7 @@ idx
 i
  ) ;
 
-459 if–
+461 if–
 pCﬁumn
  && 
 j
@@ -51353,7 +49937,7 @@ j
 nId
  ){
 
-460 
+462 
 	`sqlôeVdbeOp3
 (
 v
@@ -51371,11 +49955,11 @@ zDÊt
 P3_STATIC
 );
 
-461 }if–
+463 }if–
 u£TempTabÀ
  ){
 
-462 
+464 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51387,11 +49971,11 @@ OP_Cﬁumn
 j
 );
 
-463 }if–
+465 }if–
 pSñe˘
  ){
 
-464 
+466 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51405,7 +49989,7 @@ nCﬁumn
 j
 , 1);
 
-466 
+468 
 	`sqlôeEx¥Code
 (
 pP¨£
@@ -51419,7 +50003,7 @@ j
 pEx¥
 );
 
-473 
+475 
 	`sqlôeGíî©eC⁄°øötChecks
 (
 pP¨£
@@ -51431,13 +50015,13 @@ ba£
 keyCﬁumn
 >=0,
 
-474 0, 
+476 0, 
 ⁄Eº‹
 , 
 ídOfLo›
 );
 
-475 
+477 
 	`sqlôeCom∂ëeIn£πi⁄
 (
 pP¨£
@@ -51447,13 +50031,13 @@ pTab
 ba£
 , 0,0,0,
 
-476 
+478 
 a·î_åiggîs
  ? 
 √wIdx
  : -1);
 
-481 if–(
+483 if–(
 db
 ->
 Êags
@@ -51461,7 +50045,7 @@ db
 SQLITE_Cou¡Rows
 )!=0 ){
 
-482 
+484 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51471,15 +50055,15 @@ OP_MemIn¸
 iC¡Mem
 , 0);
 
-485 if–
+487 if–
 row_åiggîs_exi°
  ){
 
-487 if–!
+489 if–!
 isVõw
  ){
 
-488 
+490 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51489,7 +50073,7 @@ OP_Clo£
 ba£
 , 0);
 
-489 
+491 
 idx
 =1, 
 pIdx
@@ -51501,7 +50085,7 @@ pIndex
 pNext
 , idx++){
 
-490 
+492 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51513,7 +50097,7 @@ idx
 ba£
 , 0);
 
-495 if–
+497 if–
 	`sqlôeCodeRowTriggî
 (
 pP¨£
@@ -51527,17 +50111,17 @@ pTab
 √wIdx
 , -1,
 
-496 
+498 
 ⁄Eº‹
 , 
 ídOfLo›
 ) ){
 
-497 
+499 
 ö£π_˛ónup
 ;
 
-503 
+505 
 	`sqlôeVdbeResﬁveLabñ
 (
 v
@@ -51545,11 +50129,11 @@ v
 ídOfLo›
 );
 
-504 if–
+506 if–
 u£TempTabÀ
  ){
 
-505 
+507 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51561,7 +50145,7 @@ OP_Next
 iC⁄t
 );
 
-506 
+508 
 	`sqlôeVdbeResﬁveLabñ
 (
 v
@@ -51569,7 +50153,7 @@ v
 iBªak
 );
 
-507 
+509 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51579,11 +50163,11 @@ OP_Clo£
 §cTab
 , 0);
 
-508 }if–
+510 }if–
 pSñe˘
  ){
 
-509 
+511 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51593,7 +50177,7 @@ OP_P›
 nCﬁumn
 , 0);
 
-510 
+512 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51601,7 +50185,7 @@ v
 OP_Rëu∫
 , 0, 0);
 
-511 
+513 
 	`sqlôeVdbeResﬁveLabñ
 (
 v
@@ -51609,11 +50193,11 @@ v
 iCÀ™up
 );
 
-514 if–!
+516 if–!
 row_åiggîs_exi°
  ){
 
-516 
+518 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51623,7 +50207,7 @@ OP_Clo£
 ba£
 , 0);
 
-517 
+519 
 idx
 =1, 
 pIdx
@@ -51635,7 +50219,7 @@ pIndex
 pNext
 , idx++){
 
-518 
+520 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51647,7 +50231,7 @@ idx
 ba£
 , 0);
 
-522 
+524 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51655,13 +50239,13 @@ v
 OP_SëCou¡s
 , 0, 0);
 
-523 
+525 
 	`sqlôeEndWrôeO≥øti⁄
 (
 pP¨£
 );
 
-528 if–
+530 if–
 db
 ->
 Êags
@@ -51669,7 +50253,7 @@ db
 SQLITE_Cou¡Rows
  ){
 
-529 
+531 
 	`sqlôeVdbeOp3
 (
 v
@@ -51679,7 +50263,7 @@ OP_CﬁumnName
 P3_STATIC
 );
 
-530 
+532 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51689,7 +50273,7 @@ OP_MemLﬂd
 iC¡Mem
 , 0);
 
-531 
+533 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51697,129 +50281,129 @@ v
 OP_CÆlback
 , 1, 0);
 
-534 
+536 
 ö£π_˛ónup
 :
 
-535 
+537 
 	`sqlôeSrcLi°Dñëe
 (
 pTabLi°
 );
 
-536 if–
+538 if–
 pLi°
  ) 
 	`sqlôeEx¥Li°Dñëe
 (pList);
 
-537 if–
+539 if–
 pSñe˘
  ) 
 	`sqlôeSñe˘Dñëe
 (pSelect);
 
-538 
+540 
 	`sqlôeIdLi°Dñëe
 (
 pCﬁumn
 );
 
-539 
+541 
 	}
 }
 
-620 
+622 
 	$sqlôeGíî©eC⁄°øötChecks
 (
 
-621 
+623 
 P¨£
  *
 pP¨£
 ,
 
-622 
+624 
 TabÀ
  *
 pTab
 ,
 
-623 
+625 
 ba£
 ,
 
-624 *
+626 *
 aIdxU£d
 ,
 
-625 
+627 
 ª˙oChng
 ,
 
-626 
+628 
 isUpd©e
 ,
 
-627 
+629 
 ovîrideEº‹
 ,
 
-628 
+630 
 ign‹eDe°
 
 
-630 
+632 
 i
 ;
 
-631 
+633 
 Vdbe
  *
 v
 ;
 
-632 
+634 
 nCﬁ
 ;
 
-633 
+635 
 ⁄Eº‹
 ;
 
-634 
+636 
 addr
 ;
 
-635 
+637 
 exåa
 ;
 
-636 
+638 
 iCur
 ;
 
-637 
+639 
 Index
  *
 pIdx
 ;
 
-638 
+640 
 £íRïœ˚
  = 0;
 
-639 
+641 
 jumpIn°1
 , 
 jumpIn°2
 ;
 
-640 
+642 
 c⁄tAddr
 ;
 
-641 
+643 
 hasTwoRe˙os
  = (
 isUpd©e
@@ -51827,7 +50411,7 @@ isUpd©e
 ª˙oChng
 );
 
-643 
+645 
 v
  = 
 	`sqlôeGëVdbe
@@ -51835,13 +50419,13 @@ v
 pP¨£
 );
 
-644 
+646 
 	`as£π
 –
 v
 !=0 );
 
-645 
+647 
 	`as£π
 –
 pTab
@@ -51849,19 +50433,19 @@ pTab
 pSñe˘
 ==0 );
 
-646 
+648 
 nCﬁ
  = 
 pTab
 ->nCol;
 
-650 
+652 
 i
 =0; i<
 nCﬁ
 ; i++){
 
-651 if–
+653 if–
 i
 ==
 pTab
@@ -51869,7 +50453,7 @@ pTab
 iPKey
  ){
 
-654 
+656 
 ⁄Eº‹
  = 
 pTab
@@ -51881,30 +50465,14 @@ i
 nŸNuŒ
 ;
 
-655 if–
+657 if–
 ⁄Eº‹
 ==
 OE_N⁄e
  ) ;
 
-656 if–
+658 if–
 ovîrideEº‹
-!=
-OE_DeÁu…
- ){
-
-657 
-⁄Eº‹
- = 
-ovîrideEº‹
-;
-
-658 }if–
-pP¨£
-->
-db
-->
-⁄Eº‹
 !=
 OE_DeÁu…
  ){
@@ -51912,24 +50480,40 @@ OE_DeÁu…
 659 
 ⁄Eº‹
  = 
+ovîrideEº‹
+;
+
+660 }if–
 pP¨£
 ->
 db
-->onError;
-
-660 }if–
+->
 ⁄Eº‹
-==
+!=
 OE_DeÁu…
  ){
 
 661 
 ⁄Eº‹
  = 
+pP¨£
+->
+db
+->onError;
+
+662 }if–
+⁄Eº‹
+==
+OE_DeÁu…
+ ){
+
+663 
+⁄Eº‹
+ = 
 OE_Ab‹t
 ;
 
-663 if–
+665 if–
 ⁄Eº‹
 ==
 OE_Rïœ˚
@@ -51943,13 +50527,13 @@ i
 zDÊt
 ==0 ){
 
-664 
+666 
 ⁄Eº‹
  = 
 OE_Ab‹t
 ;
 
-666 
+668 
 	`sqlôeVdbeAddOp
 (
 v
@@ -51961,7 +50545,7 @@ nCﬁ
 i
 , 1);
 
-667 
+669 
 addr
  = 
 	`sqlôeVdbeAddOp
@@ -51971,27 +50555,27 @@ v
 OP_NŸNuŒ
 , 1, 0);
 
-668  
+670  
 ⁄Eº‹
  ){
 
-669 
+671 
 OE_Rﬁlback
 :
 
-670 
+672 
 OE_Ab‹t
 :
 
-671 
+673 
 OE_Faû
 : {
 
-672 *
+674 *
 zMsg
  = 0;
 
-673 
+675 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52003,7 +50587,7 @@ SQLITE_CONSTRAINT
 ⁄Eº‹
 );
 
-674 
+676 
 	`sqlôeSëSåög
 (&
 zMsg
@@ -52017,7 +50601,7 @@ aCﬁ
 i
 ].zName,
 
-676 
+678 
 	`sqlôeVdbeCh™geP3
 (
 v
@@ -52027,11 +50611,11 @@ zMsg
 P3_DYNAMIC
 );
 
-679 
+681 
 OE_Ign‹e
 : {
 
-680 
+682 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52043,7 +50627,7 @@ nCﬁ
 hasTwoRe˙os
 , 0);
 
-681 
+683 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52053,11 +50637,11 @@ OP_GŸo
 ign‹eDe°
 );
 
-684 
+686 
 OE_Rïœ˚
 : {
 
-685 
+687 
 	`sqlôeVdbeOp3
 (
 v
@@ -52075,7 +50659,7 @@ zDÊt
 P3_STATIC
 );
 
-686 
+688 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52087,11 +50671,11 @@ nCﬁ
 i
 , 0);
 
-689 : 
+691 : 
 	`as£π
 (0);
 
-691 
+693 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -52101,11 +50685,11 @@ addr
 	`sqlôeVdbeCuºítAddr
 (v));
 
-702 if–
+704 if–
 ª˙oChng
  ){
 
-703 
+705 
 ⁄Eº‹
  = 
 pTab
@@ -52113,24 +50697,8 @@ pTab
 keyC⁄f
 ;
 
-704 if–
+706 if–
 ovîrideEº‹
-!=
-OE_DeÁu…
- ){
-
-705 
-⁄Eº‹
- = 
-ovîrideEº‹
-;
-
-706 }if–
-pP¨£
-->
-db
-->
-⁄Eº‹
 !=
 OE_DeÁu…
  ){
@@ -52138,48 +50706,64 @@ OE_DeÁu…
 707 
 ⁄Eº‹
  = 
+ovîrideEº‹
+;
+
+708 }if–
 pP¨£
 ->
 db
-->onError;
-
-708 }if–
+->
 ⁄Eº‹
-==
+!=
 OE_DeÁu…
  ){
 
 709 
 ⁄Eº‹
  = 
+pP¨£
+->
+db
+->onError;
+
+710 }if–
+⁄Eº‹
+==
+OE_DeÁu…
+ ){
+
+711 
+⁄Eº‹
+ = 
 OE_Ab‹t
 ;
 
-712 if–
+714 if–
 isUpd©e
  ){
 
-713 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_Dup
-, 
-nCﬁ
-+1, 1);
-
-714 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_Dup
-, 
-nCﬁ
-+1, 1);
-
 715 
+	`sqlôeVdbeAddOp
+(
+v
+, 
+OP_Dup
+, 
+nCﬁ
++1, 1);
+
+716 
+	`sqlôeVdbeAddOp
+(
+v
+, 
+OP_Dup
+, 
+nCﬁ
++1, 1);
+
+717 
 jumpIn°1
  = 
 	`sqlôeVdbeAddOp
@@ -52189,7 +50773,7 @@ v
 OP_Eq
 , 0, 0);
 
-717 
+719 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52199,7 +50783,7 @@ OP_Dup
 nCﬁ
 , 1);
 
-718 
+720 
 jumpIn°2
  = 
 	`sqlôeVdbeAddOp
@@ -52211,29 +50795,29 @@ OP_NŸExi°s
 ba£
 , 0);
 
-719  
+721  
 ⁄Eº‹
  ){
 
-721 
+723 
 ⁄Eº‹
  = 
 OE_Ab‹t
 ;
 
-724 
+726 
 OE_Rﬁlback
 :
 
-725 
+727 
 OE_Ab‹t
 :
 
-726 
+728 
 OE_Faû
 : {
 
-727 
+729 
 	`sqlôeVdbeOp3
 (
 v
@@ -52245,15 +50829,15 @@ SQLITE_CONSTRAINT
 ⁄Eº‹
 ,
 
-728 "PRIMARY KEY mu° bêunique", 
+730 "PRIMARY KEY mu° bêunique", 
 P3_STATIC
 );
 
-731 
+733 
 OE_Rïœ˚
 : {
 
-732 
+734 
 	`sqlôeGíî©eRowIndexDñëe
 (
 pP¨£
@@ -52267,11 +50851,11 @@ pTab
 ba£
 , 0);
 
-733 if–
+735 if–
 isUpd©e
  ){
 
-734 
+736 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52283,7 +50867,7 @@ nCﬁ
 hasTwoRe˙os
 , 1);
 
-735 
+737 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52293,21 +50877,21 @@ OP_MoveTo
 ba£
 , 0);
 
-737 
+739 
 £íRïœ˚
  = 1;
 
-740 
+742 
 OE_Ign‹e
 : {
 
-741 
+743 
 	`as£π
 –
 £íRïœ˚
 ==0 );
 
-742 
+744 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52319,7 +50903,7 @@ nCﬁ
 hasTwoRe˙os
 , 0);
 
-743 
+745 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52329,7 +50913,7 @@ OP_GŸo
 ign‹eDe°
 );
 
-747 
+749 
 c⁄tAddr
  = 
 	`sqlôeVdbeCuºítAddr
@@ -52337,7 +50921,7 @@ c⁄tAddr
 v
 );
 
-748 
+750 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -52347,11 +50931,11 @@ jumpIn°2
 c⁄tAddr
 );
 
-749 if–
+751 if–
 isUpd©e
  ){
 
-750 
+752 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -52361,7 +50945,7 @@ jumpIn°1
 c⁄tAddr
 );
 
-751 
+753 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52371,7 +50955,7 @@ OP_Dup
 nCﬁ
 +1, 1);
 
-752 
+754 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52381,11 +50965,11 @@ OP_MoveTo
 ba£
 , 0);
 
-760 
+762 
 exåa
  = -1;
 
-761 
+763 
 iCur
 =0, 
 pIdx
@@ -52397,17 +50981,17 @@ pIndex
 pNext
 , iCur++){
 
-762 if–
+764 if–
 aIdxU£d
  &&áIdxU£d[
 iCur
 ]==0 ) ;
 
-763 
+765 
 exåa
 ++;
 
-766 
+768 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52419,7 +51003,7 @@ nCﬁ
 exåa
 , 1);
 
-767 
+769 
 i
 =0; i<
 pIdx
@@ -52427,7 +51011,7 @@ pIdx
 nCﬁumn
 ; i++){
 
-768 
+770 
 idx
  = 
 pIdx
@@ -52437,7 +51021,7 @@ aiCﬁumn
 i
 ];
 
-769 if–
+771 if–
 idx
 ==
 pTab
@@ -52445,7 +51029,7 @@ pTab
 iPKey
  ){
 
-770 
+772 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52459,7 +51043,7 @@ exåa
 nCﬁ
 +1, 1);
 
-772 
+774 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52475,7 +51059,7 @@ nCﬁ
 idx
 , 1);
 
-775 
+777 
 jumpIn°1
  = 
 	`sqlôeVdbeAddOp
@@ -52489,7 +51073,7 @@ pIdx
 nCﬁumn
 , 0);
 
-776 if–
+778 if–
 pP¨£
 ->
 db
@@ -52503,36 +51087,20 @@ v
 pIdx
 );
 
-779 
+781 
 ⁄Eº‹
  = 
 pIdx
 ->onError;
 
-780 if–
+782 if–
 ⁄Eº‹
 ==
 OE_N⁄e
  ) ;
 
-781 if–
+783 if–
 ovîrideEº‹
-!=
-OE_DeÁu…
- ){
-
-782 
-⁄Eº‹
- = 
-ovîrideEº‹
-;
-
-783 }if–
-pP¨£
-->
-db
-->
-⁄Eº‹
 !=
 OE_DeÁu…
  ){
@@ -52540,28 +51108,44 @@ OE_DeÁu…
 784 
 ⁄Eº‹
  = 
+ovîrideEº‹
+;
+
+785 }if–
 pP¨£
 ->
 db
-->onError;
-
-785 }if–
+->
 ⁄Eº‹
-==
+!=
 OE_DeÁu…
  ){
 
 786 
 ⁄Eº‹
  = 
+pP¨£
+->
+db
+->onError;
+
+787 }if–
+⁄Eº‹
+==
+OE_DeÁu…
+ ){
+
+788 
+⁄Eº‹
+ = 
 OE_Ab‹t
 ;
 
-788 if–
+790 if–
 £íRïœ˚
  ){
 
-789 if–
+791 if–
 ⁄Eº‹
 ==
 OE_Ign‹e
@@ -52569,7 +51153,7 @@ OE_Ign‹e
 OE_Rïœ˚
 ;
 
-790 if–
+792 if–
 ⁄Eº‹
 ==
 OE_Faû
@@ -52577,7 +51161,7 @@ OE_Faû
 OE_Ab‹t
 ;
 
-795 
+797 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52591,7 +51175,7 @@ nCﬁ
 hasTwoRe˙os
 , 1);
 
-796 
+798 
 jumpIn°2
  = 
 	`sqlôeVdbeAddOp
@@ -52605,23 +51189,23 @@ ba£
 iCur
 +1, 0);
 
-799  
+801  
 ⁄Eº‹
  ){
 
-800 
+802 
 OE_Rﬁlback
 :
 
-801 
+803 
 OE_Ab‹t
 :
 
-802 
+804 
 OE_Faû
 : {
 
-803 
+805 
 j
 , 
 n1
@@ -52629,11 +51213,11 @@ n1
 n2
 ;
 
-804 
+806 
 zEºMsg
 [200];
 
-805 
+807 
 	`°r˝y
 (
 zEºMsg
@@ -52643,7 +51227,7 @@ pIdx
 nCﬁumn
 >1 ? "columns " : "column ");
 
-806 
+808 
 n1
  = 
 	`°æí
@@ -52651,7 +51235,7 @@ n1
 zEºMsg
 );
 
-807 
+809 
 j
 =0; j<
 pIdx
@@ -52663,7 +51247,7 @@ n1
 zEºMsg
 )-30; j++){
 
-808 *
+810 *
 zCﬁ
  = 
 pTab
@@ -52679,7 +51263,7 @@ j
 zName
 ;
 
-809 
+811 
 n2
  = 
 	`°æí
@@ -52687,11 +51271,11 @@ n2
 zCﬁ
 );
 
-810 if–
+812 if–
 j
 >0 ){
 
-811 
+813 
 	`°r˝y
 (&
 zEºMsg
@@ -52699,11 +51283,11 @@ zEºMsg
 n1
 ], ", ");
 
-812 
+814 
 n1
  += 2;
 
-814 if–
+816 if–
 n1
 +
 n2
@@ -52711,7 +51295,7 @@ n2
 zEºMsg
 )-30 ){
 
-815 
+817 
 	`°r˝y
 (&
 zEºMsg
@@ -52719,11 +51303,11 @@ zEºMsg
 n1
 ], "...");
 
-816 
+818 
 n1
  += 3;
 
-819 
+821 
 	`°r˝y
 (&
 zEºMsg
@@ -52733,13 +51317,13 @@ n1
 zCﬁ
 );
 
-820 
+822 
 n1
  +
 n2
 ;
 
-823 
+825 
 	`°r˝y
 (&
 zEºMsg
@@ -52747,13 +51331,13 @@ zEºMsg
 n1
 ],
 
-824 
+826 
 pIdx
 ->
 nCﬁumn
 >1 ? "áreÇot unique" : " isÇot unique");
 
-825 
+827 
 	`sqlôeVdbeOp3
 (
 v
@@ -52767,17 +51351,17 @@ SQLITE_CONSTRAINT
 zEºMsg
 , 0);
 
-828 
+830 
 OE_Ign‹e
 : {
 
-829 
+831 
 	`as£π
 –
 £íRïœ˚
 ==0 );
 
-830 
+832 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52791,7 +51375,7 @@ exåa
 hasTwoRe˙os
 , 0);
 
-831 
+833 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52801,11 +51385,11 @@ OP_GŸo
 ign‹eDe°
 );
 
-834 
+836 
 OE_Rïœ˚
 : {
 
-835 
+837 
 	`sqlôeGíî©eRowDñëe
 (
 pP¨£
@@ -52819,11 +51403,11 @@ pTab
 ba£
 , 0);
 
-836 if–
+838 if–
 isUpd©e
  ){
 
-837 
+839 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52837,7 +51421,7 @@ exåa
 hasTwoRe˙os
 , 1);
 
-838 
+840 
 	`sqlôeVdbeAddOp
 (
 v
@@ -52847,15 +51431,15 @@ OP_MoveTo
 ba£
 , 0);
 
-840 
+842 
 £íRïœ˚
  = 1;
 
-843 : 
+845 : 
 	`as£π
 (0);
 
-845 
+847 
 c⁄tAddr
  = 
 	`sqlôeVdbeCuºítAddr
@@ -52863,11 +51447,11 @@ c⁄tAddr
 v
 );
 
-846 #i‡
+848 #i‡
 NULL_DISTINCT_FOR_UNIQUE
 
 
-847 
+849 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -52877,7 +51461,7 @@ jumpIn°1
 c⁄tAddr
 );
 
-849 
+851 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -52887,67 +51471,67 @@ jumpIn°2
 c⁄tAddr
 );
 
-851 
+853 
 	}
 }
 
-863 
+865 
 	$sqlôeCom∂ëeIn£πi⁄
 (
 
-864 
+866 
 P¨£
  *
 pP¨£
 ,
 
-865 
+867 
 TabÀ
  *
 pTab
 ,
 
-866 
+868 
 ba£
 ,
 
-867 *
+869 *
 aIdxU£d
 ,
 
-868 
+870 
 ª˙oChng
 ,
 
-869 
+871 
 isUpd©e
 ,
 
-870 
+872 
 √wIdx
 
 
-872 
+874 
 i
 ;
 
-873 
+875 
 Vdbe
  *
 v
 ;
 
-874 
+876 
 nIdx
 ;
 
-875 
+877 
 Index
  *
 pIdx
 ;
 
-877 
+879 
 v
  = 
 	`sqlôeGëVdbe
@@ -52955,13 +51539,13 @@ v
 pP¨£
 );
 
-878 
+880 
 	`as£π
 –
 v
 !=0 );
 
-879 
+881 
 	`as£π
 –
 pTab
@@ -52969,7 +51553,7 @@ pTab
 pSñe˘
 ==0 );
 
-880 
+882 
 nIdx
 =0, 
 pIdx
@@ -52981,19 +51565,19 @@ pIndex
 pNext
 ,ÇIdx++){}
 
-881 
+883 
 i
 =
 nIdx
 -1; i>=0; i--){
 
-882 if–
+884 if–
 aIdxU£d
  &&áIdxU£d[
 i
 ]==0 ) ;
 
-883 
+885 
 	`sqlôeVdbeAddOp
 (
 v
@@ -53005,7 +51589,7 @@ ba£
 i
 +1, 0);
 
-885 
+887 
 	`sqlôeVdbeAddOp
 (
 v
@@ -53017,27 +51601,27 @@ pTab
 nCﬁ
 , 0);
 
-886 if–
+888 if–
 √wIdx
 >=0 ){
 
-887 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_Dup
-, 1, 0);
-
-888 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_Dup
-, 1, 0);
-
 889 
+	`sqlôeVdbeAddOp
+(
+v
+, 
+OP_Dup
+, 1, 0);
+
+890 
+	`sqlôeVdbeAddOp
+(
+v
+, 
+OP_Dup
+, 1, 0);
+
+891 
 	`sqlôeVdbeAddOp
 (
 v
@@ -53047,7 +51631,7 @@ OP_PutI¡Key
 √wIdx
 , 0);
 
-891 
+893 
 	`sqlôeVdbeAddOp
 (
 v
@@ -53057,7 +51641,7 @@ OP_PutI¡Key
 ba£
 ,
 
-892 (
+894 (
 pP¨£
 ->
 åigSèck
@@ -53065,7 +51649,7 @@ pP¨£
 OPFLAG_NCHANGE
 ) |
 
-893 (
+895 (
 isUpd©e
 ?0:
 OPFLAG_LASTROWID
@@ -53073,13 +51657,13 @@ OPFLAG_LASTROWID
 OPFLAG_CSCHANGE
 );
 
-894 if–
+896 if–
 isUpd©e
  && 
 ª˙oChng
  ){
 
-895 
+897 
 	`sqlôeVdbeAddOp
 (
 v
@@ -53087,11 +51671,11 @@ v
 OP_P›
 , 1, 0);
 
-897 
+899 
 	}
 }
 
-907 
+909 
 	$sqlôeO≥nTabÀAndIndi˚s
 (
 P¨£
@@ -53105,17 +51689,17 @@ pTab
 ba£
 ){
 
-908 
+910 
 i
 ;
 
-909 
+911 
 Index
  *
 pIdx
 ;
 
-910 
+912 
 Vdbe
  *
 v
@@ -53125,13 +51709,13 @@ v
 pP¨£
 );
 
-911 
+913 
 	`as£π
 –
 v
 !=0 );
 
-912 
+914 
 	`sqlôeVdbeAddOp
 (
 v
@@ -53143,7 +51727,7 @@ pTab
 iDb
 , 0);
 
-913 
+915 
 	`sqlôeVdbeOp3
 (
 v
@@ -53161,7 +51745,7 @@ zName
 P3_STATIC
 );
 
-914 
+916 
 i
 =1, 
 pIdx
@@ -53173,7 +51757,7 @@ pIndex
 pNext
 , i++){
 
-915 
+917 
 	`sqlôeVdbeAddOp
 (
 v
@@ -53185,7 +51769,7 @@ pIdx
 iDb
 , 0);
 
-916 
+918 
 	`sqlôeVdbeOp3
 (
 v
@@ -53205,11 +51789,11 @@ zName
 P3_STATIC
 );
 
-918  
+920  
 i
 ;
 
-919 
+921 
 	}
 }
 
@@ -83117,79 +81701,55 @@ n
 zRight
 );
 
-175 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_PRAGMA
-, 
-zLe·
-, 
-zRight
-, 0) ){
-
-176 
-	`sqlôeFªe
-(
-zLe·
-);
-
-177 
-	`sqlôeFªe
-(
-zRight
-);
-
-197 if–
+199 if–
 	`sqlôeSåICmp
 (
 zLe·
 ,"default_cache_size")==0 ){
 
-198 
+200 
 VdbeOpLi°
  
 gëCacheSize
 [] = {
 
-199 { 
+201 { 
 OP_RódCookõ
 , 0, 2, 0},
 
-200 { 
+202 { 
 OP_AbsVÆue
 , 0, 0, 0},
 
-201 { 
+203 { 
 OP_Dup
 , 0, 0, 0},
-
-202 { 
-OP_I¡egî
-, 0, 0, 0},
-
-203 { 
-OP_Ne
-, 0, 6, 0},
 
 204 { 
 OP_I¡egî
 , 0, 0, 0},
 
 205 { 
+OP_Ne
+, 0, 6, 0},
+
+206 { 
+OP_I¡egî
+, 0, 0, 0},
+
+207 { 
 OP_CﬁumnName
 , 0, 1, "cache_size"},
 
-206 { 
+208 { 
 OP_CÆlback
 , 1, 0, 0},
 
-208 
+210 
 addr
 ;
 
-209 if–
+211 if–
 pRight
 ->
 z
@@ -83197,7 +81757,7 @@ z
 pLe·
 ->z ){
 
-210 
+212 
 addr
  = 
 	`sqlôeVdbeAddOpLi°
@@ -83209,7 +81769,7 @@ v
 gëCacheSize
 ), getCacheSize);
 
-211 
+213 
 	`sqlôeVdbeCh™geP1
 (
 v
@@ -83219,7 +81779,7 @@ addr
 MAX_PAGES
 );
 
-213 
+215 
 size
  = 
 	`©oi
@@ -83227,17 +81787,17 @@ size
 zRight
 );
 
-214 if–
+216 if–
 size
 <0 ) size = -size;
 
-215 
+217 
 	`sqlôeBegöWrôeO≥øti⁄
 (
 pP¨£
 , 0, 0);
 
-216 
+218 
 	`sqlôeVdbeAddOp
 (
 v
@@ -83247,7 +81807,7 @@ OP_I¡egî
 size
 , 0);
 
-217 
+219 
 	`sqlôeVdbeAddOp
 (
 v
@@ -83255,7 +81815,7 @@ v
 OP_RódCookõ
 , 0, 2);
 
-218 
+220 
 addr
  = 
 	`sqlôeVdbeAddOp
@@ -83265,7 +81825,7 @@ v
 OP_I¡egî
 , 0, 0);
 
-219 
+221 
 	`sqlôeVdbeAddOp
 (
 v
@@ -83275,7 +81835,7 @@ OP_Ge
 addr
 +3);
 
-220 
+222 
 	`sqlôeVdbeAddOp
 (
 v
@@ -83283,7 +81843,7 @@ v
 OP_Neg©ive
 , 0, 0);
 
-221 
+223 
 	`sqlôeVdbeAddOp
 (
 v
@@ -83291,13 +81851,13 @@ v
 OP_SëCookõ
 , 0, 2);
 
-222 
+224 
 	`sqlôeEndWrôeO≥øti⁄
 (
 pP¨£
 );
 
-223 
+225 
 db
 ->
 ˇche_size
@@ -83305,7 +81865,7 @@ db
 size
  : size;
 
-224 
+226 
 	`sqlôeBåìSëCacheSize
 (
 db
@@ -83317,27 +81877,27 @@ pBt
 ˇche_size
 );
 
-242 if–
+244 if–
 	`sqlôeSåICmp
 (
 zLe·
 ,"cache_size")==0 ){
 
-243 
+245 
 VdbeOpLi°
  
 gëCacheSize
 [] = {
 
-244 { 
+246 { 
 OP_CﬁumnName
 , 0, 1, "cache_size"},
 
-245 { 
+247 { 
 OP_CÆlback
 , 1, 0, 0},
 
-247 if–
+249 if–
 pRight
 ->
 z
@@ -83345,7 +81905,7 @@ z
 pLe·
 ->z ){
 
-248 
+250 
 size
  = 
 db
@@ -83353,11 +81913,11 @@ db
 ˇche_size
 ;;
 
-249 if–
+251 if–
 size
 <0 ) size = -size;
 
-250 
+252 
 	`sqlôeVdbeAddOp
 (
 v
@@ -83367,7 +81927,7 @@ OP_I¡egî
 size
 , 0);
 
-251 
+253 
 	`sqlôeVdbeAddOpLi°
 (
 v
@@ -83377,7 +81937,7 @@ v
 gëCacheSize
 ), getCacheSize);
 
-253 
+255 
 size
  = 
 	`©oi
@@ -83385,11 +81945,11 @@ size
 zRight
 );
 
-254 if–
+256 if–
 size
 <0 ) size = -size;
 
-255 if–
+257 if–
 db
 ->
 ˇche_size
@@ -83397,7 +81957,7 @@ db
 size
  = -size;
 
-256 
+258 
 db
 ->
 ˇche_size
@@ -83405,7 +81965,7 @@ db
 size
 ;
 
-257 
+259 
 	`sqlôeBåìSëCacheSize
 (
 db
@@ -83417,67 +81977,67 @@ pBt
 ˇche_size
 );
 
-280 if–
+282 if–
 	`sqlôeSåICmp
 (
 zLe·
 ,"default_synchronous")==0 ){
 
-281 
+283 
 VdbeOpLi°
  
 gëSync
 [] = {
 
-282 { 
+284 { 
 OP_CﬁumnName
 , 0, 1, "synchronous"},
 
-283 { 
+285 { 
 OP_RódCookõ
 , 0, 3, 0},
 
-284 { 
+286 { 
 OP_Dup
 , 0, 0, 0},
 
-285 { 
+287 { 
 OP_If
 , 0, 0, 0},
 
-286 { 
+288 { 
 OP_RódCookõ
 , 0, 2, 0},
 
-287 { 
+289 { 
 OP_I¡egî
 , 0, 0, 0},
 
-288 { 
+290 { 
 OP_Lt
 , 0, 5, 0},
 
-289 { 
+291 { 
 OP_AddImm
 , 1, 0, 0},
 
-290 { 
+292 { 
 OP_CÆlback
 , 1, 0, 0},
 
-291 { 
+293 { 
 OP_HÆt
 , 0, 0, 0},
 
-292 { 
+294 { 
 OP_AddImm
 , -1, 0, 0},
 
-293 { 
+295 { 
 OP_CÆlback
 , 1, 0, 0}
 
-295 if–
+297 if–
 pRight
 ->
 z
@@ -83485,7 +82045,7 @@ z
 pLe·
 ->z ){
 
-296 
+298 
 addr
  = 
 	`sqlôeVdbeAddOpLi°
@@ -83497,7 +82057,7 @@ v
 gëSync
 ), getSync);
 
-297 
+299 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -83505,11 +82065,11 @@ v
 addr
 +3,áddr+10);
 
-299 
+301 
 addr
 ;
 
-300 
+302 
 size
  = 
 db
@@ -83517,17 +82077,17 @@ db
 ˇche_size
 ;
 
-301 if–
+303 if–
 size
 <0 ) size = -size;
 
-302 
+304 
 	`sqlôeBegöWrôeO≥øti⁄
 (
 pP¨£
 , 0, 0);
 
-303 
+305 
 	`sqlôeVdbeAddOp
 (
 v
@@ -83535,7 +82095,7 @@ v
 OP_RódCookõ
 , 0, 2);
 
-304 
+306 
 	`sqlôeVdbeAddOp
 (
 v
@@ -83543,7 +82103,7 @@ v
 OP_Dup
 , 0, 0);
 
-305 
+307 
 addr
  = 
 	`sqlôeVdbeAddOp
@@ -83553,7 +82113,7 @@ v
 OP_I¡egî
 , 0, 0);
 
-306 
+308 
 	`sqlôeVdbeAddOp
 (
 v
@@ -83563,7 +82123,7 @@ OP_Ne
 addr
 +3);
 
-307 
+309 
 	`sqlôeVdbeAddOp
 (
 v
@@ -83573,7 +82133,7 @@ OP_AddImm
 MAX_PAGES
 , 0);
 
-308 
+310 
 	`sqlôeVdbeAddOp
 (
 v
@@ -83581,7 +82141,7 @@ v
 OP_AbsVÆue
 , 0, 0);
 
-309 
+311 
 db
 ->
 ß„ty_Àvñ
@@ -83591,13 +82151,13 @@ db
 zRight
 )+1;
 
-310 if–
+312 if–
 db
 ->
 ß„ty_Àvñ
 ==1 ){
 
-311 
+313 
 	`sqlôeVdbeAddOp
 (
 v
@@ -83605,11 +82165,11 @@ v
 OP_Neg©ive
 , 0, 0);
 
-312 
+314 
 size
  = -size;
 
-314 
+316 
 	`sqlôeVdbeAddOp
 (
 v
@@ -83617,7 +82177,7 @@ v
 OP_SëCookõ
 , 0, 2);
 
-315 
+317 
 	`sqlôeVdbeAddOp
 (
 v
@@ -83629,7 +82189,7 @@ db
 ß„ty_Àvñ
 , 0);
 
-316 
+318 
 	`sqlôeVdbeAddOp
 (
 v
@@ -83637,13 +82197,13 @@ v
 OP_SëCookõ
 , 0, 3);
 
-317 
+319 
 	`sqlôeEndWrôeO≥øti⁄
 (
 pP¨£
 );
 
-318 
+320 
 db
 ->
 ˇche_size
@@ -83651,7 +82211,7 @@ db
 size
 ;
 
-319 
+321 
 	`sqlôeBåìSëCacheSize
 (
 db
@@ -83663,7 +82223,7 @@ pBt
 ˇche_size
 );
 
-320 
+322 
 	`sqlôeBåìSëSa„tyLevñ
 (
 db
@@ -83675,27 +82235,27 @@ pBt
 ß„ty_Àvñ
 );
 
-333 if–
+335 if–
 	`sqlôeSåICmp
 (
 zLe·
 ,"synchronous")==0 ){
 
-334 
+336 
 VdbeOpLi°
  
 gëSync
 [] = {
 
-335 { 
+337 { 
 OP_CﬁumnName
 , 0, 1, "synchronous"},
 
-336 { 
+338 { 
 OP_CÆlback
 , 1, 0, 0},
 
-338 if–
+340 if–
 pRight
 ->
 z
@@ -83703,7 +82263,7 @@ z
 pLe·
 ->z ){
 
-339 
+341 
 	`sqlôeVdbeAddOp
 (
 v
@@ -83715,7 +82275,7 @@ db
 ß„ty_Àvñ
 -1, 0);
 
-340 
+342 
 	`sqlôeVdbeAddOpLi°
 (
 v
@@ -83725,7 +82285,7 @@ v
 gëSync
 ), getSync);
 
-342 
+344 
 size
  = 
 db
@@ -83733,11 +82293,11 @@ db
 ˇche_size
 ;
 
-343 if–
+345 if–
 size
 <0 ) size = -size;
 
-344 
+346 
 db
 ->
 ß„ty_Àvñ
@@ -83747,7 +82307,7 @@ db
 zRight
 )+1;
 
-345 if–
+347 if–
 db
 ->
 ß„ty_Àvñ
@@ -83755,7 +82315,7 @@ db
 size
  = -size;
 
-346 
+348 
 db
 ->
 ˇche_size
@@ -83763,7 +82323,7 @@ db
 size
 ;
 
-347 
+349 
 	`sqlôeBåìSëCacheSize
 (
 db
@@ -83775,7 +82335,7 @@ pBt
 ˇche_size
 );
 
-348 
+350 
 	`sqlôeBåìSëSa„tyLevñ
 (
 db
@@ -83787,31 +82347,31 @@ pBt
 ß„ty_Àvñ
 );
 
-352 #i‚de‡
+354 #i‚de‡
 NDEBUG
 
 
-353 if–
+355 if–
 	`sqlôeSåICmp
 (
 zLe·
 , "trigger_overhead_test")==0 ){
 
-354 if–
+356 if–
 	`gëBoﬁón
 (
 zRight
 ) ){
 
-355 
+357 
 Æways_code_åiggî_£tup
  = 1;
 
-357 
+359 
 Æways_code_åiggî_£tup
  = 0;
 
-362 if–
+364 if–
 	`ÊagPøgma
 (
 pP¨£
@@ -83821,19 +82381,19 @@ zLe·
 zRight
 ) ){
 
-366 if–
+368 if–
 	`sqlôeSåICmp
 (
 zLe·
 , "table_info")==0 ){
 
-367 
+369 
 TabÀ
  *
 pTab
 ;
 
-368 
+370 
 pTab
  = 
 	`sqlôeFödTabÀ
@@ -83843,45 +82403,45 @@ db
 zRight
 , 0);
 
-369 if–
+371 if–
 pTab
  ){
 
-370 
+372 
 VdbeOpLi°
  
 èbÀInfoPªÁ˚
 [] = {
 
-371 { 
+373 { 
 OP_CﬁumnName
 , 0, 0, "cid"},
 
-372 { 
+374 { 
 OP_CﬁumnName
 , 1, 0, "name"},
 
-373 { 
+375 { 
 OP_CﬁumnName
 , 2, 0, "type"},
 
-374 { 
+376 { 
 OP_CﬁumnName
 , 3, 0, "notnull"},
 
-375 { 
+377 { 
 OP_CﬁumnName
 , 4, 0, "dflt_value"},
 
-376 { 
+378 { 
 OP_CﬁumnName
 , 5, 1, "pk"},
 
-378 
+380 
 i
 ;
 
-379 
+381 
 	`sqlôeVdbeAddOpLi°
 (
 v
@@ -83891,7 +82451,7 @@ v
 èbÀInfoPªÁ˚
 ),ÅableInfoPreface);
 
-380 
+382 
 	`sqlôeVõwGëCﬁumnNames
 (
 pP¨£
@@ -83899,7 +82459,7 @@ pP¨£
 pTab
 );
 
-381 
+383 
 i
 =0; i<
 pTab
@@ -83907,7 +82467,7 @@ pTab
 nCﬁ
 ; i++){
 
-382 
+384 
 	`sqlôeVdbeAddOp
 (
 v
@@ -83917,7 +82477,7 @@ OP_I¡egî
 i
 , 0);
 
-383 
+385 
 	`sqlôeVdbeOp3
 (
 v
@@ -83933,7 +82493,7 @@ i
 zName
 , 0);
 
-384 
+386 
 	`sqlôeVdbeOp3
 (
 v
@@ -83941,7 +82501,7 @@ v
 OP_Såög
 , 0, 0,
 
-385 
+387 
 pTab
 ->
 aCﬁ
@@ -83951,7 +82511,7 @@ i
 zTy≥
  ?ÖTab->aCol[i].zType : "numeric", 0);
 
-386 
+388 
 	`sqlôeVdbeAddOp
 (
 v
@@ -83967,7 +82527,7 @@ i
 nŸNuŒ
 , 0);
 
-387 
+389 
 	`sqlôeVdbeOp3
 (
 v
@@ -83975,7 +82535,7 @@ v
 OP_Såög
 , 0, 0,
 
-388 
+390 
 pTab
 ->
 aCﬁ
@@ -83987,7 +82547,7 @@ zDÊt
 P3_STATIC
 );
 
-389 
+391 
 	`sqlôeVdbeAddOp
 (
 v
@@ -84003,7 +82563,7 @@ i
 isPrimKey
 , 0);
 
-390 
+392 
 	`sqlôeVdbeAddOp
 (
 v
@@ -84011,25 +82571,25 @@ v
 OP_CÆlback
 , 6, 0);
 
-395 if–
+397 if–
 	`sqlôeSåICmp
 (
 zLe·
 , "index_info")==0 ){
 
-396 
+398 
 Index
  *
 pIdx
 ;
 
-397 
+399 
 TabÀ
  *
 pTab
 ;
 
-398 
+400 
 pIdx
  = 
 	`sqlôeFödIndex
@@ -84039,33 +82599,33 @@ db
 zRight
 , 0);
 
-399 if–
+401 if–
 pIdx
  ){
 
-400 
+402 
 VdbeOpLi°
  
 èbÀInfoPªÁ˚
 [] = {
 
-401 { 
+403 { 
 OP_CﬁumnName
 , 0, 0, "seqno"},
 
-402 { 
+404 { 
 OP_CﬁumnName
 , 1, 0, "cid"},
 
-403 { 
+405 { 
 OP_CﬁumnName
 , 2, 1, "name"},
 
-405 
+407 
 i
 ;
 
-406 
+408 
 pTab
  = 
 pIdx
@@ -84073,7 +82633,7 @@ pIdx
 pTabÀ
 ;
 
-407 
+409 
 	`sqlôeVdbeAddOpLi°
 (
 v
@@ -84083,7 +82643,7 @@ v
 èbÀInfoPªÁ˚
 ),ÅableInfoPreface);
 
-408 
+410 
 i
 =0; i<
 pIdx
@@ -84091,7 +82651,7 @@ pIdx
 nCﬁumn
 ; i++){
 
-409 
+411 
 ˙um
  = 
 pIdx
@@ -84101,7 +82661,7 @@ aiCﬁumn
 i
 ];
 
-410 
+412 
 	`sqlôeVdbeAddOp
 (
 v
@@ -84111,7 +82671,7 @@ OP_I¡egî
 i
 , 0);
 
-411 
+413 
 	`sqlôeVdbeAddOp
 (
 v
@@ -84121,7 +82681,7 @@ OP_I¡egî
 ˙um
 , 0);
 
-412 
+414 
 	`as£π
 –
 pTab
@@ -84131,7 +82691,7 @@ nCﬁ
 ˙um
  );
 
-413 
+415 
 	`sqlôeVdbeOp3
 (
 v
@@ -84147,7 +82707,7 @@ aCﬁ
 zName
 , 0);
 
-414 
+416 
 	`sqlôeVdbeAddOp
 (
 v
@@ -84155,25 +82715,25 @@ v
 OP_CÆlback
 , 3, 0);
 
-419 if–
+421 if–
 	`sqlôeSåICmp
 (
 zLe·
 , "index_list")==0 ){
 
-420 
+422 
 Index
  *
 pIdx
 ;
 
-421 
+423 
 TabÀ
  *
 pTab
 ;
 
-422 
+424 
 pTab
  = 
 	`sqlôeFödTabÀ
@@ -84183,11 +82743,11 @@ db
 zRight
 , 0);
 
-423 if–
+425 if–
 pTab
  ){
 
-424 
+426 
 v
  = 
 	`sqlôeGëVdbe
@@ -84195,7 +82755,7 @@ v
 pP¨£
 );
 
-425 
+427 
 pIdx
  = 
 pTab
@@ -84203,35 +82763,35 @@ pTab
 pIndex
 ;
 
-427 if–
+429 if–
 pTab
  && 
 pIdx
  ){
 
-428 
+430 
 i
  = 0;
 
-429 
+431 
 VdbeOpLi°
  
 ödexLi°PªÁ˚
 [] = {
 
-430 { 
+432 { 
 OP_CﬁumnName
 , 0, 0, "seq"},
 
-431 { 
+433 { 
 OP_CﬁumnName
 , 1, 0, "name"},
 
-432 { 
+434 { 
 OP_CﬁumnName
 , 2, 1, "unique"},
 
-435 
+437 
 	`sqlôeVdbeAddOpLi°
 (
 v
@@ -84241,11 +82801,11 @@ v
 ödexLi°PªÁ˚
 ), indexListPreface);
 
-436 
+438 
 pIdx
 ){
 
-437 
+439 
 	`sqlôeVdbeAddOp
 (
 v
@@ -84255,7 +82815,7 @@ OP_I¡egî
 i
 , 0);
 
-438 
+440 
 	`sqlôeVdbeOp3
 (
 v
@@ -84267,7 +82827,7 @@ pIdx
 zName
 , 0);
 
-439 
+441 
 	`sqlôeVdbeAddOp
 (
 v
@@ -84281,7 +82841,7 @@ pIdx
 OE_N⁄e
 , 0);
 
-440 
+442 
 	`sqlôeVdbeAddOp
 (
 v
@@ -84289,35 +82849,35 @@ v
 OP_CÆlback
 , 3, 0);
 
-441 ++
+443 ++
 i
 ;
 
-442 
+444 
 pIdx
  =ÖIdx->
 pNext
 ;
 
-447 if–
+449 if–
 	`sqlôeSåICmp
 (
 zLe·
 , "foreign_key_list")==0 ){
 
-448 
+450 
 FKey
  *
 pFK
 ;
 
-449 
+451 
 TabÀ
  *
 pTab
 ;
 
-450 
+452 
 pTab
  = 
 	`sqlôeFödTabÀ
@@ -84327,11 +82887,11 @@ db
 zRight
 , 0);
 
-451 if–
+453 if–
 pTab
  ){
 
-452 
+454 
 v
  = 
 	`sqlôeGëVdbe
@@ -84339,7 +82899,7 @@ v
 pP¨£
 );
 
-453 
+455 
 pFK
  = 
 pTab
@@ -84347,43 +82907,43 @@ pTab
 pFKey
 ;
 
-455 if–
+457 if–
 pTab
  && 
 pFK
  ){
 
-456 
+458 
 i
  = 0;
 
-457 
+459 
 VdbeOpLi°
  
 ödexLi°PªÁ˚
 [] = {
 
-458 { 
+460 { 
 OP_CﬁumnName
 , 0, 0, "id"},
 
-459 { 
+461 { 
 OP_CﬁumnName
 , 1, 0, "seq"},
 
-460 { 
+462 { 
 OP_CﬁumnName
 , 2, 0, "table"},
 
-461 { 
+463 { 
 OP_CﬁumnName
 , 3, 0, "from"},
 
-462 { 
+464 { 
 OP_CﬁumnName
 , 4, 1, "to"},
 
-465 
+467 
 	`sqlôeVdbeAddOpLi°
 (
 v
@@ -84393,15 +82953,15 @@ v
 ödexLi°PªÁ˚
 ), indexListPreface);
 
-466 
+468 
 pFK
 ){
 
-467 
+469 
 j
 ;
 
-468 
+470 
 j
 =0; j<
 pFK
@@ -84409,7 +82969,7 @@ pFK
 nCﬁ
 ; j++){
 
-469 
+471 
 	`sqlôeVdbeAddOp
 (
 v
@@ -84419,7 +82979,7 @@ OP_I¡egî
 i
 , 0);
 
-470 
+472 
 	`sqlôeVdbeAddOp
 (
 v
@@ -84429,7 +82989,7 @@ OP_I¡egî
 j
 , 0);
 
-471 
+473 
 	`sqlôeVdbeOp3
 (
 v
@@ -84441,7 +83001,7 @@ pFK
 zTo
 , 0);
 
-472 
+474 
 	`sqlôeVdbeOp3
 (
 v
@@ -84449,7 +83009,7 @@ v
 OP_Såög
 , 0, 0,
 
-473 
+475 
 pTab
 ->
 aCﬁ
@@ -84463,7 +83023,7 @@ iFrom
 zName
 , 0);
 
-474 
+476 
 	`sqlôeVdbeOp3
 (
 v
@@ -84479,7 +83039,7 @@ j
 zCﬁ
 , 0);
 
-475 
+477 
 	`sqlôeVdbeAddOp
 (
 v
@@ -84487,45 +83047,45 @@ v
 OP_CÆlback
 , 5, 0);
 
-477 ++
+479 ++
 i
 ;
 
-478 
+480 
 pFK
  =ÖFK->
 pNextFrom
 ;
 
-483 if–
+485 if–
 	`sqlôeSåICmp
 (
 zLe·
 , "database_list")==0 ){
 
-484 
+486 
 i
 ;
 
-485 
+487 
 VdbeOpLi°
  
 ödexLi°PªÁ˚
 [] = {
 
-486 { 
+488 { 
 OP_CﬁumnName
 , 0, 0, "seq"},
 
-487 { 
+489 { 
 OP_CﬁumnName
 , 1, 0, "name"},
 
-488 { 
+490 { 
 OP_CﬁumnName
 , 2, 1, "file"},
 
-491 
+493 
 	`sqlôeVdbeAddOpLi°
 (
 v
@@ -84535,7 +83095,7 @@ v
 ödexLi°PªÁ˚
 ), indexListPreface);
 
-492 
+494 
 i
 =0; i<
 db
@@ -84543,7 +83103,7 @@ db
 nDb
 ; i++){
 
-493 if–
+495 if–
 db
 ->
 aDb
@@ -84553,7 +83113,7 @@ i
 pBt
 ==0 ) ;
 
-494 
+496 
 	`as£π
 –
 db
@@ -84565,7 +83125,7 @@ i
 zName
 !=0 );
 
-495 
+497 
 	`sqlôeVdbeAddOp
 (
 v
@@ -84575,7 +83135,7 @@ OP_I¡egî
 i
 , 0);
 
-496 
+498 
 	`sqlôeVdbeOp3
 (
 v
@@ -84591,7 +83151,7 @@ i
 zName
 , 0);
 
-497 
+499 
 	`sqlôeVdbeOp3
 (
 v
@@ -84599,7 +83159,7 @@ v
 OP_Såög
 , 0, 0,
 
-498 
+500 
 	`sqlôeBåìGëFûíame
 (
 db
@@ -84611,7 +83171,7 @@ i
 pBt
 ), 0);
 
-499 
+501 
 	`sqlôeVdbeAddOp
 (
 v
@@ -84619,27 +83179,27 @@ v
 OP_CÆlback
 , 3, 0);
 
-515 if–
+517 if–
 	`sqlôeSåICmp
 (
 zLe·
 , "temp_store")==0 ){
 
-516 
+518 
 VdbeOpLi°
  
 gëTmpDbLoc
 [] = {
 
-517 { 
+519 { 
 OP_CﬁumnName
 , 0, 1, "temp_store"},
 
-518 { 
+520 { 
 OP_CÆlback
 , 1, 0, 0},
 
-520 if–
+522 if–
 pRight
 ->
 z
@@ -84647,7 +83207,7 @@ z
 pLe·
 ->z ){
 
-521 
+523 
 	`sqlôeVdbeAddOp
 (
 v
@@ -84659,7 +83219,7 @@ db
 ãmp_°‹e
 , 0);
 
-522 
+524 
 	`sqlôeVdbeAddOpLi°
 (
 v
@@ -84669,7 +83229,7 @@ v
 gëTmpDbLoc
 ), getTmpDbLoc);
 
-524 
+526 
 	`ch™geTempSt‹age
 (
 pP¨£
@@ -84677,31 +83237,31 @@ pP¨£
 zRight
 );
 
-539 if–
+541 if–
 	`sqlôeSåICmp
 (
 zLe·
 , "default_temp_store")==0 ){
 
-540 
+542 
 VdbeOpLi°
  
 gëTmpDbLoc
 [] = {
 
-541 { 
+543 { 
 OP_CﬁumnName
 , 0, 1, "temp_store"},
 
-542 { 
+544 { 
 OP_RódCookõ
 , 0, 5, 0},
 
-543 { 
+545 { 
 OP_CÆlback
 , 1, 0, 0}};
 
-544 if–
+546 if–
 pRight
 ->
 z
@@ -84709,7 +83269,7 @@ z
 pLe·
 ->z ){
 
-545 
+547 
 	`sqlôeVdbeAddOpLi°
 (
 v
@@ -84719,13 +83279,13 @@ v
 gëTmpDbLoc
 ), getTmpDbLoc);
 
-547 
+549 
 	`sqlôeBegöWrôeO≥øti⁄
 (
 pP¨£
 , 0, 0);
 
-548 
+550 
 	`sqlôeVdbeAddOp
 (
 v
@@ -84737,7 +83297,7 @@ OP_I¡egî
 zRight
 ), 0);
 
-549 
+551 
 	`sqlôeVdbeAddOp
 (
 v
@@ -84745,51 +83305,51 @@ v
 OP_SëCookõ
 , 0, 5);
 
-550 
+552 
 	`sqlôeEndWrôeO≥øti⁄
 (
 pP¨£
 );
 
-554 #i‚de‡
+556 #i‚de‡
 NDEBUG
 
 
-555 if–
+557 if–
 	`sqlôeSåICmp
 (
 zLe·
 , "parser_trace")==0 ){
 
-556 
+558 
 	`sqlôeP¨£rTø˚
 (
 FILE
 *, *);
 
-557 if–
+559 if–
 	`gëBoﬁón
 (
 zRight
 ) ){
 
-558 
+560 
 	`sqlôeP¨£rTø˚
 (
 °dout
 , "parser: ");
 
-560 
+562 
 	`sqlôeP¨£rTø˚
 (0, 0);
 
-565 if–
+567 if–
 	`sqlôeSåICmp
 (
 zLe·
 , "integrity_check")==0 ){
 
-566 
+568 
 i
 , 
 j
@@ -84797,129 +83357,129 @@ j
 addr
 ;
 
-571 
+573 
 VdbeOpLi°
  
 öôCode
 [] = {
 
-572 { 
+574 { 
 OP_I¡egî
 , 0, 0, 0},
 
-573 { 
+575 { 
 OP_MemSt‹e
 , 0, 1, 0},
 
-574 { 
+576 { 
 OP_CﬁumnName
 , 0, 1, "integrity_check"},
 
-579 
+581 
 VdbeOpLi°
  
 checkDb
 [] = {
 
-580 { 
+582 { 
 OP_SëIn£π
 , 0, 0, "2"},
 
-581 { 
+583 { 
 OP_I¡egî
 , 0, 0, 0},
 
-582 { 
+584 { 
 OP_O≥nRód
 , 0, 2, 0},
 
-583 { 
+585 { 
 OP_Rewöd
 , 0, 7, 0},
 
-584 { 
+586 { 
 OP_Cﬁumn
 , 0, 3, 0},
 
-585 { 
+587 { 
 OP_SëIn£π
 , 0, 0, 0},
 
-586 { 
+588 { 
 OP_Next
 , 0, 4, 0},
 
-587 { 
+589 { 
 OP_I¡egrôyCk
 , 0, 0, 0},
 
-588 { 
+590 { 
 OP_Dup
 , 0, 1, 0},
 
-589 { 
+591 { 
 OP_Såög
 , 0, 0, "ok"},
 
-590 { 
+592 { 
 OP_SåEq
 , 0, 12, 0},
 
-591 { 
-OP_MemIn¸
-, 0, 0, 0},
-
-592 { 
-OP_Såög
-, 0, 0, "*** in database "},
-
 593 { 
-OP_Såög
+OP_MemIn¸
 , 0, 0, 0},
 
 594 { 
 OP_Såög
-, 0, 0, " ***\n"},
+, 0, 0, "*** in database "},
 
 595 { 
+OP_Såög
+, 0, 0, 0},
+
+596 { 
+OP_Såög
+, 0, 0, " ***\n"},
+
+597 { 
 OP_PuŒ
 , 3, 0, 0},
 
-596 { 
+598 { 
 OP_C⁄ˇt
 , 4, 1, 0},
 
-597 { 
+599 { 
 OP_CÆlback
 , 1, 0, 0},
 
-604 
+606 
 VdbeOpLi°
  
 ídCode
 [] = {
 
-605 { 
+607 { 
 OP_MemLﬂd
 , 0, 0, 0},
 
-606 { 
+608 { 
 OP_I¡egî
 , 0, 0, 0},
 
-607 { 
+609 { 
 OP_Ne
 , 0, 0, 0},
 
-608 { 
+610 { 
 OP_Såög
 , 0, 0, "ok"},
 
-609 { 
+611 { 
 OP_CÆlback
 , 1, 0, 0},
 
-613 
+615 
 	`sqlôeVdbeAddOpLi°
 (
 v
@@ -84929,7 +83489,7 @@ v
 öôCode
 ), initCode);
 
-616 
+618 
 i
 =0; i<
 db
@@ -84937,13 +83497,13 @@ db
 nDb
 ; i++){
 
-617 
+619 
 HashEÀm
  *
 x
 ;
 
-621 
+623 
 addr
  = 
 	`sqlôeVdbeAddOpLi°
@@ -84955,7 +83515,7 @@ v
 checkDb
 ), checkDb);
 
-622 
+624 
 	`sqlôeVdbeCh™geP1
 (
 v
@@ -84965,7 +83525,7 @@ addr
 i
 );
 
-623 
+625 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -84973,7 +83533,7 @@ v
 addr
 +3,áddr+7);
 
-624 
+626 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -84981,7 +83541,7 @@ v
 addr
 +6,áddr+4);
 
-625 
+627 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -84991,7 +83551,7 @@ addr
 i
 );
 
-626 
+628 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -85003,7 +83563,7 @@ addr
 checkDb
 ));
 
-627 
+629 
 	`sqlôeVdbeCh™geP3
 (
 v
@@ -85021,7 +83581,7 @@ zName
 P3_STATIC
 );
 
-631 
+633 
 	`sqlôeCodeVîifySchema
 (
 pP¨£
@@ -85029,7 +83589,7 @@ pP¨£
 i
 );
 
-632 
+634 
 x
 =
 	`sqlôeHashFú°
@@ -85045,7 +83605,7 @@ tblHash
 	`sqlôeHashNext
 (x)){
 
-633 
+635 
 TabÀ
  *
 pTab
@@ -85055,23 +83615,23 @@ pTab
 x
 );
 
-634 
+636 
 Index
  *
 pIdx
 ;
 
-635 
+637 
 lo›T›
 ;
 
-637 if–
+639 if–
 pTab
 ->
 pIndex
 ==0 ) ;
 
-638 
+640 
 	`sqlôeVdbeAddOp
 (
 v
@@ -85081,7 +83641,7 @@ OP_I¡egî
 i
 , 0);
 
-639 
+641 
 	`sqlôeVdbeOp3
 (
 v
@@ -85095,7 +83655,7 @@ pTab
 zName
 , 0);
 
-640 
+642 
 j
 =0, 
 pIdx
@@ -85107,13 +83667,13 @@ pIndex
 pNext
 , j++){
 
-641 if–
+643 if–
 pIdx
 ->
 äum
 ==0 ) ;
 
-642 
+644 
 	`sqlôeVdbeAddOp
 (
 v
@@ -85125,7 +83685,7 @@ pIdx
 iDb
 , 0);
 
-643 
+645 
 	`sqlôeVdbeOp3
 (
 v
@@ -85141,7 +83701,7 @@ pIdx
 zName
 , 0);
 
-645 
+647 
 	`sqlôeVdbeAddOp
 (
 v
@@ -85149,7 +83709,7 @@ v
 OP_I¡egî
 , 0, 0);
 
-646 
+648 
 	`sqlôeVdbeAddOp
 (
 v
@@ -85157,7 +83717,7 @@ v
 OP_MemSt‹e
 , 1, 1);
 
-647 
+649 
 lo›T›
  = 
 	`sqlôeVdbeAddOp
@@ -85167,7 +83727,7 @@ v
 OP_Rewöd
 , 1, 0);
 
-648 
+650 
 	`sqlôeVdbeAddOp
 (
 v
@@ -85175,7 +83735,7 @@ v
 OP_MemIn¸
 , 1, 0);
 
-649 
+651 
 j
 =0, 
 pIdx
@@ -85187,47 +83747,47 @@ pIndex
 pNext
 , j++){
 
-650 
+652 
 k
 , 
 jmp2
 ;
 
-651 
+653 
 VdbeOpLi°
  
 idxEº
 [] = {
 
-652 { 
+654 { 
 OP_MemIn¸
 , 0, 0, 0},
 
-653 { 
+655 { 
 OP_Såög
 , 0, 0, "rowid "},
 
-654 { 
+656 { 
 OP_Re˙o
 , 1, 0, 0},
 
-655 { 
+657 { 
 OP_Såög
 , 0, 0, " missing from index "},
 
-656 { 
+658 { 
 OP_Såög
 , 0, 0, 0},
 
-657 { 
+659 { 
 OP_C⁄ˇt
 , 4, 0, 0},
 
-658 { 
+660 { 
 OP_CÆlback
 , 1, 0, 0},
 
-660 
+662 
 	`sqlôeVdbeAddOp
 (
 v
@@ -85235,7 +83795,7 @@ v
 OP_Re˙o
 , 1, 0);
 
-661 
+663 
 k
 =0; k<
 pIdx
@@ -85243,7 +83803,7 @@ pIdx
 nCﬁumn
 ; k++){
 
-662 
+664 
 idx
  = 
 pIdx
@@ -85253,7 +83813,7 @@ aiCﬁumn
 k
 ];
 
-663 if–
+665 if–
 idx
 ==
 pTab
@@ -85261,7 +83821,7 @@ pTab
 iPKey
  ){
 
-664 
+666 
 	`sqlôeVdbeAddOp
 (
 v
@@ -85269,7 +83829,7 @@ v
 OP_Re˙o
 , 1, 0);
 
-666 
+668 
 	`sqlôeVdbeAddOp
 (
 v
@@ -85279,7 +83839,7 @@ OP_Cﬁumn
 idx
 );
 
-669 
+671 
 	`sqlôeVdbeAddOp
 (
 v
@@ -85291,7 +83851,7 @@ pIdx
 nCﬁumn
 , 0);
 
-670 if–
+672 if–
 db
 ->
 fûe_f‹m©
@@ -85303,7 +83863,7 @@ v
 pIdx
 );
 
-671 
+673 
 jmp2
  = 
 	`sqlôeVdbeAddOp
@@ -85315,7 +83875,7 @@ OP_Found
 j
 +2, 0);
 
-672 
+674 
 addr
  = 
 	`sqlôeVdbeAddOpLi°
@@ -85327,7 +83887,7 @@ v
 idxEº
 ), idxErr);
 
-673 
+675 
 	`sqlôeVdbeCh™geP3
 (
 v
@@ -85341,7 +83901,7 @@ zName
 P3_STATIC
 );
 
-674 
+676 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -85351,7 +83911,7 @@ jmp2
 	`sqlôeVdbeCuºítAddr
 (v));
 
-676 
+678 
 	`sqlôeVdbeAddOp
 (
 v
@@ -85361,7 +83921,7 @@ OP_Next
 lo›T›
 +1);
 
-677 
+679 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -85371,7 +83931,7 @@ lo›T›
 	`sqlôeVdbeCuºítAddr
 (v));
 
-678 
+680 
 j
 =0, 
 pIdx
@@ -85383,71 +83943,71 @@ pIndex
 pNext
 , j++){
 
-679 
+681 
 VdbeOpLi°
  
 ˙tIdx
 [] = {
 
-680 { 
+682 { 
 OP_I¡egî
 , 0, 0, 0},
 
-681 { 
+683 { 
 OP_MemSt‹e
 , 2, 1, 0},
 
-682 { 
+684 { 
 OP_Rewöd
 , 0, 0, 0},
 
-683 { 
+685 { 
 OP_MemIn¸
 , 2, 0, 0},
 
-684 { 
+686 { 
 OP_Next
 , 0, 0, 0},
 
-685 { 
+687 { 
 OP_MemLﬂd
 , 1, 0, 0},
 
-686 { 
+688 { 
 OP_MemLﬂd
 , 2, 0, 0},
 
-687 { 
+689 { 
 OP_Eq
 , 0, 0, 0},
 
-688 { 
+690 { 
 OP_MemIn¸
 , 0, 0, 0},
 
-689 { 
+691 { 
 OP_Såög
 , 0, 0, "wrong # ofÉntries in index "},
 
-690 { 
+692 { 
 OP_Såög
 , 0, 0, 0},
 
-691 { 
+693 { 
 OP_C⁄ˇt
 , 2, 0, 0},
 
-692 { 
+694 { 
 OP_CÆlback
 , 1, 0, 0},
 
-694 if–
+696 if–
 pIdx
 ->
 äum
 ==0 ) ;
 
-695 
+697 
 addr
  = 
 	`sqlôeVdbeAddOpLi°
@@ -85459,7 +84019,7 @@ v
 ˙tIdx
 ), cntIdx);
 
-696 
+698 
 	`sqlôeVdbeCh™geP1
 (
 v
@@ -85469,7 +84029,7 @@ addr
 j
 +2);
 
-697 
+699 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -85477,7 +84037,7 @@ v
 addr
 +2,áddr+5);
 
-698 
+700 
 	`sqlôeVdbeCh™geP1
 (
 v
@@ -85487,7 +84047,7 @@ addr
 j
 +2);
 
-699 
+701 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -85495,7 +84055,7 @@ v
 addr
 +4,áddr+3);
 
-700 
+702 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -85507,7 +84067,7 @@ addr
 ˙tIdx
 ));
 
-701 
+703 
 	`sqlôeVdbeCh™geP3
 (
 v
@@ -85521,7 +84081,7 @@ zName
 P3_STATIC
 );
 
-705 
+707 
 addr
  = 
 	`sqlôeVdbeAddOpLi°
@@ -85533,7 +84093,7 @@ v
 ídCode
 ),ÉndCode);
 
-706 
+708 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -85545,19 +84105,19 @@ addr
 ídCode
 ));
 
-710 
+712 
 	`sqlôeFªe
 (
 zLe·
 );
 
-711 
+713 
 	`sqlôeFªe
 (
 zRight
 );
 
-712 
+714 
 	}
 }
 
@@ -97019,14 +95579,6 @@ nEº
 p
 ==0 )  1;
 
-2033 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_SELECT
-, 0, 0, 0) )  1;
-
 2037 if–
 p
 ->
@@ -107044,86 +105596,6 @@ P¨£
 1247 #i‚de‡
 SQLITE_OMIT_AUTHORIZATION
 
-
-1248 
-sqlôeAuthRód
-(
-P¨£
-*,
-Ex¥
-*,
-SrcLi°
-*);
-
-1249 
-sqlôeAuthCheck
-(
-P¨£
-*,, const *, const *, const *);
-
-1250 
-sqlôeAuthC⁄ãxtPush
-(
-P¨£
-*, 
-AuthC⁄ãxt
-*, const *);
-
-1251 
-sqlôeAuthC⁄ãxtP›
-(
-AuthC⁄ãxt
-*);
-
-1253 
-	#sqlôeAuthRód
-(
-a
-,
-b
-,
-c
-)
-
-	)
-
-1254 
-	#sqlôeAuthCheck
-(
-a
-,
-b
-,
-c
-,
-d
-,
-e
-Ë
-SQLITE_OK
-
-
-	)
-
-1255 
-	#sqlôeAuthC⁄ãxtPush
-(
-a
-,
-b
-,
-c
-)
-
-	)
-
-1256 
-	#sqlôeAuthC⁄ãxtP›
-(
-a
-Ë(()◊))
-
-	)
 
 1258 
 sqlôeAâach
@@ -127109,57 +125581,19 @@ code
 SQLITE_CREATE_TEMP_TRIGGER
 ;
 
-112 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-code
-, 
-zName
-, 
-èb
-->zName, 
-zDbTrig
-) ){
-
-113 
-åiggî_˛ónup
-;
-
-115 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_INSERT
-, 
-	`SCHEMA_TABLE
-(
-èb
-->
-iDb
-), 0, 
-zDb
-)){
-
-116 
-åiggî_˛ónup
-;
-
-126 i‡(
+128 i‡(
 å_tm
  =
 TK_INSTEAD
 ){
 
-127 
+129 
 å_tm
  = 
 TK_BEFORE
 ;
 
-131 
+133 
 ¡
  = (
 Triggî
@@ -127167,13 +125601,13 @@ Triggî
 	`sqlôeMÆloc
 ((Trigger));
 
-132 if–
+134 if–
 ¡
 ==0 ) 
 åiggî_˛ónup
 ;
 
-133 
+135 
 ¡
 ->
 «me
@@ -127181,11 +125615,11 @@ Triggî
 zName
 ;
 
-134 
+136 
 zName
  = 0;
 
-135 
+137 
 ¡
 ->
 èbÀ
@@ -127199,19 +125633,19 @@ a
 zName
 );
 
-136 if–
+138 if–
 sqlôe_mÆloc_Áûed
  ) 
 åiggî_˛ónup
 ;
 
-137 
+139 
 ¡
 ->
 iDb
  = iDb;
 
-138 
+140 
 ¡
 ->
 iTabDb
@@ -127221,19 +125655,19 @@ iTabDb
 iDb
 ;
 
-139 
+141 
 ¡
 ->
 ›
  = op;
 
-140 
+142 
 ¡
 ->
 å_tm
  =År_tm;
 
-141 
+143 
 ¡
 ->
 pWhí
@@ -127241,7 +125675,7 @@ pWhí
 	`sqlôeEx¥Dup
 (pWhen);
 
-142 
+144 
 ¡
 ->
 pCﬁumns
@@ -127249,13 +125683,13 @@ pCﬁumns
 	`sqlôeIdLi°Dup
 (pColumns);
 
-143 
+145 
 ¡
 ->
 f‹óch
  = foreach;
 
-144 
+146 
 	`sqlôeTokíC›y
 (&
 ¡
@@ -127265,7 +125699,7 @@ f‹óch
 pName
 );
 
-145 
+147 
 	`as£π
 –
 pP¨£
@@ -127273,7 +125707,7 @@ pP¨£
 pNewTriggî
 ==0 );
 
-146 
+148 
 pP¨£
 ->
 pNewTriggî
@@ -127281,67 +125715,67 @@ pNewTriggî
 ¡
 ;
 
-148 
+150 
 åiggî_˛ónup
 :
 
-149 
+151 
 	`sqlôeFªe
 (
 zName
 );
 
-150 
+152 
 	`sqlôeSrcLi°Dñëe
 (
 pTabÀName
 );
 
-151 
+153 
 	`sqlôeIdLi°Dñëe
 (
 pCﬁumns
 );
 
-152 
+154 
 	`sqlôeEx¥Dñëe
 (
 pWhí
 );
 
-153 
+155 
 	}
 }
 
-159 
+161 
 	$sqlôeFöishTriggî
 (
 
-160 
+162 
 P¨£
  *
 pP¨£
 ,
 
-161 
+163 
 TriggîSãp
  *
 pSãpLi°
 ,
 
-162 
+164 
 Tokí
  *
 pAŒ
 
 
-164 
+166 
 Triggî
  *
 ¡
  = 0;
 
-165 
+167 
 sqlôe
  *
 db
@@ -127349,13 +125783,13 @@ db
 pP¨£
 ->db;
 
-166 
+168 
 DbFixî
  
 sFix
 ;
 
-168 if–
+170 if–
 pP¨£
 ->
 nEº
@@ -127365,7 +125799,7 @@ pNewTriggî
 åiggîföish_˛ónup
 ;
 
-169 
+171 
 ¡
  = 
 pP¨£
@@ -127373,13 +125807,13 @@ pP¨£
 pNewTriggî
 ;
 
-170 
+172 
 pP¨£
 ->
 pNewTriggî
  = 0;
 
-171 
+173 
 ¡
 ->
 °ï_li°
@@ -127387,11 +125821,11 @@ pNewTriggî
 pSãpLi°
 ;
 
-172  
+174  
 pSãpLi°
  ){
 
-173 
+175 
 pSãpLi°
 ->
 pTrig
@@ -127399,13 +125833,13 @@ pTrig
 ¡
 ;
 
-174 
+176 
 pSãpLi°
  =ÖSãpLi°->
 pNext
 ;
 
-176 if–
+178 if–
 	`sqlôeFixInô
 (&
 sFix
@@ -127419,7 +125853,7 @@ iDb
 «meTokí
 )
 
-177 && 
+179 && 
 	`sqlôeFixTriggîSãp
 (&
 sFix
@@ -127429,11 +125863,11 @@ sFix
 °ï_li°
 ) ){
 
-178 
+180 
 åiggîföish_˛ónup
 ;
 
-184 if–!
+186 if–!
 db
 ->
 öô
@@ -127441,30 +125875,22 @@ db
 busy
  ){
 
-185 
+187 
 VdbeOpLi°
  
 ö£πTrig
 [] = {
 
-186 { 
-OP_NewRe˙o
-, 0, 0, 0 },
-
-187 { 
-OP_Såög
-, 0, 0, "trigger" },
-
 188 { 
-OP_Såög
+OP_NewRe˙o
 , 0, 0, 0 },
 
 189 { 
 OP_Såög
-, 0, 0, 0 },
+, 0, 0, "trigger" },
 
 190 { 
-OP_I¡egî
+OP_Såög
 , 0, 0, 0 },
 
 191 { 
@@ -127472,24 +125898,32 @@ OP_Såög
 , 0, 0, 0 },
 
 192 { 
+OP_I¡egî
+, 0, 0, 0 },
+
+193 { 
+OP_Såög
+, 0, 0, 0 },
+
+194 { 
 OP_MakeRec‹d
 , 5, 0, 0 },
 
-193 { 
+195 { 
 OP_PutI¡Key
 , 0, 0, 0 },
 
-195 
+197 
 addr
 ;
 
-196 
+198 
 Vdbe
  *
 v
 ;
 
-199 
+201 
 v
  = 
 	`sqlôeGëVdbe
@@ -127497,19 +125931,19 @@ v
 pP¨£
 );
 
-200 if–
+202 if–
 v
 ==0 ) 
 åiggîföish_˛ónup
 ;
 
-201 
+203 
 	`sqlôeBegöWrôeO≥øti⁄
 (
 pP¨£
 , 0, 0);
 
-202 
+204 
 	`sqlôeO≥nMa°îTabÀ
 (
 v
@@ -127519,7 +125953,7 @@ v
 iDb
 );
 
-203 
+205 
 addr
  = 
 	`sqlôeVdbeAddOpLi°
@@ -127531,7 +125965,7 @@ v
 ö£πTrig
 ), insertTrig);
 
-204 
+206 
 	`sqlôeVdbeCh™geP3
 (
 v
@@ -127543,7 +125977,7 @@ addr
 «me
 , 0);
 
-205 
+207 
 	`sqlôeVdbeCh™geP3
 (
 v
@@ -127555,7 +125989,7 @@ addr
 èbÀ
 , 0);
 
-206 
+208 
 	`sqlôeVdbeCh™geP3
 (
 v
@@ -127569,13 +126003,13 @@ z
 n
 );
 
-207 if–
+209 if–
 ¡
 ->
 iDb
 ==0 ){
 
-208 
+210 
 	`sqlôeCh™geCookõ
 (
 db
@@ -127583,7 +126017,7 @@ db
 v
 );
 
-210 
+212 
 	`sqlôeVdbeAddOp
 (
 v
@@ -127591,25 +126025,25 @@ v
 OP_Clo£
 , 0, 0);
 
-211 
+213 
 	`sqlôeEndWrôeO≥øti⁄
 (
 pP¨£
 );
 
-214 if–!
+216 if–!
 pP¨£
 ->
 ex∂aö
  ){
 
-215 
+217 
 TabÀ
  *
 pTab
 ;
 
-216 
+218 
 	`sqlôeHashIn£π
 (&
 db
@@ -127623,7 +126057,7 @@ iDb
 åigHash
 ,
 
-217 
+219 
 ¡
 ->
 «me
@@ -127631,7 +126065,7 @@ iDb
 	`°æí
 (nt->name)+1,Çt);
 
-218 
+220 
 pTab
  = 
 	`sqlôeLoˇãTabÀ
@@ -127651,13 +126085,13 @@ iTabDb
 zName
 );
 
-219 
+221 
 	`as£π
 –
 pTab
 !=0 );
 
-220 
+222 
 ¡
 ->
 pNext
@@ -127667,7 +126101,7 @@ pTab
 pTriggî
 ;
 
-221 
+223 
 pTab
 ->
 pTriggî
@@ -127675,21 +126109,21 @@ pTriggî
 ¡
 ;
 
-222 
+224 
 ¡
  = 0;
 
-225 
+227 
 åiggîföish_˛ónup
 :
 
-226 
+228 
 	`sqlôeDñëeTriggî
 (
 ¡
 );
 
-227 
+229 
 	`sqlôeDñëeTriggî
 (
 pP¨£
@@ -127697,23 +126131,23 @@ pP¨£
 pNewTriggî
 );
 
-228 
+230 
 pP¨£
 ->
 pNewTriggî
  = 0;
 
-229 
+231 
 	`sqlôeDñëeTriggîSãp
 (
 pSãpLi°
 );
 
-230 
+232 
 	}
 }
 
-242 
+244 
 	$sqlôePîsi°TriggîSãp
 (
 TriggîSãp
@@ -127721,7 +126155,7 @@ TriggîSãp
 p
 ){
 
-243 if–
+245 if–
 p
 ->
 èrgë
@@ -127729,7 +126163,7 @@ p
 z
  ){
 
-244 
+246 
 p
 ->
 èrgë
@@ -127741,7 +126175,7 @@ z
 n
 );
 
-245 
+247 
 p
 ->
 èrgë
@@ -127749,13 +126183,13 @@ p
 dyn
  = 1;
 
-247 if–
+249 if–
 p
 ->
 pSñe˘
  ){
 
-248 
+250 
 Sñe˘
  *
 pNew
@@ -127767,7 +126201,7 @@ p
 pSñe˘
 );
 
-249 
+251 
 	`sqlôeSñe˘Dñëe
 (
 p
@@ -127775,7 +126209,7 @@ p
 pSñe˘
 );
 
-250 
+252 
 p
 ->
 pSñe˘
@@ -127783,13 +126217,13 @@ pSñe˘
 pNew
 ;
 
-252 if–
+254 if–
 p
 ->
 pWhîe
  ){
 
-253 
+255 
 Ex¥
  *
 pNew
@@ -127801,7 +126235,7 @@ p
 pWhîe
 );
 
-254 
+256 
 	`sqlôeEx¥Dñëe
 (
 p
@@ -127809,7 +126243,7 @@ p
 pWhîe
 );
 
-255 
+257 
 p
 ->
 pWhîe
@@ -127817,13 +126251,13 @@ pWhîe
 pNew
 ;
 
-257 if–
+259 if–
 p
 ->
 pEx¥Li°
  ){
 
-258 
+260 
 Ex¥Li°
  *
 pNew
@@ -127835,7 +126269,7 @@ p
 pEx¥Li°
 );
 
-259 
+261 
 	`sqlôeEx¥Li°Dñëe
 (
 p
@@ -127843,7 +126277,7 @@ p
 pEx¥Li°
 );
 
-260 
+262 
 p
 ->
 pEx¥Li°
@@ -127851,13 +126285,13 @@ pEx¥Li°
 pNew
 ;
 
-262 if–
+264 if–
 p
 ->
 pIdLi°
  ){
 
-263 
+265 
 IdLi°
  *
 pNew
@@ -127869,7 +126303,7 @@ p
 pIdLi°
 );
 
-264 
+266 
 	`sqlôeIdLi°Dñëe
 (
 p
@@ -127877,7 +126311,7 @@ p
 pIdLi°
 );
 
-265 
+267 
 p
 ->
 pIdLi°
@@ -127885,11 +126319,11 @@ pIdLi°
 pNew
 ;
 
-267 
+269 
 	}
 }
 
-276 
+278 
 TriggîSãp
  *
 	$sqlôeTriggîSñe˘Sãp
@@ -127899,7 +126333,7 @@ Sñe˘
 pSñe˘
 ){
 
-277 
+279 
 TriggîSãp
  *
 pTriggîSãp
@@ -127907,11 +126341,11 @@ pTriggîSãp
 	`sqlôeMÆloc
 ((TriggerStep));
 
-278 if–
+280 if–
 pTriggîSãp
 ==0 )  0;
 
-280 
+282 
 pTriggîSãp
 ->
 ›
@@ -127919,13 +126353,13 @@ pTriggîSãp
 TK_SELECT
 ;
 
-281 
+283 
 pTriggîSãp
 ->
 pSñe˘
  =ÖSelect;
 
-282 
+284 
 pTriggîSãp
 ->
 ‹c⁄f
@@ -127933,55 +126367,55 @@ pTriggîSãp
 OE_DeÁu…
 ;
 
-283 
+285 
 	`sqlôePîsi°TriggîSãp
 (
 pTriggîSãp
 );
 
-285  
+287  
 pTriggîSãp
 ;
 
-286 
+288 
 	}
 }
 
-295 
+297 
 TriggîSãp
  *
 	$sqlôeTriggîIn£πSãp
 (
 
-296 
+298 
 Tokí
  *
 pTabÀName
 ,
 
-297 
+299 
 IdLi°
  *
 pCﬁumn
 ,
 
-298 
+300 
 Ex¥Li°
  *
 pELi°
 ,
 
-299 
+301 
 Sñe˘
  *
 pSñe˘
 ,
 
-300 
+302 
 ‹c⁄f
 
 
-302 
+304 
 TriggîSãp
  *
 pTriggîSãp
@@ -127989,11 +126423,11 @@ pTriggîSãp
 	`sqlôeMÆloc
 ((TriggerStep));
 
-303 if–
+305 if–
 pTriggîSãp
 ==0 )  0;
 
-305 
+307 
 	`as£π
 (
 pELi°
@@ -128001,7 +126435,7 @@ pELi°
 pSñe˘
  == 0);
 
-306 
+308 
 	`as£π
 (
 pELi°
@@ -128009,7 +126443,7 @@ pELi°
 pSñe˘
  != 0);
 
-308 
+310 
 pTriggîSãp
 ->
 ›
@@ -128017,13 +126451,13 @@ pTriggîSãp
 TK_INSERT
 ;
 
-309 
+311 
 pTriggîSãp
 ->
 pSñe˘
  =ÖSelect;
 
-310 
+312 
 pTriggîSãp
 ->
 èrgë
@@ -128031,7 +126465,7 @@ pTriggîSãp
 pTabÀName
 ;
 
-311 
+313 
 pTriggîSãp
 ->
 pIdLi°
@@ -128039,7 +126473,7 @@ pIdLi°
 pCﬁumn
 ;
 
-312 
+314 
 pTriggîSãp
 ->
 pEx¥Li°
@@ -128047,55 +126481,55 @@ pEx¥Li°
 pELi°
 ;
 
-313 
+315 
 pTriggîSãp
 ->
 ‹c⁄f
  = orconf;
 
-314 
+316 
 	`sqlôePîsi°TriggîSãp
 (
 pTriggîSãp
 );
 
-316  
+318  
 pTriggîSãp
 ;
 
-317 
+319 
 	}
 }
 
-324 
+326 
 TriggîSãp
  *
 	$sqlôeTriggîUpd©eSãp
 (
 
-325 
+327 
 Tokí
  *
 pTabÀName
 ,
 
-326 
+328 
 Ex¥Li°
  *
 pELi°
 ,
 
-327 
+329 
 Ex¥
  *
 pWhîe
 ,
 
-328 
+330 
 ‹c⁄f
 
 
-330 
+332 
 TriggîSãp
  *
 pTriggîSãp
@@ -128103,11 +126537,11 @@ pTriggîSãp
 	`sqlôeMÆloc
 ((TriggerStep));
 
-331 if–
+333 if–
 pTriggîSãp
 ==0 )  0;
 
-333 
+335 
 pTriggîSãp
 ->
 ›
@@ -128115,7 +126549,7 @@ pTriggîSãp
 TK_UPDATE
 ;
 
-334 
+336 
 pTriggîSãp
 ->
 èrgë
@@ -128123,7 +126557,7 @@ pTriggîSãp
 pTabÀName
 ;
 
-335 
+337 
 pTriggîSãp
 ->
 pEx¥Li°
@@ -128131,33 +126565,33 @@ pEx¥Li°
 pELi°
 ;
 
-336 
+338 
 pTriggîSãp
 ->
 pWhîe
  =ÖWhere;
 
-337 
+339 
 pTriggîSãp
 ->
 ‹c⁄f
  = orconf;
 
-338 
+340 
 	`sqlôePîsi°TriggîSãp
 (
 pTriggîSãp
 );
 
-340  
+342  
 pTriggîSãp
 ;
 
-341 
+343 
 	}
 }
 
-348 
+350 
 TriggîSãp
  *
 	$sqlôeTriggîDñëeSãp
@@ -128171,7 +126605,7 @@ Ex¥
 pWhîe
 ){
 
-349 
+351 
 TriggîSãp
  *
 pTriggîSãp
@@ -128179,11 +126613,11 @@ pTriggîSãp
 	`sqlôeMÆloc
 ((TriggerStep));
 
-350 if–
+352 if–
 pTriggîSãp
 ==0 )  0;
 
-352 
+354 
 pTriggîSãp
 ->
 ›
@@ -128191,7 +126625,7 @@ pTriggîSãp
 TK_DELETE
 ;
 
-353 
+355 
 pTriggîSãp
 ->
 èrgë
@@ -128199,13 +126633,13 @@ pTriggîSãp
 pTabÀName
 ;
 
-354 
+356 
 pTriggîSãp
 ->
 pWhîe
  =ÖWhere;
 
-355 
+357 
 pTriggîSãp
 ->
 ‹c⁄f
@@ -128213,21 +126647,21 @@ pTriggîSãp
 OE_DeÁu…
 ;
 
-356 
+358 
 	`sqlôePîsi°TriggîSãp
 (
 pTriggîSãp
 );
 
-358  
+360  
 pTriggîSãp
 ;
 
-359 
+361 
 	}
 }
 
-364 
+366 
 	$sqlôeDñëeTriggî
 (
 Triggî
@@ -128235,11 +126669,11 @@ Triggî
 pTriggî
 ){
 
-365 if–
+367 if–
 pTriggî
 ==0 ) ;
 
-366 
+368 
 	`sqlôeDñëeTriggîSãp
 (
 pTriggî
@@ -128247,7 +126681,7 @@ pTriggî
 °ï_li°
 );
 
-367 
+369 
 	`sqlôeFªe
 (
 pTriggî
@@ -128255,7 +126689,7 @@ pTriggî
 «me
 );
 
-368 
+370 
 	`sqlôeFªe
 (
 pTriggî
@@ -128263,7 +126697,7 @@ pTriggî
 èbÀ
 );
 
-369 
+371 
 	`sqlôeEx¥Dñëe
 (
 pTriggî
@@ -128271,7 +126705,7 @@ pTriggî
 pWhí
 );
 
-370 
+372 
 	`sqlôeIdLi°Dñëe
 (
 pTriggî
@@ -128279,7 +126713,7 @@ pTriggî
 pCﬁumns
 );
 
-371 if–
+373 if–
 pTriggî
 ->
 «meTokí
@@ -128291,17 +126725,17 @@ dyn
 z
 );
 
-372 
+374 
 	`sqlôeFªe
 (
 pTriggî
 );
 
-373 
+375 
 	}
 }
 
-388 
+390 
 	$sqlôeDr›Triggî
 (
 P¨£
@@ -128313,29 +126747,29 @@ SrcLi°
 pName
 ){
 
-389 
+391 
 Triggî
  *
 pTriggî
 ;
 
-390 
+392 
 i
 ;
 
-391 c⁄° *
+393 c⁄° *
 zDb
 ;
 
-392 c⁄° *
+394 c⁄° *
 zName
 ;
 
-393 
+395 
 nName
 ;
 
-394 
+396 
 sqlôe
  *
 db
@@ -128343,13 +126777,13 @@ db
 pP¨£
 ->db;
 
-396 if–
+398 if–
 sqlôe_mÆloc_Áûed
  ) 
 dr›_åiggî_˛ónup
 ;
 
-397 
+399 
 	`as£π
 –
 pName
@@ -128357,7 +126791,7 @@ pName
 nSrc
 ==1 );
 
-398 
+400 
 zDb
  = 
 pName
@@ -128367,7 +126801,7 @@ a
 zD©aba£
 ;
 
-399 
+401 
 zName
  = 
 pName
@@ -128375,7 +126809,7 @@ pName
 a
 [0].zName;
 
-400 
+402 
 nName
  = 
 	`°æí
@@ -128383,7 +126817,7 @@ nName
 zName
 );
 
-401 
+403 
 i
 =0; i<
 db
@@ -128391,13 +126825,13 @@ db
 nDb
 ; i++){
 
-402 
+404 
 j
  = (
 i
 <2) ? i^1 : i;
 
-403 if–
+405 if–
 zDb
  && 
 	`sqlôeSåICmp
@@ -128411,7 +126845,7 @@ j
 zName
 , zDb) ) ;
 
-404 
+406 
 pTriggî
  = 
 	`sqlôeHashFöd
@@ -128429,15 +126863,15 @@ zName
 nName
 +1);
 
-405 if–
+407 if–
 pTriggî
  ) ;
 
-407 if–!
+409 if–!
 pTriggî
  ){
 
-408 
+410 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -128445,11 +126879,11 @@ pP¨£
 pName
 , 0);
 
-409 
+411 
 dr›_åiggî_˛ónup
 ;
 
-411 
+413 
 	`sqlôeDr›TriggîPå
 (
 pP¨£
@@ -128457,21 +126891,21 @@ pP¨£
 pTriggî
 , 0);
 
-413 
+415 
 dr›_åiggî_˛ónup
 :
 
-414 
+416 
 	`sqlôeSrcLi°Dñëe
 (
 pName
 );
 
-415 
+417 
 	}
 }
 
-422 
+424 
 	$sqlôeDr›TriggîPå
 (
 P¨£
@@ -128485,19 +126919,19 @@ pTriggî
 √°ed
 ){
 
-423 
+425 
 TabÀ
  *
 pTabÀ
 ;
 
-424 
+426 
 Vdbe
  *
 v
 ;
 
-425 
+427 
 sqlôe
  *
 db
@@ -128505,7 +126939,7 @@ db
 pP¨£
 ->db;
 
-427 
+429 
 	`as£π
 –
 pTriggî
@@ -128517,19 +126951,19 @@ db
 nDb
  );
 
-428 if–
+430 if–
 pTriggî
 ->
 iDb
 >=2 ){
 
-429 
+431 
 	`sqlôeEº‹Msg
 (
 pP¨£
 , "triggers mayÇot beÑemoved from "
 
-430 "auxûüry d©aba£ %s", 
+432 "auxûüry d©aba£ %s", 
 db
 ->
 aDb
@@ -128541,7 +126975,7 @@ iDb
 zName
 );
 
-433 
+435 
 pTabÀ
  = 
 	`sqlôeFödTabÀ
@@ -128559,13 +126993,13 @@ iTabDb
 zName
 );
 
-434 
+436 
 	`as£π
 (
 pTabÀ
 );
 
-435 
+437 
 	`as£π
 –
 pTabÀ
@@ -128575,17 +127009,17 @@ iDb
 pTriggî
 ->iDb ||ÖTrigger->iDb==1 );
 
-436 #i‚de‡
+438 #i‚de‡
 SQLITE_OMIT_AUTHORIZATION
 
 
-438 
+440 
 code
  = 
 SQLITE_DROP_TRIGGER
 ;
 
-439 c⁄° *
+441 c⁄° *
 zDb
  = 
 db
@@ -128599,7 +127033,7 @@ iDb
 zName
 ;
 
-440 c⁄° *
+442 c⁄° *
 zTab
  = 
 	`SCHEMA_TABLE
@@ -128609,7 +127043,7 @@ pTriggî
 iDb
 );
 
-441 if–
+443 if–
 pTriggî
 ->
 iDb
@@ -128619,37 +127053,7 @@ code
 SQLITE_DROP_TEMP_TRIGGER
 ;
 
-442 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-code
-, 
-pTriggî
-->
-«me
-, 
-pTabÀ
-->
-zName
-, 
-zDb
-) ||
-
-443 
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_DELETE
-, 
-zTab
-, 0, 
-zDb
-) ){
-
-451 if–
+455 if–
 pTabÀ
 !=0 && !
 √°ed
@@ -128661,67 +127065,67 @@ v
 pP¨£
 ))!=0 ){
 
-452 
+456 
 ba£
 ;
 
-453 
+457 
 VdbeOpLi°
  
 dr›Triggî
 [] = {
 
-454 { 
+458 { 
 OP_Rewöd
 , 0, 
 	`ADDR
 (9), 0},
 
-455 { 
-OP_Såög
-, 0, 0, 0},
-
-456 { 
-OP_Cﬁumn
-, 0, 1, 0},
-
-457 { 
-OP_Ne
-, 0, 
-	`ADDR
-(8), 0},
-
-458 { 
-OP_Såög
-, 0, 0, "trigger"},
-
 459 { 
-OP_Cﬁumn
+OP_Såög
 , 0, 0, 0},
 
 460 { 
+OP_Cﬁumn
+, 0, 1, 0},
+
+461 { 
 OP_Ne
 , 0, 
 	`ADDR
 (8), 0},
 
-461 { 
+462 { 
+OP_Såög
+, 0, 0, "trigger"},
+
+463 { 
+OP_Cﬁumn
+, 0, 0, 0},
+
+464 { 
+OP_Ne
+, 0, 
+	`ADDR
+(8), 0},
+
+465 { 
 OP_Dñëe
 , 0, 0, 0},
 
-462 { 
+466 { 
 OP_Next
 , 0, 
 	`ADDR
 (1), 0},
 
-465 
+469 
 	`sqlôeBegöWrôeO≥øti⁄
 (
 pP¨£
 , 0, 0);
 
-466 
+470 
 	`sqlôeO≥nMa°îTabÀ
 (
 v
@@ -128731,7 +127135,7 @@ pTriggî
 iDb
 );
 
-467 
+471 
 ba£
  = 
 	`sqlôeVdbeAddOpLi°
@@ -128743,7 +127147,7 @@ v
 dr›Triggî
 ), dropTrigger);
 
-468 
+472 
 	`sqlôeVdbeCh™geP3
 (
 v
@@ -128755,13 +127159,13 @@ pTriggî
 «me
 , 0);
 
-469 if–
+473 if–
 pTriggî
 ->
 iDb
 ==0 ){
 
-470 
+474 
 	`sqlôeCh™geCookõ
 (
 db
@@ -128769,7 +127173,7 @@ db
 v
 );
 
-472 
+476 
 	`sqlôeVdbeAddOp
 (
 v
@@ -128777,19 +127181,19 @@ v
 OP_Clo£
 , 0, 0);
 
-473 
+477 
 	`sqlôeEndWrôeO≥øti⁄
 (
 pP¨£
 );
 
-479 if–!
+483 if–!
 pP¨£
 ->
 ex∂aö
  ){
 
-480 c⁄° *
+484 c⁄° *
 zName
  = 
 pTriggî
@@ -128797,7 +127201,7 @@ pTriggî
 «me
 ;
 
-481 
+485 
 nName
  = 
 	`°æí
@@ -128805,13 +127209,13 @@ nName
 zName
 );
 
-482 if–
+486 if–
 pTabÀ
 ->
 pTriggî
  ==ÖTrigger ){
 
-483 
+487 
 pTabÀ
 ->
 pTriggî
@@ -128819,7 +127223,7 @@ pTriggî
 pNext
 ;
 
-485 
+489 
 Triggî
  *
 cc
@@ -128829,11 +127233,11 @@ pTabÀ
 pTriggî
 ;
 
-486  
+490  
 cc
  ){
 
-487 if–
+491 if–
 cc
 ->
 pNext
@@ -128841,25 +127245,25 @@ pNext
 pTriggî
  ){
 
-488 
+492 
 cc
 ->
 pNext
  = cc->pNext->pNext;
 
-491 
+495 
 cc
  = cc->
 pNext
 ;
 
-493 
+497 
 	`as£π
 (
 cc
 );
 
-495 
+499 
 	`sqlôeHashIn£π
 (&(
 db
@@ -128877,17 +127281,17 @@ zName
 nName
 +1, 0);
 
-496 
+500 
 	`sqlôeDñëeTriggî
 (
 pTriggî
 );
 
-498 
+502 
 	}
 }
 
-509 
+513 
 	$checkCﬁumnOvîL≠
 (
 IdLi°
@@ -128899,17 +127303,17 @@ Ex¥Li°
 pELi°
 ){
 
-510 
+514 
 e
 ;
 
-511 if–!
+515 if–!
 pIdLi°
  || !
 pELi°
  )  1;
 
-512 
+516 
 e
 =0;É<
 pELi°
@@ -128917,7 +127321,7 @@ pELi°
 nEx¥
 ;É++){
 
-513 if–
+517 if–
 	`sqlôeIdLi°Index
 (
 pIdLi°
@@ -128931,87 +127335,87 @@ e
 zName
 )>=0 )  1;
 
-516 
+520 
 	}
 }
 
-526 
+530 
 	gÆways_code_åiggî_£tup
  = 0;
 
-533 
+537 
 	$sqlôeTriggîsExi°
 (
 
-534 
+538 
 P¨£
  *
 pP¨£
 ,
 
-535 
+539 
 Triggî
  *
 pTriggî
 ,
 
-536 
+540 
 ›
 ,
 
-537 
+541 
 å_tm
 ,
 
-538 
+542 
 f‹óch
 ,
 
-539 
+543 
 Ex¥Li°
  *
 pCh™ges
 
 
-541 
+545 
 Triggî
  * 
 pTriggîCurs‹
 ;
 
-543 if–
+547 if–
 Æways_code_åiggî_£tup
  ){
 
-547 
+551 
 pTriggîCurs‹
  = 
 pTriggî
 ;
 
-548  
+552  
 pTriggîCurs‹
  ){
 
-549 if–
+553 if–
 pTriggîCurs‹
 ->
 ›
  == op &&
 
-550 
+554 
 pTriggîCurs‹
 ->
 å_tm
  ==År_tm &&
 
-551 
+555 
 pTriggîCurs‹
 ->
 f‹óch
  == foreach &&
 
-552 
+556 
 	`checkCﬁumnOvîL≠
 (
 pTriggîCurs‹
@@ -129021,13 +127425,13 @@ pCﬁumns
 pCh™ges
 ) ){
 
-553 
+557 
 TriggîSèck
  * 
 ss
 ;
 
-554 
+558 
 ss
  = 
 pP¨£
@@ -129035,67 +127439,67 @@ pP¨£
 åigSèck
 ;
 
-555  
+559  
 ss
  && ss->
 pTriggî
  !=ÖTrigger ){
 
-556 
+560 
 ss
  = ss->
 pNext
 ;
 
-558 if–!
+562 if–!
 ss
  ) 1;
 
-560 
+564 
 pTriggîCurs‹
  =ÖTriggîCurs‹->
 pNext
 ;
 
-564 
+568 
 	}
 }
 
-576 
+580 
 SrcLi°
  *
 	$èrgëSrcLi°
 (
 
-577 
+581 
 P¨£
  *
 pP¨£
 ,
 
-578 
+582 
 TriggîSãp
  *
 pSãp
 
 
-580 
+584 
 Tokí
  
 sDb
 ;
 
-581 
+585 
 iDb
 ;
 
-582 
+586 
 SrcLi°
  *
 pSrc
 ;
 
-584 
+588 
 iDb
  = 
 pSãp
@@ -129103,11 +127507,11 @@ pSãp
 pTrig
 ->iDb;
 
-585 if–
+589 if–
 iDb
 ==0 || iDb>=2 ){
 
-586 
+590 
 	`as£π
 –
 iDb
@@ -129119,7 +127523,7 @@ db
 nDb
  );
 
-587 
+591 
 sDb
 .
 z
@@ -129135,7 +127539,7 @@ iDb
 zName
 ;
 
-588 
+592 
 sDb
 .
 n
@@ -129145,7 +127549,7 @@ n
 z
 );
 
-589 
+593 
 pSrc
  = 
 	`sqlôeSrcLi°Aµíd
@@ -129157,7 +127561,7 @@ pSãp
 èrgë
 );
 
-591 
+595 
 pSrc
  = 
 	`sqlôeSrcLi°Aµíd
@@ -129167,35 +127571,35 @@ pSãp
 èrgë
 , 0);
 
-593  
+597  
 pSrc
 ;
 
-594 
+598 
 	}
 }
 
-600 
+604 
 	$codeTriggîProgøm
 (
 
-601 
+605 
 P¨£
  *
 pP¨£
 ,
 
-602 
+606 
 TriggîSãp
  *
 pSãpLi°
 ,
 
-603 
+607 
 ‹c⁄fö
 
 
-605 
+609 
 TriggîSãp
  * 
 pTriggîSãp
@@ -129203,15 +127607,15 @@ pTriggîSãp
 pSãpLi°
 ;
 
-606 
+610 
 ‹c⁄f
 ;
 
-608  
+612  
 pTriggîSãp
  ){
 
-609 
+613 
 ßveNTab
  = 
 pP¨£
@@ -129219,7 +127623,7 @@ pP¨£
 nTab
 ;
 
-611 
+615 
 ‹c⁄f
  = (
 ‹c⁄fö
@@ -129229,7 +127633,7 @@ OE_DeÁu…
 pTriggîSãp
 ->orconf:orconfin;
 
-612 
+616 
 pP¨£
 ->
 åigSèck
@@ -129237,17 +127641,17 @@ pP¨£
 ‹c⁄f
  = orconf;
 
-613  
+617  
 pTriggîSãp
 ->
 ›
  ){
 
-614 
+618 
 TK_SELECT
 : {
 
-615 
+619 
 Sñe˘
  * 
 ss
@@ -129259,13 +127663,13 @@ pTriggîSãp
 pSñe˘
 );
 
-616 
+620 
 	`as£π
 (
 ss
 );
 
-617 
+621 
 	`as£π
 (
 ss
@@ -129273,7 +127677,7 @@ ss
 pSrc
 );
 
-618 
+622 
 	`sqlôeSñe˘
 (
 pP¨£
@@ -129283,23 +127687,23 @@ ss
 SRT_Disˇrd
 , 0, 0, 0, 0);
 
-619 
+623 
 	`sqlôeSñe˘Dñëe
 (
 ss
 );
 
-622 
+626 
 TK_UPDATE
 : {
 
-623 
+627 
 SrcLi°
  *
 pSrc
 ;
 
-624 
+628 
 pSrc
  = 
 	`èrgëSrcLi°
@@ -129307,42 +127711,6 @@ pSrc
 pP¨£
 , 
 pTriggîSãp
-);
-
-625 
-	`sqlôeVdbeAddOp
-(
-pP¨£
-->
-pVdbe
-, 
-OP_Li°Push
-, 0, 0);
-
-626 
-	`sqlôeUpd©e
-(
-pP¨£
-, 
-pSrc
-,
-
-627 
-	`sqlôeEx¥Li°Dup
-(
-pTriggîSãp
-->
-pEx¥Li°
-),
-
-628 
-	`sqlôeEx¥Dup
-(
-pTriggîSãp
-->
-pWhîe
-), 
-‹c⁄f
 );
 
 629 
@@ -129352,20 +127720,56 @@ pP¨£
 ->
 pVdbe
 , 
+OP_Li°Push
+, 0, 0);
+
+630 
+	`sqlôeUpd©e
+(
+pP¨£
+, 
+pSrc
+,
+
+631 
+	`sqlôeEx¥Li°Dup
+(
+pTriggîSãp
+->
+pEx¥Li°
+),
+
+632 
+	`sqlôeEx¥Dup
+(
+pTriggîSãp
+->
+pWhîe
+), 
+‹c⁄f
+);
+
+633 
+	`sqlôeVdbeAddOp
+(
+pP¨£
+->
+pVdbe
+, 
 OP_Li°P›
 , 0, 0);
 
-632 
+636 
 TK_INSERT
 : {
 
-633 
+637 
 SrcLi°
  *
 pSrc
 ;
 
-634 
+638 
 pSrc
  = 
 	`èrgëSrcLi°
@@ -129375,7 +127779,7 @@ pP¨£
 pTriggîSãp
 );
 
-635 
+639 
 	`sqlôeIn£π
 (
 pP¨£
@@ -129383,7 +127787,7 @@ pP¨£
 pSrc
 ,
 
-636 
+640 
 	`sqlôeEx¥Li°Dup
 (
 pTriggîSãp
@@ -129391,7 +127795,7 @@ pTriggîSãp
 pEx¥Li°
 ),
 
-637 
+641 
 	`sqlôeSñe˘Dup
 (
 pTriggîSãp
@@ -129399,7 +127803,7 @@ pTriggîSãp
 pSñe˘
 ),
 
-638 
+642 
 	`sqlôeIdLi°Dup
 (
 pTriggîSãp
@@ -129409,17 +127813,17 @@ pIdLi°
 ‹c⁄f
 );
 
-641 
+645 
 TK_DELETE
 : {
 
-642 
+646 
 SrcLi°
  *
 pSrc
 ;
 
-643 
+647 
 	`sqlôeVdbeAddOp
 (
 pP¨£
@@ -129429,7 +127833,7 @@ pVdbe
 OP_Li°Push
 , 0, 0);
 
-644 
+648 
 pSrc
  = 
 	`èrgëSrcLi°
@@ -129439,7 +127843,7 @@ pP¨£
 pTriggîSãp
 );
 
-645 
+649 
 	`sqlôeDñëeFrom
 (
 pP¨£
@@ -129453,7 +127857,7 @@ pTriggîSãp
 pWhîe
 ));
 
-646 
+650 
 	`sqlôeVdbeAddOp
 (
 pP¨£
@@ -129463,11 +127867,11 @@ pVdbe
 OP_Li°P›
 , 0, 0);
 
-650 
+654 
 	`as£π
 (0);
 
-652 
+656 
 pP¨£
 ->
 nTab
@@ -129475,75 +127879,75 @@ nTab
 ßveNTab
 ;
 
-653 
+657 
 pTriggîSãp
  =ÖTriggîSãp->
 pNext
 ;
 
-657 
+661 
 	}
 }
 
-679 
+683 
 	$sqlôeCodeRowTriggî
 (
 
-680 
+684 
 P¨£
  *
 pP¨£
 ,
 
-681 
+685 
 ›
 ,
 
-682 
+686 
 Ex¥Li°
  *
 pCh™ges
 ,
 
-683 
+687 
 å_tm
 ,
 
-684 
+688 
 TabÀ
  *
 pTab
 ,
 
-685 
+689 
 √wIdx
 ,
 
-686 
+690 
 ﬁdIdx
 ,
 
-687 
+691 
 ‹c⁄f
 ,
 
-688 
+692 
 ign‹eJump
 
 
-690 
+694 
 Triggî
  * 
 pTriggî
 ;
 
-691 
+695 
 TriggîSèck
  * 
 pTriggîSèck
 ;
 
-693 
+697 
 	`as£π
 (
 ›
@@ -129555,7 +127959,7 @@ TK_INSERT
 TK_DELETE
 );
 
-694 
+698 
 	`as£π
 (
 å_tm
@@ -129565,7 +127969,7 @@ TK_BEFORE
 TK_AFTER
  );
 
-696 
+700 
 	`as£π
 (
 √wIdx
@@ -129573,21 +127977,21 @@ TK_AFTER
 ﬁdIdx
  != -1);
 
-698 
+702 
 pTriggî
  = 
 pTab
 ->pTrigger;
 
-699  
+703  
 pTriggî
  ){
 
-700 
+704 
 fúe_this
  = 0;
 
-703 if–
+707 if–
 pTriggî
 ->
 ›
@@ -129595,7 +127999,7 @@ pTriggî
 å_tm
  ==År_tm &&
 
-704 
+708 
 pTriggî
 ->
 f‹óch
@@ -129603,11 +128007,11 @@ f‹óch
 TK_ROW
  ){
 
-705 
+709 
 fúe_this
  = 1;
 
-706 
+710 
 pTriggîSèck
  = 
 pP¨£
@@ -129615,27 +128019,27 @@ pP¨£
 åigSèck
 ;
 
-707  
+711  
 pTriggîSèck
  ){
 
-708 if–
+712 if–
 pTriggîSèck
 ->
 pTriggî
  ==ÖTrigger ){
 
-709 
+713 
 fúe_this
  = 0;
 
-711 
+715 
 pTriggîSèck
  =ÖTriggîSèck->
 pNext
 ;
 
-713 if–
+717 if–
 ›
  =
 TK_UPDATE
@@ -129645,7 +128049,7 @@ pTriggî
 pCﬁumns
  &&
 
-714 !
+718 !
 	`checkCﬁumnOvîL≠
 (
 pTriggî
@@ -129655,11 +128059,11 @@ pCﬁumns
 pCh™ges
 ) ){
 
-715 
+719 
 fúe_this
  = 0;
 
-719 if–
+723 if–
 fúe_this
  && (
 pTriggîSèck
@@ -129669,59 +128073,59 @@ pTriggîSèck
 TriggîSèck
 )))!=0 ){
 
-720 
+724 
 ídTriggî
 ;
 
-721 
+725 
 SrcLi°
  
 dummyTabli°
 ;
 
-722 
+726 
 Ex¥
  * 
 whíEx¥
 ;
 
-723 
+727 
 AuthC⁄ãxt
  
 sC⁄ãxt
 ;
 
-725 
+729 
 dummyTabli°
 .
 nSrc
  = 0;
 
-728 
+732 
 pTriggîSèck
 ->
 pTriggî
  =ÖTrigger;
 
-729 
+733 
 pTriggîSèck
 ->
 √wIdx
  =ÇewIdx;
 
-730 
+734 
 pTriggîSèck
 ->
 ﬁdIdx
  = oldIdx;
 
-731 
+735 
 pTriggîSèck
 ->
 pTab
  =ÖTab;
 
-732 
+736 
 pTriggîSèck
 ->
 pNext
@@ -129731,13 +128135,13 @@ pP¨£
 åigSèck
 ;
 
-733 
+737 
 pTriggîSèck
 ->
 ign‹eJump
  = ignoreJump;
 
-734 
+738 
 pP¨£
 ->
 åigSèck
@@ -129745,19 +128149,7 @@ pP¨£
 pTriggîSèck
 ;
 
-735 
-	`sqlôeAuthC⁄ãxtPush
-(
-pP¨£
-, &
-sC⁄ãxt
-, 
-pTriggî
-->
-«me
-);
-
-738 
+742 
 ídTriggî
  = 
 	`sqlôeVdbeMakeLabñ
@@ -129767,7 +128159,7 @@ pP¨£
 pVdbe
 );
 
-739 
+743 
 whíEx¥
  = 
 	`sqlôeEx¥Dup
@@ -129777,7 +128169,7 @@ pTriggî
 pWhí
 );
 
-740 if–
+744 if–
 	`sqlôeEx¥ResﬁveIds
 (
 pP¨£
@@ -129787,7 +128179,7 @@ dummyTabli°
 whíEx¥
 ) ){
 
-741 
+745 
 pP¨£
 ->
 åigSèck
@@ -129795,19 +128187,19 @@ pP¨£
 pNext
 ;
 
-742 
+746 
 	`sqlôeFªe
 (
 pTriggîSèck
 );
 
-743 
+747 
 	`sqlôeEx¥Dñëe
 (
 whíEx¥
 );
 
-746 
+750 
 	`sqlôeEx¥IfFÆ£
 (
 pP¨£
@@ -129817,13 +128209,13 @@ whíEx¥
 ídTriggî
 , 1);
 
-747 
+751 
 	`sqlôeEx¥Dñëe
 (
 whíEx¥
 );
 
-749 
+753 
 	`sqlôeVdbeAddOp
 (
 pP¨£
@@ -129833,7 +128225,7 @@ pVdbe
 OP_C⁄ãxtPush
 , 0, 0);
 
-750 
+754 
 	`codeTriggîProgøm
 (
 pP¨£
@@ -129845,7 +128237,7 @@ pTriggî
 ‹c⁄f
 );
 
-751 
+755 
 	`sqlôeVdbeAddOp
 (
 pP¨£
@@ -129855,7 +128247,7 @@ pVdbe
 OP_C⁄ãxtP›
 , 0, 0);
 
-754 
+758 
 pP¨£
 ->
 åigSèck
@@ -129863,19 +128255,13 @@ pP¨£
 pNext
 ;
 
-755 
-	`sqlôeAuthC⁄ãxtP›
-(&
-sC⁄ãxt
-);
-
-756 
+760 
 	`sqlôeFªe
 (
 pTriggîSèck
 );
 
-758 
+762 
 	`sqlôeVdbeResﬁveLabñ
 (
 pP¨£
@@ -129885,13 +128271,13 @@ pVdbe
 ídTriggî
 );
 
-760 
+764 
 pTriggî
  =ÖTriggî->
 pNext
 ;
 
-764 
+768 
 	}
 }
 
@@ -130441,59 +128827,29 @@ SQLITE_OMIT_AUTHORIZATION
 rc
 ;
 
-145 
-rc
- = 
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_UPDATE
-, 
-pTab
-->
-zName
-,
-
-146 
-pTab
-->
-aCﬁ
-[
-j
-].
-zName
-, 
-db
-->
-aDb
-[pTab->
-iDb
-].zName);
-
-147 if–
+148 if–
 rc
 ==
 SQLITE_DENY
  ){
 
-148 
+149 
 upd©e_˛ónup
 ;
 
-149 }if–
+150 }if–
 rc
 ==
 SQLITE_IGNORE
  ){
 
-150 
+151 
 aXRef
 [
 j
 ] = -1;
 
-161 
+162 
 nIdx
 =
 nIdxTŸÆ
@@ -130507,15 +128863,15 @@ pIndex
 pNext
 ,ÇIdxTotal++){
 
-162 if–
+163 if–
 chngRe˙o
  ){
 
-163 
+164 
 i
  = 0;
 
-165 
+166 
 i
 =0; i<
 pIdx
@@ -130523,7 +128879,7 @@ pIdx
 nCﬁumn
 ; i++){
 
-166 if–
+167 if–
 aXRef
 [
 pIdx
@@ -130533,7 +128889,7 @@ aiCﬁumn
 i
 ]]>=0 ) ;
 
-169 if–
+170 if–
 i
 <
 pIdx
@@ -130543,11 +128899,11 @@ nCﬁumn
 nIdx
 ++;
 
-171 if–
+172 if–
 nIdxTŸÆ
 >0 ){
 
-172 
+173 
 ≠Idx
  = 
 	`sqlôeMÆloc
@@ -130559,13 +128915,13 @@ nIdx
 nIdxTŸÆ
  );
 
-173 if–
+174 if–
 ≠Idx
 ==0 ) 
 upd©e_˛ónup
 ;
 
-174 
+175 
 aIdxU£d
  = (*)&
 ≠Idx
@@ -130573,7 +128929,7 @@ aIdxU£d
 nIdx
 ];
 
-176 
+177 
 nIdx
 =
 j
@@ -130587,15 +128943,15 @@ pIndex
 pNext
 , j++){
 
-177 if–
+178 if–
 chngRe˙o
  ){
 
-178 
+179 
 i
  = 0;
 
-180 
+181 
 i
 =0; i<
 pIdx
@@ -130603,7 +128959,7 @@ pIdx
 nCﬁumn
 ; i++){
 
-181 if–
+182 if–
 aXRef
 [
 pIdx
@@ -130613,7 +128969,7 @@ aiCﬁumn
 i
 ]]>=0 ) ;
 
-184 if–
+185 if–
 i
 <
 pIdx
@@ -130621,7 +128977,7 @@ pIdx
 nCﬁumn
  ){
 
-185 
+186 
 ≠Idx
 [
 nIdx
@@ -130629,23 +128985,23 @@ nIdx
 pIdx
 ;
 
-186 
+187 
 aIdxU£d
 [
 j
 ] = 1;
 
-188 
+189 
 aIdxU£d
 [
 j
 ] = 0;
 
-195 if–
+196 if–
 pWhîe
  ){
 
-196 if–
+197 if–
 	`sqlôeEx¥ResﬁveIds
 (
 pP¨£
@@ -130655,11 +129011,11 @@ pTabLi°
 pWhîe
 ) ){
 
-197 
+198 
 upd©e_˛ónup
 ;
 
-199 if–
+200 if–
 	`sqlôeEx¥Check
 (
 pP¨£
@@ -130667,27 +129023,15 @@ pP¨£
 pWhîe
 , 0, 0) ){
 
-200 
+201 
 upd©e_˛ónup
 ;
 
-206 if–
+207 if–
 isVõw
  ){
 
-207 
-	`sqlôeAuthC⁄ãxtPush
-(
-pP¨£
-, &
-sC⁄ãxt
-, 
-pTab
-->
-zName
-);
-
-212 
+213 
 v
  = 
 	`sqlôeGëVdbe
@@ -130695,13 +129039,13 @@ v
 pP¨£
 );
 
-213 if–
+214 if–
 v
 ==0 ) 
 upd©e_˛ónup
 ;
 
-214 
+215 
 	`sqlôeBegöWrôeO≥øti⁄
 (
 pP¨£
@@ -130711,17 +129055,17 @@ pTab
 iDb
 );
 
-219 if–
+220 if–
 isVõw
  ){
 
-220 
+221 
 Sñe˘
  *
 pVõw
 ;
 
-221 
+222 
 pVõw
  = 
 	`sqlôeSñe˘Dup
@@ -130731,7 +129075,7 @@ pTab
 pSñe˘
 );
 
-222 
+223 
 	`sqlôeSñe˘
 (
 pP¨£
@@ -130743,13 +129087,13 @@ SRT_TempTabÀ
 iCur
 , 0, 0, 0);
 
-223 
+224 
 	`sqlôeSñe˘Dñëe
 (
 pVõw
 );
 
-228 
+229 
 pWInfo
  = 
 	`sqlôeWhîeBegö
@@ -130761,13 +129105,13 @@ pTabLi°
 pWhîe
 , 1, 0);
 
-229 if–
+230 if–
 pWInfo
 ==0 ) 
 upd©e_˛ónup
 ;
 
-233 
+234 
 	`sqlôeVdbeAddOp
 (
 v
@@ -130775,13 +129119,13 @@ v
 OP_Li°Wrôe
 , 0, 0);
 
-237 
+238 
 	`sqlôeWhîeEnd
 (
 pWInfo
 );
 
-241 if–
+242 if–
 db
 ->
 Êags
@@ -130793,7 +129137,7 @@ pP¨£
 åigSèck
  ){
 
-242 
+243 
 	`sqlôeVdbeAddOp
 (
 v
@@ -130801,11 +129145,11 @@ v
 OP_I¡egî
 , 0, 0);
 
-245 if–
+246 if–
 row_åiggîs_exi°
  ){
 
-248 
+249 
 	`sqlôeVdbeAddOp
 (
 v
@@ -130815,7 +129159,7 @@ OP_O≥nP£udo
 ﬁdIdx
 , 0);
 
-249 
+250 
 	`sqlôeVdbeAddOp
 (
 v
@@ -130825,7 +129169,7 @@ OP_O≥nP£udo
 √wIdx
 , 0);
 
-253 
+254 
 	`sqlôeVdbeAddOp
 (
 v
@@ -130833,7 +129177,7 @@ v
 OP_Li°Rewöd
 , 0, 0);
 
-254 
+255 
 	`sqlôeVdbeAddOp
 (
 v
@@ -130841,7 +129185,7 @@ v
 OP_SèckDïth
 , 0, 0);
 
-255 
+256 
 	`sqlôeVdbeAddOp
 (
 v
@@ -130851,7 +129195,7 @@ OP_MemSt‹e
 iSèckDïth
 , 1);
 
-256 
+257 
 lo›Sèπ
  = 
 	`sqlôeVdbeAddOp
@@ -130863,7 +129207,7 @@ OP_MemLﬂd
 iSèckDïth
 , 0);
 
-257 
+258 
 	`sqlôeVdbeAddOp
 (
 v
@@ -130871,7 +129215,7 @@ v
 OP_SèckRe£t
 , 0, 0);
 
-258 
+259 
 jumpIn°
  = 
 	`sqlôeVdbeAddOp
@@ -130881,7 +129225,7 @@ v
 OP_Li°Ród
 , 0, 0);
 
-259 
+260 
 	`sqlôeVdbeAddOp
 (
 v
@@ -130889,7 +129233,7 @@ v
 OP_Dup
 , 0, 0);
 
-264 
+265 
 	`sqlôeVdbeAddOp
 (
 v
@@ -130897,11 +129241,11 @@ v
 OP_Dup
 , 0, 0);
 
-265 if–!
+266 if–!
 isVõw
  ){
 
-266 
+267 
 	`sqlôeVdbeAddOp
 (
 v
@@ -130913,7 +129257,7 @@ pTab
 iDb
 , 0);
 
-267 
+268 
 	`sqlôeVdbeAddOp
 (
 v
@@ -130927,7 +129271,7 @@ pTab
 äum
 );
 
-269 
+270 
 	`sqlôeVdbeAddOp
 (
 v
@@ -130937,22 +129281,12 @@ OP_MoveTo
 iCur
 , 0);
 
-273 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_Re˙o
-, 
-iCur
-, 0);
-
 274 
 	`sqlôeVdbeAddOp
 (
 v
 , 
-OP_RowD©a
+OP_Re˙o
 , 
 iCur
 , 0);
@@ -130962,16 +129296,26 @@ iCur
 (
 v
 , 
+OP_RowD©a
+, 
+iCur
+, 0);
+
+276 
+	`sqlôeVdbeAddOp
+(
+v
+, 
 OP_PutI¡Key
 , 
 ﬁdIdx
 , 0);
 
-279 if–
+280 if–
 chngRe˙o
  ){
 
-280 
+281 
 	`sqlôeEx¥Code
 (
 pP¨£
@@ -130979,7 +129323,7 @@ pP¨£
 pRe˙oEx¥
 );
 
-282 
+283 
 	`sqlôeVdbeAddOp
 (
 v
@@ -130989,7 +129333,7 @@ OP_Re˙o
 iCur
 , 0);
 
-284 
+285 
 i
 =0; i<
 pTab
@@ -130997,7 +129341,7 @@ pTab
 nCﬁ
 ; i++){
 
-285 if–
+286 if–
 i
 ==
 pTab
@@ -131005,7 +129349,7 @@ pTab
 iPKey
  ){
 
-286 
+287 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131013,7 +129357,7 @@ v
 OP_Såög
 , 0, 0);
 
-289 
+290 
 j
  = 
 aXRef
@@ -131021,11 +129365,11 @@ aXRef
 i
 ];
 
-290 if–
+291 if–
 j
 <0 ){
 
-291 
+292 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131037,7 +129381,7 @@ iCur
 i
 );
 
-293 
+294 
 	`sqlôeEx¥Code
 (
 pP¨£
@@ -131051,7 +129395,7 @@ j
 pEx¥
 );
 
-296 
+297 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131063,7 +129407,7 @@ pTab
 nCﬁ
 , 0);
 
-297 
+298 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131073,11 +129417,11 @@ OP_PutI¡Key
 √wIdx
 , 0);
 
-298 if–!
+299 if–!
 isVõw
  ){
 
-299 
+300 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131087,7 +129431,7 @@ OP_Clo£
 iCur
 , 0);
 
-304 if–
+305 if–
 	`sqlôeCodeRowTriggî
 (
 pP¨£
@@ -131101,7 +129445,7 @@ TK_BEFORE
 pTab
 ,
 
-305 
+306 
 √wIdx
 , 
 ﬁdIdx
@@ -131111,15 +129455,15 @@ pTab
 lo›Sèπ
 ) ){
 
-306 
+307 
 upd©e_˛ónup
 ;
 
-310 if–!
+311 if–!
 isVõw
  ){
 
-317 
+318 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131131,7 +129475,7 @@ pTab
 iDb
 , 0);
 
-318 
+319 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131145,21 +129489,21 @@ pTab
 äum
 );
 
-319 if–
+320 if–
 ⁄Eº‹
 ==
 OE_Rïœ˚
  ){
 
-320 
+321 
 ›íAŒ
  = 1;
 
-322 
+323 
 ›íAŒ
  = 0;
 
-323 
+324 
 pIdx
 =
 pTab
@@ -131169,7 +129513,7 @@ pIndex
 pNext
 ){
 
-324 if–
+325 if–
 pIdx
 ->
 ⁄Eº‹
@@ -131177,11 +129521,11 @@ pIdx
 OE_Rïœ˚
  ){
 
-325 
+326 
 ›íAŒ
  = 1;
 
-330 
+331 
 i
 =0, 
 pIdx
@@ -131193,7 +129537,7 @@ pIndex
 pNext
 , i++){
 
-331 if–
+332 if–
 ›íAŒ
  || 
 aIdxU£d
@@ -131201,7 +129545,7 @@ aIdxU£d
 i
 ] ){
 
-332 
+333 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131213,7 +129557,7 @@ pIdx
 iDb
 , 0);
 
-333 
+334 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131229,7 +129573,7 @@ pIdx
 äum
 );
 
-334 
+335 
 	`as£π
 –
 pP¨£
@@ -131241,11 +129585,11 @@ iCur
 i
 +1 );
 
-344 if–!
+345 if–!
 row_åiggîs_exi°
  ){
 
-345 
+346 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131253,7 +129597,7 @@ v
 OP_Li°Rewöd
 , 0, 0);
 
-346 
+347 
 jumpIn°
  = 
 lo›Sèπ
@@ -131265,7 +129609,7 @@ v
 OP_Li°Ród
 , 0, 0);
 
-347 
+348 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131273,7 +129617,7 @@ v
 OP_Dup
 , 0, 0);
 
-349 
+350 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131285,11 +129629,11 @@ iCur
 lo›Sèπ
 );
 
-355 if–
+356 if–
 chngRe˙o
  ){
 
-356 
+357 
 	`sqlôeEx¥Code
 (
 pP¨£
@@ -131297,7 +129641,7 @@ pP¨£
 pRe˙oEx¥
 );
 
-357 
+358 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131305,7 +129649,7 @@ v
 OP_Mu°BeI¡
 , 0, 0);
 
-362 
+363 
 i
 =0; i<
 pTab
@@ -131313,7 +129657,7 @@ pTab
 nCﬁ
 ; i++){
 
-363 if–
+364 if–
 i
 ==
 pTab
@@ -131321,7 +129665,7 @@ pTab
 iPKey
  ){
 
-364 
+365 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131329,7 +129673,7 @@ v
 OP_Såög
 , 0, 0);
 
-367 
+368 
 j
  = 
 aXRef
@@ -131337,11 +129681,11 @@ aXRef
 i
 ];
 
-368 if–
+369 if–
 j
 <0 ){
 
-369 
+370 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131353,7 +129697,7 @@ iCur
 i
 );
 
-371 
+372 
 	`sqlôeEx¥Code
 (
 pP¨£
@@ -131367,7 +129711,7 @@ j
 pEx¥
 );
 
-377 
+378 
 	`sqlôeGíî©eC⁄°øötChecks
 (
 pP¨£
@@ -131381,13 +129725,13 @@ aIdxU£d
 chngRe˙o
 , 1,
 
-378 
+379 
 ⁄Eº‹
 , 
 lo›Sèπ
 );
 
-382 
+383 
 	`sqlôeGíî©eRowIndexDñëe
 (
 db
@@ -131401,11 +129745,11 @@ iCur
 aIdxU£d
 );
 
-386 if–
+387 if–
 chngRe˙o
  ){
 
-387 
+388 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131415,7 +129759,7 @@ OP_Dñëe
 iCur
 , 0);
 
-392 
+393 
 	`sqlôeCom∂ëeIn£πi⁄
 (
 pP¨£
@@ -131429,7 +129773,7 @@ aIdxU£d
 chngRe˙o
 , 1, -1);
 
-397 if–
+398 if–
 db
 ->
 Êags
@@ -131441,7 +129785,7 @@ pP¨£
 åigSèck
 ){
 
-398 
+399 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131449,15 +129793,15 @@ v
 OP_AddImm
 , 1, 0);
 
-404 if–
+405 if–
 row_åiggîs_exi°
  ){
 
-405 if–!
+406 if–!
 isVõw
  ){
 
-406 
+407 
 i
 =0, 
 pIdx
@@ -131469,7 +129813,7 @@ pIndex
 pNext
 , i++){
 
-407 if–
+408 if–
 ›íAŒ
  || 
 aIdxU£d
@@ -131477,7 +129821,7 @@ aIdxU£d
 i
 ] )
 
-408 
+409 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131489,7 +129833,7 @@ iCur
 i
 +1, 0);
 
-410 
+411 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131499,7 +129843,7 @@ OP_Clo£
 iCur
 , 0);
 
-411 
+412 
 pP¨£
 ->
 nTab
@@ -131507,7 +129851,7 @@ nTab
 iCur
 ;
 
-413 if–
+414 if–
 	`sqlôeCodeRowTriggî
 (
 pP¨£
@@ -131521,7 +129865,7 @@ TK_AFTER
 pTab
 ,
 
-414 
+415 
 √wIdx
 , 
 ﬁdIdx
@@ -131531,11 +129875,11 @@ pTab
 lo›Sèπ
 ) ){
 
-415 
+416 
 upd©e_˛ónup
 ;
 
-422 
+423 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131545,7 +129889,7 @@ OP_GŸo
 lo›Sèπ
 );
 
-423 
+424 
 	`sqlôeVdbeCh™geP2
 (
 v
@@ -131555,7 +129899,7 @@ jumpIn°
 	`sqlôeVdbeCuºítAddr
 (v));
 
-424 
+425 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131563,11 +129907,11 @@ v
 OP_Li°Re£t
 , 0, 0);
 
-427 if–!
+428 if–!
 row_åiggîs_exi°
  ){
 
-428 
+429 
 i
 =0, 
 pIdx
@@ -131579,7 +129923,7 @@ pIndex
 pNext
 , i++){
 
-429 if–
+430 if–
 ›íAŒ
  || 
 aIdxU£d
@@ -131587,7 +129931,7 @@ aIdxU£d
 i
 ] ){
 
-430 
+431 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131599,7 +129943,7 @@ iCur
 i
 +1, 0);
 
-433 
+434 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131609,7 +129953,7 @@ OP_Clo£
 iCur
 , 0);
 
-434 
+435 
 pP¨£
 ->
 nTab
@@ -131617,7 +129961,7 @@ nTab
 iCur
 ;
 
-436 
+437 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131627,7 +129971,7 @@ OP_Clo£
 √wIdx
 , 0);
 
-437 
+438 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131637,7 +129981,7 @@ OP_Clo£
 ﬁdIdx
 , 0);
 
-440 
+441 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131645,13 +129989,13 @@ v
 OP_SëCou¡s
 , 0, 0);
 
-441 
+442 
 	`sqlôeEndWrôeO≥øti⁄
 (
 pP¨£
 );
 
-446 if–
+447 if–
 db
 ->
 Êags
@@ -131663,7 +130007,7 @@ pP¨£
 åigSèck
  ){
 
-447 
+448 
 	`sqlôeVdbeOp3
 (
 v
@@ -131673,7 +130017,7 @@ OP_CﬁumnName
 P3_STATIC
 );
 
-448 
+449 
 	`sqlôeVdbeAddOp
 (
 v
@@ -131681,47 +130025,41 @@ v
 OP_CÆlback
 , 1, 0);
 
-451 
+452 
 upd©e_˛ónup
 :
 
-452 
-	`sqlôeAuthC⁄ãxtP›
-(&
-sC⁄ãxt
-);
-
-453 
+454 
 	`sqlôeFªe
 (
 ≠Idx
 );
 
-454 
+455 
 	`sqlôeFªe
 (
 aXRef
 );
 
-455 
+456 
 	`sqlôeSrcLi°Dñëe
 (
 pTabLi°
 );
 
-456 
+457 
 	`sqlôeEx¥Li°Dñëe
 (
 pCh™ges
 );
 
-457 
+458 
 	`sqlôeEx¥Dñëe
 (
 pWhîe
 );
 
-459 
+460 
 	}
 }
 
@@ -278372,15 +276710,13 @@ _ASM_GENERIC_ERRNO_BASE_H
 .
 1
 /usr/include
-159
-3586
+157
+3564
 src/attach.c
-src/auth.c
 src/btree.c
 src/btree.h
 src/btree_rb.c
 src/build.c
-src/copy.c
 src/date.c
 src/delete.c
 src/encode.c

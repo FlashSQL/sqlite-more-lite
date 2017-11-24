@@ -1,4 +1,4 @@
-cscope 15 $HOME/SaS/VERSTION2/sqlite-2.8.17/src               0001317519
+cscope 15 $HOME/SaS/sqlite-more-lite/sqlite-2.8.17/src               0001315016
 	@attach.c
 
 16 
@@ -155,29 +155,11 @@ zFûe
 SQLITE_OMIT_AUTHORIZATION
 
 
-55 if–
-	`sqlôeAuthCheck
-(
-pP¨£
-, 
-SQLITE_ATTACH
-, 
-zFûe
-, 0, 0)!=
-SQLITE_OK
- ){
-
-56 
-	`sqlôeFªe
-(
-zFûe
-);
-
-61 
+63 
 zName
  = 0;
 
-62 
+64 
 	`sqlôeSëNSåög
 (&
 zName
@@ -189,17 +171,17 @@ z
 n
 , 0);
 
-63 if–
+65 if–
 zName
 ==0 ) ;
 
-64 
+66 
 	`sqlôeDequŸe
 (
 zName
 );
 
-65 
+67 
 i
 =0; i<
 db
@@ -207,7 +189,7 @@ db
 nDb
 ; i++){
 
-66 if–
+68 if–
 db
 ->
 aDb
@@ -219,7 +201,7 @@ zName
 	`sqlôeSåICmp
 (db->aDb[i].zName, zName)==0 ){
 
-67 
+69 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -227,7 +209,7 @@ pP¨£
 zName
 );
 
-68 
+70 
 pP¨£
 ->
 rc
@@ -235,13 +217,13 @@ rc
 SQLITE_ERROR
 ;
 
-69 
+71 
 	`sqlôeFªe
 (
 zFûe
 );
 
-74 if–
+76 if–
 db
 ->
 aDb
@@ -249,7 +231,7 @@ aDb
 aDbSètic
  ){
 
-75 
+77 
 aNew
  = 
 	`sqlôeMÆloc
@@ -259,11 +241,11 @@ db
 aDb
 [0])*3 );
 
-76 if–
+78 if–
 aNew
 ==0 ) ;
 
-77 
+79 
 	`mem˝y
 (
 aNew
@@ -273,7 +255,7 @@ db
 aDb
 , (db->aDb[0])*2);
 
-79 
+81 
 aNew
  = 
 	`sqlôeRóŒoc
@@ -285,11 +267,11 @@ aDb
 nDb
 +1) );
 
-80 if–
+82 if–
 aNew
 ==0 ) ;
 
-82 
+84 
 db
 ->
 aDb
@@ -297,7 +279,7 @@ aDb
 aNew
 ;
 
-83 
+85 
 aNew
  = &
 db
@@ -307,13 +289,13 @@ aDb
 nDb
 ++];
 
-84 
+86 
 	`mem£t
 (
 aNew
 , 0, (*aNew));
 
-85 
+87 
 	`sqlôeHashInô
 (&
 aNew
@@ -323,7 +305,7 @@ tblHash
 SQLITE_HASH_STRING
 , 0);
 
-86 
+88 
 	`sqlôeHashInô
 (&
 aNew
@@ -333,7 +315,7 @@ idxHash
 SQLITE_HASH_STRING
 , 0);
 
-87 
+89 
 	`sqlôeHashInô
 (&
 aNew
@@ -343,7 +325,7 @@ aNew
 SQLITE_HASH_STRING
 , 0);
 
-88 
+90 
 	`sqlôeHashInô
 (&
 aNew
@@ -353,13 +335,13 @@ aFKey
 SQLITE_HASH_STRING
 , 1);
 
-89 
+91 
 aNew
 ->
 zName
  = zName;
 
-90 
+92 
 rc
  = 
 	`sqlôeBåìFa˘‹y
@@ -375,11 +357,11 @@ aNew
 pBt
 );
 
-91 if–
+93 if–
 rc
  ){
 
-92 
+94 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -387,25 +369,25 @@ pP¨£
 zFûe
 );
 
-94 #i‡
+96 #i‡
 SQLITE_HAS_CODEC
 
 
-96 
+98 
 	`sqlôeCodecAâach
 (
 sqlôe
 *, , *, );
 
-97 *
+99 *
 zKey
  = 0;
 
-98 
+100 
 nKey
 ;
 
-99 if–
+101 if–
 pKey
  &&ÖKey->
 z
@@ -413,7 +395,7 @@ z
 n
  ){
 
-100 
+102 
 	`sqlôeSëNSåög
 (&
 zKey
@@ -425,13 +407,13 @@ z
 n
 , 0);
 
-101 
+103 
 	`sqlôeDequŸe
 (
 zKey
 );
 
-102 
+104 
 nKey
  = 
 	`°æí
@@ -439,15 +421,15 @@ nKey
 zKey
 );
 
-104 
+106 
 zKey
  = 0;
 
-105 
+107 
 nKey
  = 0;
 
-107 
+109 
 	`sqlôeCodecAâach
 (
 db
@@ -459,13 +441,13 @@ zKey
 nKey
 );
 
-110 
+112 
 	`sqlôeFªe
 (
 zFûe
 );
 
-111 
+113 
 db
 ->
 Êags
@@ -473,19 +455,19 @@ db
 SQLITE_Inôülized
 ;
 
-112 if–
+114 if–
 pP¨£
 ->
 nEº
  ) ;
 
-113 if–
+115 if–
 rc
 ==
 SQLITE_OK
  ){
 
-114 
+116 
 rc
  = 
 	`sqlôeInô
@@ -497,11 +479,11 @@ db
 zEºMsg
 );
 
-116 if–
+118 if–
 rc
  ){
 
-117 
+119 
 i
  = 
 db
@@ -509,13 +491,13 @@ db
 nDb
  - 1;
 
-118 
+120 
 	`as£π
 –
 i
 >=2 );
 
-119 if–
+121 if–
 db
 ->
 aDb
@@ -525,7 +507,7 @@ i
 pBt
  ){
 
-120 
+122 
 	`sqlôeBåìClo£
 (
 db
@@ -537,7 +519,7 @@ i
 pBt
 );
 
-121 
+123 
 db
 ->
 aDb
@@ -547,19 +529,19 @@ i
 pBt
  = 0;
 
-123 
+125 
 	`sqlôeRe£tI¡î«lSchema
 (
 db
 , 0);
 
-124 
+126 
 pP¨£
 ->
 nEº
 ++;
 
-125 
+127 
 pP¨£
 ->
 rc
@@ -567,11 +549,11 @@ rc
 SQLITE_ERROR
 ;
 
-127 
+129 
 	}
 }
 
-136 
+138 
 	$sqlôeDëach
 (
 P¨£
@@ -583,29 +565,29 @@ Tokí
 pDb«me
 ){
 
-137 
+139 
 i
 ;
 
-138 
+140 
 sqlôe
  *
 db
 ;
 
-139 
+141 
 Vdbe
  *
 v
 ;
 
-140 
+142 
 Db
  *
 pDb
 ;
 
-142 
+144 
 v
  = 
 	`sqlôeGëVdbe
@@ -613,7 +595,7 @@ v
 pP¨£
 );
 
-143 
+145 
 	`sqlôeVdbeAddOp
 (
 v
@@ -621,19 +603,19 @@ v
 OP_HÆt
 , 0, 0);
 
-144 if–
+146 if–
 pP¨£
 ->
 ex∂aö
  ) ;
 
-145 
+147 
 db
  = 
 pP¨£
 ->db;
 
-146 
+148 
 i
 =0; i<
 db
@@ -641,7 +623,7 @@ db
 nDb
 ; i++){
 
-147 
+149 
 pDb
  = &
 db
@@ -651,7 +633,7 @@ aDb
 i
 ];
 
-148 if–
+150 if–
 pDb
 ->
 pBt
@@ -659,7 +641,7 @@ pBt
 zName
 ==0 ) ;
 
-149 if–
+151 if–
 	`°æí
 (
 pDb
@@ -671,7 +653,7 @@ pDb«me
 n
  ) ;
 
-150 if–
+152 if–
 	`sqlôeSåNICmp
 (
 pDb
@@ -685,7 +667,7 @@ z
 n
 )==0 ) ;
 
-152 if–
+154 if–
 i
 >=
 db
@@ -693,7 +675,7 @@ db
 nDb
  ){
 
-153 
+155 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -701,11 +683,11 @@ pP¨£
 pDb«me
 );
 
-156 if–
+158 if–
 i
 <2 ){
 
-157 
+159 
 	`sqlôeEº‹Msg
 (
 pP¨£
@@ -713,11 +695,11 @@ pP¨£
 pDb«me
 );
 
-160 #i‚de‡
+162 #i‚de‡
 SQLITE_OMIT_AUTHORIZATION
 
 
-166 
+168 
 	`sqlôeBåìClo£
 (
 pDb
@@ -725,13 +707,13 @@ pDb
 pBt
 );
 
-167 
+169 
 pDb
 ->
 pBt
  = 0;
 
-168 
+170 
 	`sqlôeFªe
 (
 pDb
@@ -739,7 +721,7 @@ pDb
 zName
 );
 
-169 
+171 
 	`sqlôeRe£tI¡î«lSchema
 (
 db
@@ -747,7 +729,7 @@ db
 i
 );
 
-170 if–
+172 if–
 pDb
 ->
 pAux
@@ -757,13 +739,13 @@ xFªeAux
 	`xFªeAux
 (pDb->pAux);
 
-171 
+173 
 db
 ->
 nDb
 --;
 
-172 if–
+174 if–
 i
 <
 db
@@ -771,7 +753,7 @@ db
 nDb
  ){
 
-173 
+175 
 db
 ->
 aDb
@@ -781,7 +763,7 @@ i
 nDb
 ];
 
-174 
+176 
 	`mem£t
 (&
 db
@@ -791,7 +773,7 @@ aDb
 nDb
 ], 0, (db->aDb[0]));
 
-175 
+177 
 	`sqlôeRe£tI¡î«lSchema
 (
 db
@@ -799,57 +781,57 @@ db
 i
 );
 
-177 
+179 
 	}
 }
 
-186 
+188 
 	$sqlôeFixInô
 (
 
-187 
+189 
 DbFixî
  *
 pFix
 ,
 
-188 
+190 
 P¨£
  *
 pP¨£
 ,
 
-189 
+191 
 iDb
 ,
 
-190 c⁄° *
+192 c⁄° *
 zTy≥
 ,
 
-191 c⁄° 
+193 c⁄° 
 Tokí
  *
 pName
 
 
-193 
+195 
 sqlôe
  *
 db
 ;
 
-195 if–
+197 if–
 iDb
 <0 || iDb==1 )  0;
 
-196 
+198 
 db
  = 
 pP¨£
 ->db;
 
-197 
+199 
 	`as£π
 –
 db
@@ -859,13 +841,13 @@ nDb
 iDb
  );
 
-198 
+200 
 pFix
 ->
 pP¨£
  =ÖParse;
 
-199 
+201 
 pFix
 ->
 zDb
@@ -879,57 +861,57 @@ iDb
 zName
 ;
 
-200 
+202 
 pFix
 ->
 zTy≥
  = zType;
 
-201 
+203 
 pFix
 ->
 pName
  =ÖName;
 
-203 
+205 
 	}
 }
 
-219 
+221 
 	$sqlôeFixSrcLi°
 (
 
-220 
+222 
 DbFixî
  *
 pFix
 ,
 
-221 
+223 
 SrcLi°
  *
 pLi°
 
 
-223 
+225 
 i
 ;
 
-224 c⁄° *
+226 c⁄° *
 zDb
 ;
 
-226 if–
+228 if–
 pLi°
 ==0 )  0;
 
-227 
+229 
 zDb
  = 
 pFix
 ->zDb;
 
-228 
+230 
 i
 =0; i<
 pLi°
@@ -937,7 +919,7 @@ pLi°
 nSrc
 ; i++){
 
-229 if–
+231 if–
 pLi°
 ->
 a
@@ -947,7 +929,7 @@ i
 zD©aba£
 ==0 ){
 
-230 
+232 
 pLi°
 ->
 a
@@ -961,7 +943,7 @@ zD©aba£
 zDb
 );
 
-231 }if–
+233 }if–
 	`sqlôeSåICmp
 (
 pLi°
@@ -975,7 +957,7 @@ zD©aba£
 zDb
 )!=0 ){
 
-232 
+234 
 	`sqlôeEº‹Msg
 (
 pFix
@@ -983,7 +965,7 @@ pFix
 pP¨£
 ,
 
-234 
+236 
 pFix
 ->
 zTy≥
@@ -997,7 +979,7 @@ z
 n
 ),
 
-235 
+237 
 pLi°
 ->
 a
@@ -1007,7 +989,7 @@ i
 zD©aba£
 );
 
-238 if–
+240 if–
 	`sqlôeFixSñe˘
 (
 pFix
@@ -1021,7 +1003,7 @@ i
 pSñe˘
 ) )  1;
 
-239 if–
+241 if–
 	`sqlôeFixEx¥
 (
 pFix
@@ -1035,31 +1017,31 @@ i
 pOn
 ) )  1;
 
-242 
+244 
 	}
 }
 
-243 
+245 
 	$sqlôeFixSñe˘
 (
 
-244 
+246 
 DbFixî
  *
 pFix
 ,
 
-245 
+247 
 Sñe˘
  *
 pSñe˘
 
 
-247  
+249  
 pSñe˘
  ){
 
-248 if–
+250 if–
 	`sqlôeFixEx¥Li°
 (
 pFix
@@ -1069,7 +1051,7 @@ pSñe˘
 pELi°
 ) ){
 
-251 if–
+253 if–
 	`sqlôeFixSrcLi°
 (
 pFix
@@ -1079,7 +1061,7 @@ pSñe˘
 pSrc
 ) ){
 
-254 if–
+256 if–
 	`sqlôeFixEx¥
 (
 pFix
@@ -1089,7 +1071,7 @@ pSñe˘
 pWhîe
 ) ){
 
-257 if–
+259 if–
 	`sqlôeFixEx¥
 (
 pFix
@@ -1099,37 +1081,37 @@ pSñe˘
 pHavög
 ) ){
 
-260 
+262 
 pSñe˘
  =ÖSñe˘->
 pPri‹
 ;
 
-263 
+265 
 	}
 }
 
-264 
+266 
 	$sqlôeFixEx¥
 (
 
-265 
+267 
 DbFixî
  *
 pFix
 ,
 
-266 
+268 
 Ex¥
  *
 pEx¥
 
 
-268  
+270  
 pEx¥
  ){
 
-269 if–
+271 if–
 	`sqlôeFixSñe˘
 (
 pFix
@@ -1139,7 +1121,7 @@ pEx¥
 pSñe˘
 ) ){
 
-272 if–
+274 if–
 	`sqlôeFixEx¥Li°
 (
 pFix
@@ -1149,7 +1131,7 @@ pEx¥
 pLi°
 ) ){
 
-275 if–
+277 if–
 	`sqlôeFixEx¥
 (
 pFix
@@ -1159,41 +1141,41 @@ pEx¥
 pRight
 ) ){
 
-278 
+280 
 pEx¥
  =ÖEx¥->
 pLe·
 ;
 
-281 
+283 
 	}
 }
 
-282 
+284 
 	$sqlôeFixEx¥Li°
 (
 
-283 
+285 
 DbFixî
  *
 pFix
 ,
 
-284 
+286 
 Ex¥Li°
  *
 pLi°
 
 
-286 
+288 
 i
 ;
 
-287 if–
+289 if–
 pLi°
 ==0 )  0;
 
-288 
+290 
 i
 =0; i<
 pLi°
@@ -1201,7 +1183,7 @@ pLi°
 nEx¥
 ; i++){
 
-289 if–
+291 if–
 	`sqlôeFixEx¥
 (
 pFix
@@ -1215,31 +1197,31 @@ i
 pEx¥
 ) ){
 
-294 
+296 
 	}
 }
 
-295 
+297 
 	$sqlôeFixTriggîSãp
 (
 
-296 
+298 
 DbFixî
  *
 pFix
 ,
 
-297 
+299 
 TriggîSãp
  *
 pSãp
 
 
-299  
+301  
 pSãp
  ){
 
-300 if–
+302 if–
 	`sqlôeFixSñe˘
 (
 pFix
@@ -1249,7 +1231,7 @@ pSãp
 pSñe˘
 ) ){
 
-303 if–
+305 if–
 	`sqlôeFixEx¥
 (
 pFix
@@ -1259,7 +1241,7 @@ pSãp
 pWhîe
 ) ){
 
-306 if–
+308 if–
 	`sqlôeFixEx¥Li°
 (
 pFix
@@ -1269,13 +1251,13 @@ pSãp
 pEx¥Li°
 ) ){
 
-309 
+311 
 pSãp
  =ÖSãp->
 pNext
 ;
 
-312 
+314 
 	}
 }
 
@@ -31706,480 +31688,6 @@ OP_Commô
 , 0, 0);
 
 2171 
-	}
-}
-
-	@copy.c
-
-16 
-	~"sqlôeI¡.h
-"
-
-29 
-	$sqlôeC›y
-(
-
-30 
-P¨£
- *
-pP¨£
-,
-
-31 
-SrcLi°
- *
-pTabÀName
-,
-
-32 
-Tokí
- *
-pFûíame
-,
-
-33 
-Tokí
- *
-pDñimôî
-,
-
-34 
-⁄Eº‹
-
-
-36 
-TabÀ
- *
-pTab
-;
-
-37 
-i
-;
-
-38 
-Vdbe
- *
-v
-;
-
-39 
-addr
-, 
-íd
-;
-
-40 *
-zFûe
- = 0;
-
-41 c⁄° *
-zDb
-;
-
-42 
-sqlôe
- *
-db
- = 
-pP¨£
-->db;
-
-45 if–
-sqlôe_mÆloc_Áûed
- ) 
-c›y_˛ónup
-;
-
-46 
-	`as£π
-–
-pTabÀName
-->
-nSrc
-==1 );
-
-47 
-pTab
- = 
-	`sqlôeSrcLi°Lookup
-(
-pP¨£
-, 
-pTabÀName
-);
-
-48 if–
-pTab
-==0 || 
-	`sqlôeIsRódO∆y
-(
-pP¨£
-,ÖTab, 0ËË
-c›y_˛ónup
-;
-
-49 
-zFûe
- = 
-	`sqlôeSåNDup
-(
-pFûíame
-->
-z
-,ÖFûíame->
-n
-);
-
-50 
-	`sqlôeDequŸe
-(
-zFûe
-);
-
-51 
-	`as£π
-–
-pTab
-->
-iDb
-<
-db
-->
-nDb
- );
-
-52 
-zDb
- = 
-db
-->
-aDb
-[
-pTab
-->
-iDb
-].
-zName
-;
-
-59 
-v
- = 
-	`sqlôeGëVdbe
-(
-pP¨£
-);
-
-60 if–
-v
- ){
-
-61 
-	`sqlôeBegöWrôeO≥øti⁄
-(
-pP¨£
-, 1, 
-pTab
-->
-iDb
-);
-
-62 
-addr
- = 
-	`sqlôeVdbeOp3
-(
-v
-, 
-OP_FûeO≥n
-, 0, 0, 
-pFûíame
-->
-z
-,ÖFûíame->
-n
-);
-
-63 
-	`sqlôeVdbeDequŸeP3
-(
-v
-, 
-addr
-);
-
-64 
-	`sqlôeO≥nTabÀAndIndi˚s
-(
-pP¨£
-, 
-pTab
-, 0);
-
-65 if–
-db
-->
-Êags
- & 
-SQLITE_Cou¡Rows
- ){
-
-66 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_I¡egî
-, 0, 0);
-
-68 
-íd
- = 
-	`sqlôeVdbeMakeLabñ
-(
-v
-);
-
-69 
-addr
- = 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_FûeRód
-, 
-pTab
-->
-nCﬁ
-, 
-íd
-);
-
-70 if–
-pDñimôî
- ){
-
-71 
-	`sqlôeVdbeCh™geP3
-(
-v
-, 
-addr
-, 
-pDñimôî
-->
-z
-,ÖDñimôî->
-n
-);
-
-72 
-	`sqlôeVdbeDequŸeP3
-(
-v
-, 
-addr
-);
-
-74 
-	`sqlôeVdbeCh™geP3
-(
-v
-, 
-addr
-, "\t", 1);
-
-76 if–
-pTab
-->
-iPKey
->=0 ){
-
-77 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_FûeCﬁumn
-, 
-pTab
-->
-iPKey
-, 0);
-
-78 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_Mu°BeI¡
-, 0, 0);
-
-80 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_NewRe˙o
-, 0, 0);
-
-82 
-i
-=0; i<
-pTab
-->
-nCﬁ
-; i++){
-
-83 if–
-i
-==
-pTab
-->
-iPKey
- ){
-
-86 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_Såög
-, 0, 0);
-
-88 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_FûeCﬁumn
-, 
-i
-, 0);
-
-91 
-	`sqlôeGíî©eC⁄°øötChecks
-(
-pP¨£
-, 
-pTab
-, 0, 0,ÖTab->
-iPKey
->=0,
-
-92 0, 
-⁄Eº‹
-, 
-addr
-);
-
-93 
-	`sqlôeCom∂ëeIn£πi⁄
-(
-pP¨£
-, 
-pTab
-, 0, 0, 0, 0, -1);
-
-94 if–(
-db
-->
-Êags
- & 
-SQLITE_Cou¡Rows
-)!=0 ){
-
-95 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_AddImm
-, 1, 0);
-
-97 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_GŸo
-, 0, 
-addr
-);
-
-98 
-	`sqlôeVdbeResﬁveLabñ
-(
-v
-, 
-íd
-);
-
-99 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_No›
-, 0, 0);
-
-100 
-	`sqlôeEndWrôeO≥øti⁄
-(
-pP¨£
-);
-
-101 if–
-db
-->
-Êags
- & 
-SQLITE_Cou¡Rows
- ){
-
-102 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_CﬁumnName
-, 0, 1);
-
-103 
-	`sqlôeVdbeCh™geP3
-(
-v
-, -1, "row†ö£πed", 
-P3_STATIC
-);
-
-104 
-	`sqlôeVdbeAddOp
-(
-v
-, 
-OP_CÆlback
-, 1, 0);
-
-108 
-c›y_˛ónup
-:
-
-109 
-	`sqlôeSrcLi°Dñëe
-(
-pTabÀName
-);
-
-110 
-	`sqlôeFªe
-(
-zFûe
-);
-
-112 
 	}
 }
 
@@ -252594,14 +252102,13 @@ _ASM_GENERIC_ERRNO_BASE_H
 .
 1
 /usr/include
-149
-3249
+148
+3242
 attach.c
 btree.c
 btree.h
 btree_rb.c
 build.c
-copy.c
 date.c
 delete.c
 encode.c

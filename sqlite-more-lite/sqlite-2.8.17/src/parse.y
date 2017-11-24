@@ -762,10 +762,10 @@ cmd ::= DROP INDEX nm(X) dbnm(Y).   {
 
 ///////////////////////////// The COPY command ///////////////////////////////
 //
-cmd ::= COPY orconf(R) nm(X) dbnm(D) FROM nm(Y) USING DELIMITERS STRING(Z).
-    {sqliteCopy(pParse,sqliteSrcListAppend(0,&X,&D),&Y,&Z,R);}
-cmd ::= COPY orconf(R) nm(X) dbnm(D) FROM nm(Y).
-    {sqliteCopy(pParse,sqliteSrcListAppend(0,&X,&D),&Y,0,R);}
+//cmd ::= COPY orconf(R) nm(X) dbnm(D) FROM nm(Y) USING DELIMITERS STRING(Z).
+//    {sqliteCopy(pParse,sqliteSrcListAppend(0,&X,&D),&Y,&Z,R);}
+//cmd ::= COPY orconf(R) nm(X) dbnm(D) FROM nm(Y).
+//    {sqliteCopy(pParse,sqliteSrcListAppend(0,&X,&D),&Y,0,R);}
 
 ///////////////////////////// The VACUUM command /////////////////////////////
 //
