@@ -88,7 +88,7 @@ LIBOBJ = attach.lo btree.lo build.lo date.lo \
          delete.lo encode.lo expr.lo func.lo hash.lo insert.lo \
          main.lo opcodes.lo os.lo pager.lo parse.lo pragma.lo \
          printf.lo random.lo select.lo table.lo tokenize.lo \
-         update.lo util.lo vacuum.lo vdbe.lo vdbeaux.lo \
+         update.lo util.lo vdbe.lo vdbeaux.lo \
          where.lo trigger.lo
 
 # Only build the in-core DB if it is required.
@@ -130,7 +130,6 @@ SRC = \
   $(TOP)/src/trigger.c \
   $(TOP)/src/update.c \
   $(TOP)/src/util.c \
-  $(TOP)/src/vacuum.c \
   $(TOP)/src/vdbe.c \
   $(TOP)/src/vdbeaux.c \
   $(TOP)/src/vdbe.h \
@@ -330,9 +329,6 @@ trigger.lo:	$(TOP)/src/trigger.c $(HDR)
 
 update.lo:	$(TOP)/src/update.c $(HDR)
 	$(LTCOMPILE) -c $(TOP)/src/update.c
-
-vacuum.lo:	$(TOP)/src/vacuum.c $(HDR)
-	$(LTCOMPILE) -c $(TOP)/src/vacuum.c
 
 tclsqlite.lo:	$(TOP)/src/tclsqlite.c $(HDR)
 	$(LTCOMPILE) $(TCL_FLAGS) -c $(TOP)/src/tclsqlite.c

@@ -769,8 +769,8 @@ cmd ::= DROP INDEX nm(X) dbnm(Y).   {
 
 ///////////////////////////// The VACUUM command /////////////////////////////
 //
-cmd ::= VACUUM.                {sqliteVacuum(pParse,0);}
-cmd ::= VACUUM nm(X).         {sqliteVacuum(pParse,&X);}
+//cmd ::= VACUUM.                {sqliteVacuum(pParse,0);}
+//cmd ::= VACUUM nm(X).         {sqliteVacuum(pParse,&X);}
 
 ///////////////////////////// The PRAGMA command /////////////////////////////
 //
