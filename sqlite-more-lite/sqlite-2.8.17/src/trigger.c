@@ -66,8 +66,8 @@ void sqliteBeginTrigger(
   if( sqlite_malloc_failed ) goto trigger_cleanup;
   assert( pTableName->nSrc==1 );
   if( db->init.busy
-   && sqliteFixInit(&sFix, pParse, db->init.iDb, "trigger", pName)
-   && sqliteFixSrcList(&sFix, pTableName)
+   //&& sqliteFixInit(&sFix, pParse, db->init.iDb, "trigger", pName)
+   //&& sqliteFixSrcList(&sFix, pTableName)
   ){
     goto trigger_cleanup;
   }
@@ -175,10 +175,10 @@ void sqliteFinishTrigger(
     pStepList->pTrig = nt;
     pStepList = pStepList->pNext;
   }
-  if( sqliteFixInit(&sFix, pParse, nt->iDb, "trigger", &nt->nameToken) 
-          && sqliteFixTriggerStep(&sFix, nt->step_list) ){
-    goto triggerfinish_cleanup;
-  }
+  //if( sqliteFixInit(&sFix, pParse, nt->iDb, "trigger", &nt->nameToken) 
+  //        && sqliteFixTriggerStep(&sFix, nt->step_list) ){
+  //  goto triggerfinish_cleanup;
+  //}
 
   /* if we are not initializing, and this trigger is not on a TEMP table, 
   ** build the sqlite_master entry

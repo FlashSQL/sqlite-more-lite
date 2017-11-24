@@ -1255,16 +1255,16 @@ void sqliteDeferForeignKey(Parse*, int);
 //# define sqliteAuthContextPush(a,b,c)
 //# define sqliteAuthContextPop(a)  ((void)(a))
 #endif
-void sqliteAttach(Parse*, Token*, Token*, Token*);
-void sqliteDetach(Parse*, Token*);
+//void sqliteAttach(Parse*, Token*, Token*, Token*);
+//void sqliteDetach(Parse*, Token*);
 int sqliteBtreeFactory(const sqlite *db, const char *zFilename,
                        int mode, int nPg, Btree **ppBtree);
-int sqliteFixInit(DbFixer*, Parse*, int, const char*, const Token*);
-int sqliteFixSrcList(DbFixer*, SrcList*);
-int sqliteFixSelect(DbFixer*, Select*);
-int sqliteFixExpr(DbFixer*, Expr*);
-int sqliteFixExprList(DbFixer*, ExprList*);
-int sqliteFixTriggerStep(DbFixer*, TriggerStep*);
+//int sqliteFixInit(DbFixer*, Parse*, int, const char*, const Token*);
+//int sqliteFixSrcList(DbFixer*, SrcList*);
+//int sqliteFixSelect(DbFixer*, Select*);
+//int sqliteFixExpr(DbFixer*, Expr*);
+//int sqliteFixExprList(DbFixer*, ExprList*);
+//int sqliteFixTriggerStep(DbFixer*, TriggerStep*);
 double sqliteAtoF(const char *z, const char **);
 char *sqlite_snprintf(int,char*,const char*,...);
 int sqliteFitsIn32Bits(const char *);

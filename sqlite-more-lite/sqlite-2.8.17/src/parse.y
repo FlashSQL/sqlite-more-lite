@@ -881,17 +881,17 @@ cmd ::= DROP TRIGGER nm(X) dbnm(D). {
 }
 
 //////////////////////// ATTACH DATABASE file AS name /////////////////////////
-cmd ::= ATTACH database_kw_opt ids(F) AS nm(D) key_opt(K). {
-  sqliteAttach(pParse, &F, &D, &K);
-}
-%type key_opt {Token}
-key_opt(A) ::= USING ids(X).  { A = X; }
-key_opt(A) ::= .              { A.z = 0; A.n = 0; }
+//cmd ::= ATTACH database_kw_opt ids(F) AS nm(D) key_opt(K). {
+//  sqliteAttach(pParse, &F, &D, &K);
+//}
+//%type key_opt {Token}
+//key_opt(A) ::= USING ids(X).  { A = X; }
+//key_opt(A) ::= .              { A.z = 0; A.n = 0; }
 
-database_kw_opt ::= DATABASE.
-database_kw_opt ::= .
+//database_kw_opt ::= DATABASE.
+//database_kw_opt ::= .
 
 //////////////////////// DETACH DATABASE name /////////////////////////////////
-cmd ::= DETACH database_kw_opt nm(D). {
-  sqliteDetach(pParse, &D);
-}
+//cmd ::= DETACH database_kw_opt nm(D). {
+//  sqliteDetach(pParse, &D);
+//}

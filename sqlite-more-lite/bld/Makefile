@@ -84,7 +84,7 @@ endif
 
 # Object files for the SQLite library.
 #
-LIBOBJ = attach.lo btree.lo build.lo date.lo \
+LIBOBJ = btree.lo build.lo date.lo \
          delete.lo encode.lo expr.lo func.lo hash.lo insert.lo \
          main.lo opcodes.lo os.lo pager.lo parse.lo pragma.lo \
          printf.lo random.lo select.lo table.lo tokenize.lo \
@@ -99,7 +99,6 @@ endif
 # All of the source code files.
 #
 SRC = \
-  $(TOP)/src/attach.c \
   $(TOP)/src/btree.c \
   $(TOP)/src/btree.h \
   $(TOP)/src/btree_rb.c \
@@ -338,9 +337,6 @@ pragma.lo:	$(TOP)/src/pragma.c $(HDR)
 
 printf.lo:	$(TOP)/src/printf.c $(HDR)
 	$(LTCOMPILE) $(TCL_FLAGS) -c $(TOP)/src/printf.c
-
-attach.lo:	$(TOP)/src/attach.c $(HDR)
-	$(LTCOMPILE) $(TCL_FLAGS) -c $(TOP)/src/attach.c
 
 tclsqlite-sh.lo:	$(TOP)/src/tclsqlite.c $(HDR)
 	$(LTCOMPILE) $(TCL_FLAGS) -DTCLSH=1 -o $@ -c $(TOP)/src/tclsqlite.c

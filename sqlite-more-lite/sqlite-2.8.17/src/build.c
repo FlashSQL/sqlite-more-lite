@@ -1010,12 +1010,12 @@ void sqliteCreateView(
     sqliteSelectDelete(pSelect);
     return;
   }
-  if( sqliteFixInit(&sFix, pParse, p->iDb, "view", pName)
-    && sqliteFixSelect(&sFix, pSelect)
-  ){
-    sqliteSelectDelete(pSelect);
-    return;
-  }
+//  if( sqliteFixInit(&sFix, pParse, p->iDb, "view", pName)
+//    && sqliteFixSelect(&sFix, pSelect)
+//  ){
+//    sqliteSelectDelete(pSelect);
+//    return;
+//  }
 
   /* Make a copy of the entire SELECT statement that defines the view.
   ** This will force all the Expr.token.z values to be dynamically
@@ -1495,8 +1495,8 @@ void sqliteCreateIndex(
 
   if( pParse->nErr || sqlite_malloc_failed ) goto exit_create_index;
   if( db->init.busy 
-     && sqliteFixInit(&sFix, pParse, db->init.iDb, "index", pName)
-     && sqliteFixSrcList(&sFix, pTable)
+  //   && sqliteFixInit(&sFix, pParse, db->init.iDb, "index", pName)
+  //   && sqliteFixSrcList(&sFix, pTable)
   ){
     goto exit_create_index;
   }
