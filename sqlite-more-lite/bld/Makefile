@@ -124,7 +124,6 @@ SRC = \
   $(TOP)/src/sqlite.h.in \
   $(TOP)/src/sqliteInt.h \
   $(TOP)/src/table.c \
-  $(TOP)/src/tclsqlite.c \
   $(TOP)/src/tokenize.c \
   $(TOP)/src/trigger.c \
   $(TOP)/src/update.c \
@@ -133,20 +132,6 @@ SRC = \
   $(TOP)/src/vdbeaux.c \
   $(TOP)/src/vdbe.h \
   $(TOP)/src/where.c
-
-# Source code to the test files.
-#
-TESTSRC = \
-  $(TOP)/src/btree.c \
-  $(TOP)/src/func.c \
-  $(TOP)/src/os.c \
-  $(TOP)/src/pager.c \
-  $(TOP)/src/test1.c \
-  $(TOP)/src/test2.c \
-  $(TOP)/src/test3.c \
-  $(TOP)/src/test4.c \
-  $(TOP)/src/vdbe.c \
-  $(TOP)/src/md5.c
 
 # Header files used by all library source files.
 #
@@ -184,11 +169,6 @@ last_change:	$(SRC)
 
 libsqlite.la:	$(LIBOBJ)
 	$(LTLINK) -o libsqlite.la $(LIBOBJ) ${RELEASE} -rpath ${prefix}/lib \
-		-version-info "8:6:8"
-
-libtclsqlite.la:	tclsqlite.lo libsqlite.la
-	$(LTLINK) -o libtclsqlite.la tclsqlite.lo \
-		libsqlite.la $(LIBTCL) -rpath ${prefix}/lib/sqlite \
 		-version-info "8:6:8"
 
 sqlite:	$(TOP)/src/shell.c libsqlite.la sqlite.h
@@ -329,31 +309,11 @@ trigger.lo:	$(TOP)/src/trigger.c $(HDR)
 update.lo:	$(TOP)/src/update.c $(HDR)
 	$(LTCOMPILE) -c $(TOP)/src/update.c
 
-tclsqlite.lo:	$(TOP)/src/tclsqlite.c $(HDR)
-	$(LTCOMPILE) $(TCL_FLAGS) -c $(TOP)/src/tclsqlite.c
-
 pragma.lo:	$(TOP)/src/pragma.c $(HDR)
 	$(LTCOMPILE) $(TCL_FLAGS) -c $(TOP)/src/pragma.c
 
 printf.lo:	$(TOP)/src/printf.c $(HDR)
 	$(LTCOMPILE) $(TCL_FLAGS) -c $(TOP)/src/printf.c
-
-tclsqlite-sh.lo:	$(TOP)/src/tclsqlite.c $(HDR)
-	$(LTCOMPILE) $(TCL_FLAGS) -DTCLSH=1 -o $@ -c $(TOP)/src/tclsqlite.c
-
-tclsqlite:	tclsqlite-sh.lo libsqlite.la
-	$(LTLINK) $(TCL_FLAGS) -o tclsqlite tclsqlite-sh.lo libsqlite.la $(LIBTCL)
-
-testfixture:	$(TOP)/src/tclsqlite.c libtclsqlite.la libsqlite.la $(TESTSRC)
-	$(LTLINK) $(TCL_FLAGS) -DTCLSH=1 -DSQLITE_TEST=1\
-                -o testfixture $(TESTSRC) $(TOP)/src/tclsqlite.c \
-		libtclsqlite.la libsqlite.la $(LIBTCL)
-
-fulltest:	testfixture sqlite
-	./testfixture $(TOP)/test/all.test
-
-test:	testfixture sqlite
-	./testfixture $(TOP)/test/quick.test
 
 index.html:	$(TOP)/www/index.tcl last_change
 	tclsh $(TOP)/www/index.tcl `cat $(TOP)/VERSION` >index.html
@@ -385,8 +345,8 @@ opcode.html:	$(TOP)/www/opcode.tcl $(TOP)/src/vdbe.c
 mingw.html:	$(TOP)/www/mingw.tcl
 	tclsh $(TOP)/www/mingw.tcl >mingw.html
 
-tclsqlite.html:	$(TOP)/www/tclsqlite.tcl
-	tclsh $(TOP)/www/tclsqlite.tcl >tclsqlite.html
+#tclsqlite.html:	$(TOP)/www/tclsqlite.tcl
+#	tclsh $(TOP)/www/tclsqlite.tcl >tclsqlite.html
 
 speed.html:	$(TOP)/www/speed.tcl
 	tclsh $(TOP)/www/speed.tcl >speed.html

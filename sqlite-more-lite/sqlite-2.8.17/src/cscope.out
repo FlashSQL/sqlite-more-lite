@@ -1,4 +1,4 @@
-cscope 15 $HOME/SaS/sqlite-more-lite/sqlite-2.8.17/src               0001301908
+cscope 15 $HOME/SaS/sqlite-more-lite/sqlite-2.8.17/src               0001300532
 	@btree.c
 
 52 
@@ -25725,34 +25725,6 @@ nE¼
 pS–eù
 );
 
-1013 ifĞ
-	`sql™eFixIn™
-(&
-sFix
-, 
-pP¬£
-, 
-p
-->
-iDb
-, "v›w", 
-pName
-)
-
-1014 && 
-	`sql™eFixS–eù
-(&
-sFix
-, 
-pS–eù
-)
-
-1016 
-	`sql™eS–eùD–‘e
-(
-pS–eù
-);
-
 1025 
 p
 ->
@@ -27632,30 +27604,6 @@ db
 .
 busy
 
-
-1498 && 
-	`sql™eFixIn™
-(&
-sFix
-, 
-pP¬£
-, 
-db
-->
-š™
-.
-iDb
-, "šdex", 
-pName
-)
-
-1499 && 
-	`sql™eFixSrcLi¡
-(&
-sFix
-, 
-pTabË
-)
 
 1501 
 ex™_ü—‹_šdex
@@ -79683,108 +79631,6 @@ D
 	}
 }
 
-884 
-cmd
- ::ğ
-ATTACH
- 
-d©aba£_kw_İt
- 
-	$ids
-(
-F
-è
-AS
- 
-	$nm
-(
-D
-è
-	`key_İt
-(
-K
-). {
-
-885 
-	`sql™eA‰ach
-(
-pP¬£
-, &
-F
-, &
-D
-, &
-K
-);
-
-886 
-	}
-}
-
-887 %
-ty³
- 
-key_İt
- {
-Tok’
-}
-
-888 
-	$key_İt
-(
-A
-è::ğ
-USING
- 
-	`ids
-(
-X
-). { A = X; 
-	}
-}
-
-889 
-	$key_İt
-(
-A
-è::ğ. { A.
-z
- = 0; A.
-n
- = 0; 
-	}
-}
-
-891 
-d©aba£_kw_İt
- ::ğ
-DATABASE
-.
-
-892 
-d©aba£_kw_İt
- ::= .
-
-895 
-cmd
- ::ğ
-DETACH
- 
-d©aba£_kw_İt
- 
-nm
-(
-D
-). {
-
-896 
-sql™eD‘ach
-(
-pP¬£
-, &
-D
-);
-
 	@pragma.c
 
 16 
@@ -104193,22 +104039,6 @@ P¬£
 SQLITE_OMIT_AUTHORIZATION
 
 
-1258 
-sql™eA‰ach
-(
-P¬£
-*, 
-Tok’
-*, Token*, Token*);
-
-1259 
-sql™eD‘ach
-(
-P¬£
-*, 
-Tok’
-*);
-
 1260 
 sql™eBŒ“FaùÜy
 (cÚ¡ 
@@ -104228,56 +104058,6 @@ BŒ“
  **
 µBŒ“
 );
-
-1262 
-sql™eFixIn™
-(
-DbFix”
-*, 
-P¬£
-*, , cÚ¡ *, cÚ¡ 
-Tok’
-*);
-
-1263 
-sql™eFixSrcLi¡
-(
-DbFix”
-*, 
-SrcLi¡
-*);
-
-1264 
-sql™eFixS–eù
-(
-DbFix”
-*, 
-S–eù
-*);
-
-1265 
-sql™eFixEx´
-(
-DbFix”
-*, 
-Ex´
-*);
-
-1266 
-sql™eFixEx´Li¡
-(
-DbFix”
-*, 
-Ex´Li¡
-*);
-
-1267 
-sql™eFixTrigg”S‹p
-(
-DbFix”
-*, 
-Trigg”S‹p
-*);
 
 1268 
 sql™eAtoF
@@ -123917,30 +123697,6 @@ db
 busy
 
 
-69 && 
-	`sql™eFixIn™
-(&
-sFix
-, 
-pP¬£
-, 
-db
-->
-š™
-.
-iDb
-, "Œigg”", 
-pName
-)
-
-70 && 
-	`sql™eFixSrcLi¡
-(&
-sFix
-, 
-pTabËName
-)
-
 72 
 Œigg”_ş—nup
 ;
@@ -124433,34 +124189,6 @@ pTrig
 pS‹pLi¡
  =…S‹pLi¡->
 pNext
-;
-
-178 ifĞ
-	`sql™eFixIn™
-(&
-sFix
-, 
-pP¬£
-, 
-Á
-->
-iDb
-, "Œigg”", &Á->
-ÇmeTok’
-)
-
-179 && 
-	`sql™eFixTrigg”S‹p
-(&
-sFix
-, 
-Á
-->
-¡•_li¡
-) ){
-
-180 
-Œigg”fšish_ş—nup
 ;
 
 186 ifĞ!
