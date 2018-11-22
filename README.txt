@@ -1,6 +1,6 @@
 THIS PORJECT IS PORTING LIGHT SQLite More Lite 
 
 
-Gihwan Oh
-Jonghyeok Park
-Soyee Choi
+Gihwan Oh (wurikiji@gmail.com)
+Jonghyeok Park (akindo19@gmail.com)
+Soyee Choi (thdldla11@gmail.com)
