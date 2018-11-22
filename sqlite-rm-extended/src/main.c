@@ -19,9 +19,6 @@
 #ifdef SQLITE_ENABLE_FTS3
 # include "fts3.h"
 #endif
-#ifdef SQLITE_ENABLE_RTREE
-# include "rtree.h"
-#endif
 #ifdef SQLITE_ENABLE_ICU
 # include "sqliteicu.h"
 #endif
@@ -2954,11 +2951,6 @@ static int openDatabase(
   }
 #endif
 
-#ifdef SQLITE_ENABLE_RTREE
-  if( !db->mallocFailed && rc==SQLITE_OK){
-    rc = sqlite3RtreeInit(db);
-  }
-#endif
 
 #ifdef SQLITE_ENABLE_DBSTAT_VTAB
   if( !db->mallocFailed && rc==SQLITE_OK){
